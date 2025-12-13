@@ -10,13 +10,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Keep crawlers out of non-content routes.
+        // Keep crawlers out of non-content routes and legacy routes.
         disallow: [
           '/api/',
           '/_next/',
           '/private/',
           '/admin/',
-          '/visit-api', // Explicitly disallow this legacy route
+          '/visit-api', // Legacy API route
+          '/message/', // Legacy message/share routes
+          '/mls', // Legacy MLS route (redirects to /homes)
+          '/lc', // Legacy route (redirects to /contact)
+          '/ub', // Legacy route (redirects to /homes)
         ],
       },
     ],

@@ -22,10 +22,15 @@ export function middleware(request: NextRequest) {
   const canonicalProtocol = 'https:';
 
   // Handle missing pages that should redirect
+  // These are legacy routes that should redirect to appropriate pages
   const redirectMap: Record<string, string> = {
     '/tour': '/search',
     '/tour/mls': '/search',
     '/ap': '/homes', // "ap" might be "apartment" or abbreviation - redirect to homes
+    '/mls': '/homes', // MLS listings redirect to homes page
+    '/lc': '/contact', // Legacy contact route
+    '/ub': '/homes', // Unknown legacy route - redirect to homes
+    '/message/share': '/contact', // Social sharing route - redirect to contact
   };
 
   // Check if this path should redirect to another page
