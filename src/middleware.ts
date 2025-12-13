@@ -31,6 +31,9 @@ export function middleware(request: NextRequest) {
     '/lc': '/contact', // Legacy contact route
     '/ub': '/homes', // Unknown legacy route - redirect to homes
     '/message/share': '/contact', // Social sharing route - redirect to contact
+    '/new-construction': '/homes', // New construction redirects to homes (can filter for new builds)
+    '/schools': '/map-and-nearby-places', // Schools page redirects to map page (has school info)
+    '/maravilla-hoa': '/neighborhood', // HOA info redirects to neighborhood page (has community info)
   };
 
   // Check if this path should redirect to another page
