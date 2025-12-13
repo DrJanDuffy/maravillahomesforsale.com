@@ -159,6 +159,8 @@ export default function RootLayout({
   return (
     <html lang='en' className={`${sourceSansPro.variable} ${openSans.variable}`}>
       <head>
+        {/* Viewport meta tag - Next.js adds this automatically, but explicit for clarity */}
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         {/* Favicon for Google Search results - must be square, at least 48x48px, stable URL */}
         <link rel='icon' href='/favicon.ico' sizes='any' />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />

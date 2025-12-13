@@ -95,7 +95,32 @@ export default function Footer() {
               </li>
               <li className='flex items-center'>
                 <span className='mr-2'>📍</span>
-                851 W Lone Mountain Rd, North Las Vegas, NV 89032
+                <a
+                  href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover:text-white transition-colors'
+                >
+                  851 W Lone Mountain Rd, North Las Vegas, NV 89032
+                </a>
+              </li>
+              <li className='mt-4'>
+                <a
+                  href='https://www.google.com/maps/place/?q=place_id:YOUR_PLACE_ID'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center text-[#3A8DDE] hover:text-white transition-colors text-sm font-medium'
+                  aria-label='View Google Business Profile'
+                >
+                  <svg
+                    className='w-4 h-4 mr-2'
+                    fill='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z' />
+                  </svg>
+                  View on Google Maps
+                </a>
               </li>
             </ul>
           </div>
