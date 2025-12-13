@@ -176,8 +176,6 @@ export default function RootLayout({
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
         {/* Facebook Pixel: DNS prefetch only (loaded lazily) */}
         <link rel='dns-prefetch' href='https://connect.facebook.net' />
-        {/* AWS S3: Preconnect for background images (better than dns-prefetch for same-origin resources) */}
-        <link rel='preconnect' href='https://cribflyer-publicsite.s3.amazonaws.com' crossOrigin='anonymous' />
         {/* Preload critical hero image for LCP optimization */}
         <link
           rel='preload'

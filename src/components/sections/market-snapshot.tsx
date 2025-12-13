@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 export default function MarketSnapshot() {
   return (
     <section className='py-20 bg-gradient-to-br from-amber-50 via-white to-amber-50' style={{
-      backgroundImage: 'url(https://cribflyer-publicsite.s3.amazonaws.com/stock-images/background-tiles/retina-wood.png)',
+      backgroundImage: 'url(/images/backgrounds/retina-wood.png)',
       backgroundRepeat: 'repeat',
     }}>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
