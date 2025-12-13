@@ -66,16 +66,16 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    "Discover luxury homes in Craig Ranch, Las Vegas. Find your dream home in one of the city's most prestigious communities with premium amenities, excellent schools, and convenient location. View current listings from $600K to $1.2M.",
+    'Discover luxury homes in Maravilla, Las Vegas. Find your dream home in one of the city&apos;s most prestigious communities with premium amenities, excellent schools, and convenient location.',
   keywords:
-    'Craig Ranch, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Craig Ranch community, luxury homes Las Vegas, Craig Ranch properties, Las Vegas luxury real estate, Craig Ranch homes for sale, Las Vegas real estate agent, Craig Ranch neighborhood, luxury properties Las Vegas, Craig Ranch real estate market, Las Vegas home values',
+    'Maravilla, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Maravilla community, luxury homes Las Vegas, Maravilla properties, Las Vegas luxury real estate, Maravilla homes for sale, Las Vegas real estate agent, Maravilla neighborhood, luxury properties Las Vegas, Maravilla real estate market, Las Vegas home values',
   authors: [
-    { name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy', url: siteUrl },
+    { name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy', url: siteUrl },
   ],
-  creator: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-  publisher: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  creator: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  publisher: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   formatDetection: {
     email: false,
     address: false,

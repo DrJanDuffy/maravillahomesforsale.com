@@ -354,7 +354,7 @@ export default function HomesPage() {
                   '@type': 'Product',
                   '@id': `${baseUrl}/homes`,
                   name: 'Maravilla Homes',
-                  description: 'Luxury homes in Craig Ranch ranging from $370,000 to $1.8 million',
+                  description: 'Luxury homes in Maravilla with various price ranges to suit different needs',
                   category: 'Real Estate',
                   offers: {
                     '@type': 'AggregateOffer',
