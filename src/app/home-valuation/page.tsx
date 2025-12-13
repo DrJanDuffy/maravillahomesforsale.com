@@ -289,25 +289,7 @@ export default function MaravillaHomeValuationPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema({
-              name: nap.name,
-              description:
-                'Maravilla home valuation services. Get accurate home value estimates for properties in Maravilla, North Las Vegas.',
-              url: `${baseUrl}/home-valuation`,
-              telephone: nap.phoneHref.replace('tel:', '+1-'),
-              address: {
-                streetAddress: nap.addressLine,
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89031',
-                addressCountry: 'US',
-              },
-              geo: {
-                latitude: 36.26276,
-                longitude: -115.17182,
-              },
-              openingHours: nap.hoursLine,
-            }),
+            generateLocalBusinessSchema(),
             generateFAQPageSchema(faqs),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },

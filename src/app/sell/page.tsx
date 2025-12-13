@@ -284,25 +284,7 @@ export default function SellMaravillaPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateLocalBusinessSchema({
-              name: nap.name,
-              description:
-                'Sell your Maravilla home with expert guidance. Dr. Jan Duffy helps you price competitively, prepare for market, and negotiate to maximize proceeds.',
-              url: `${baseUrl}/sell`,
-              telephone: nap.phoneHref.replace('tel:', '+1-'),
-              address: {
-                streetAddress: nap.addressLine,
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89031',
-                addressCountry: 'US',
-              },
-              geo: {
-                latitude: 36.26276,
-                longitude: -115.17182,
-              },
-              openingHours: nap.hoursLine,
-            }),
+            generateLocalBusinessSchema(),
             generateFAQPageSchema(faqs),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
