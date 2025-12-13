@@ -11,7 +11,13 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
         // Keep crawlers out of non-content routes.
-        disallow: ['/api/', '/_next/', '/private/', '/admin/'],
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/private/',
+          '/admin/',
+          '/visit-api', // Explicitly disallow this legacy route
+        ],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
