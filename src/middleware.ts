@@ -24,8 +24,8 @@ export function middleware(request: NextRequest) {
   // Handle missing pages that should redirect
   // These are legacy routes that should redirect to appropriate pages
   const redirectMap: Record<string, string> = {
-    '/tour': '/search',
-    '/tour/mls': '/search',
+    '/tour': '/homes', // Property tours redirect to homes page
+    '/tour/mls': '/homes', // MLS tours redirect to homes page (not /search which is noindex)
     '/ap': '/homes', // "ap" might be "apartment" or abbreviation - redirect to homes
     '/mls': '/homes', // MLS listings redirect to homes page
     '/lc': '/contact', // Legacy contact route
