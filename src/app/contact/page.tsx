@@ -35,7 +35,7 @@ export const revalidate = false; // Static page, no revalidation needed
 export const metadata = genMetadata({
   title: 'Contact Dr. Jan Duffy - North Las Vegas Family Homes | Homes by Dr. Jan Duffy | Las Vegas Real Estate',
   description:
-    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 500-1953 or email DrDuffy@MaravillaHomesForSale.com.',
+    `Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: ${BUSINESS_INFO.address.full}. Call ${BUSINESS_INFO.phone.display} or email ${BUSINESS_INFO.email}.`,
   keywords:
     'contact real estate agent, Dr. Jan Duffy, Maravilla real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
   path: '/contact',
@@ -125,10 +125,10 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className='text-lg font-semibold text-[#0A2540]'>
-                    851 W Lone Mountain Rd
+                    {BUSINESS_INFO.address.streetAddress}
                   </p>
                   <p className='text-gray-600 text-sm mt-1'>
-                    North Las Vegas, NV 89032
+                    {BUSINESS_INFO.address.addressLocality}, {BUSINESS_INFO.address.addressRegion} {BUSINESS_INFO.address.postalCode}
                   </p>
                   <p className='text-gray-600 text-sm mt-2'>
                     Serving Las Vegas, Henderson, and surrounding communities
@@ -208,7 +208,7 @@ export default function ContactPage() {
               Find Us on the Map
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Visit us at 851 W Lone Mountain Rd, North Las Vegas, NV 89032. We
+              Visit us at {BUSINESS_INFO.address.full}. We
               serve clients throughout Las Vegas, Henderson, and surrounding
               communities.
             </p>
@@ -216,9 +216,9 @@ export default function ContactPage() {
           <div className='relative'>
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
-                address='851 W Lone Mountain Rd, North Las Vegas, NV 89032'
-                latitude={36.2465}
-                longitude={-115.1475}
+                address={BUSINESS_INFO.address.full}
+                latitude={BUSINESS_INFO.geo.latitude}
+                longitude={BUSINESS_INFO.geo.longitude}
                 zoom={14}
                 height='500px'
                 title='North Las Vegas Family Homes | Homes by Dr. Jan Duffy Office Location'
@@ -231,7 +231,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                href={BUSINESS_INFO.maps.business}
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}
@@ -241,7 +241,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                href={BUSINESS_INFO.maps.business}
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}

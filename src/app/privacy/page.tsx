@@ -120,7 +120,7 @@ export default function PrivacyPage() {
                 <p>
                   <strong>North Las Vegas Family Homes | Homes by Dr. Jan Duffy</strong>
                 </p>
-                <p>851 W Lone Mountain Rd, North Las Vegas, NV 89032</p>
+                <p>{BUSINESS_INFO.address.full}</p>
                 <p>
                   Phone: <a href='tel:7025001953' className='text-[#3A8DDE] hover:underline'>(702) 500-1953</a>
                 </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BUSINESS_INFO } from '@/lib/config/business-info';
 
 export default function Footer() {
   return (

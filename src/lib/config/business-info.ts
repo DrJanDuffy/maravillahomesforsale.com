@@ -17,12 +17,12 @@ export const BUSINESS_INFO = {
   
   // Business Address (Office Location)
   address: {
-    streetAddress: '851 W Lone Mountain Rd',
+    streetAddress: '4380 W Ann Rd Suite 201',
     addressLocality: 'North Las Vegas',
     addressRegion: 'NV',
-    postalCode: '89032',
+    postalCode: '89031',
     addressCountry: 'US',
-    full: '851 W Lone Mountain Rd, North Las Vegas, NV 89032',
+    full: '4380 W Ann Rd Suite 201, North Las Vegas, NV 89031',
   },
   
   // Community Address (Maravilla Community)
@@ -62,7 +62,7 @@ export const BUSINESS_INFO = {
   
   // Google Maps Links
   maps: {
-    business: 'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+    business: 'https://www.google.com/maps/search/?api=1&query=4380+W+Ann+Rd+Suite+201+North+Las+Vegas+NV+89031',
     community: 'https://www.google.com/maps/search/?api=1&query=Maravilla+North+Las+Vegas+NV+89031',
   },
 } as const;

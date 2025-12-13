@@ -6,6 +6,7 @@ import {
   generateLocalBusinessSchema,
   generateWebSiteSchema,
 } from '@/lib/metadata';
+import { BUSINESS_INFO } from '@/lib/config/business-info';
 import './globals.css';
 
 const googleSiteVerification =
@@ -268,11 +269,11 @@ export default function RootLayout({
               image: ogImageUrl,
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd',
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89032',
-                addressCountry: 'US',
+                streetAddress: BUSINESS_INFO.address.streetAddress,
+                addressLocality: BUSINESS_INFO.address.addressLocality,
+                addressRegion: BUSINESS_INFO.address.addressRegion,
+                postalCode: BUSINESS_INFO.address.postalCode,
+                addressCountry: BUSINESS_INFO.address.addressCountry,
               },
               areaServed: [
                 {
@@ -347,11 +348,11 @@ export default function RootLayout({
               },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '851 W Lone Mountain Rd',
-                addressLocality: 'North Las Vegas',
-                addressRegion: 'NV',
-                postalCode: '89032',
-                addressCountry: 'US',
+                streetAddress: BUSINESS_INFO.address.streetAddress,
+                addressLocality: BUSINESS_INFO.address.addressLocality,
+                addressRegion: BUSINESS_INFO.address.addressRegion,
+                postalCode: BUSINESS_INFO.address.postalCode,
+                addressCountry: BUSINESS_INFO.address.addressCountry,
               },
               geo: {
                 '@type': 'GeoCoordinates',
@@ -359,7 +360,7 @@ export default function RootLayout({
                 longitude: -115.1475,
               },
               hasMap:
-                'https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032',
+                BUSINESS_INFO.maps.business,
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
