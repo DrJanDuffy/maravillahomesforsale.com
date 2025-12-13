@@ -68,7 +68,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
-    'Discover luxury homes in Maravilla, Las Vegas. Find your dream home in one of the city&apos;s most prestigious communities with premium amenities, excellent schools, and convenient location.',
+    'Find exceptional value in Maravilla, Las Vegas. Discover quality homes with great value in a well-planned community featuring excellent amenities, top-rated schools, and convenient location.',
   keywords:
     'Maravilla, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Maravilla community, luxury homes Las Vegas, Maravilla properties, Las Vegas luxury real estate, Maravilla homes for sale, Las Vegas real estate agent, Maravilla neighborhood, luxury properties Las Vegas, Maravilla real estate market, Las Vegas home values',
   authors: [

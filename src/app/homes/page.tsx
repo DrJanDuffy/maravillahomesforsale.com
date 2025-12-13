@@ -337,7 +337,7 @@ export default function HomesPage() {
             generateCollectionPageSchema({
               name: 'Homes for Sale in Maravilla, Las Vegas',
               description:
-                'Browse luxury homes for sale in Maravilla, Las Vegas. Find your dream home in one of Las Vegas&apos; most prestigious communities.',
+                'Browse quality homes for sale in Maravilla, Las Vegas. Find exceptional value and your dream home in one of Las Vegas&apos; best value communities.',
               url: `${baseUrl}/homes`,
             }),
             {

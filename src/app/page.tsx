@@ -324,7 +324,7 @@ export default function Home() {
             generateWebPageSchema({
               name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               description:
-                'Find your dream home in Maravilla, Las Vegas. Browse luxury homes, explore the neighborhood, and discover why Maravilla is one of Las Vegas&apos; most prestigious communities.',
+                'Find your dream home in Maravilla, Las Vegas. Browse quality homes with exceptional value, explore the neighborhood, and discover why Maravilla offers one of the best values in Las Vegas.',
               url: baseUrl,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },

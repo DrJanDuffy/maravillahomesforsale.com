@@ -57,8 +57,8 @@ export default function Hero() {
         </h1>
 
         <p className='text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
-          Discover luxury living in one of Las Vegas&apos; most prestigious
-          communities
+          Find exceptional value and quality homes in one of Las Vegas&apos; best
+          value communities
         </p>
 
         {/* Hero CTA Buttons */}

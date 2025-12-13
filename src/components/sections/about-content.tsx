@@ -14,10 +14,10 @@ export default function AboutContent() {
             <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
               Dr. Jan Duffy is a REALTOR® with{' '}
               <strong>Berkshire Hathaway HomeServices® Nevada</strong>, your
-              trusted partner in finding the perfect home in one of Las Vegas&apos;
-              most prestigious communities. With years of experience in the Maravilla
+              trusted partner in finding the perfect home with exceptional value in one of Las Vegas&apos;
+              best value communities. With years of experience in the Maravilla
               area and throughout Las Vegas and Henderson, she understands
-              what makes each neighborhood special.
+              what makes each neighborhood special and how to find the best value for your investment.
             </p>
             <p className='text-lg text-gray-600 mb-8 leading-relaxed'>
               Dr. Duffy is committed to providing exceptional service, expert
