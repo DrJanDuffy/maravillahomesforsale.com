@@ -9,10 +9,10 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className='text-2xl font-bold mb-4 text-white'>
-              Craig Ranch Vegas | Homes By Dr. Jan Duffy
+              Maravilla Homes for Sale | Homes By Dr. Jan Duffy
             </h3>
             <p className='text-gray-300 leading-relaxed'>
-              Your trusted partner in finding the perfect home in Craig Ranch.
+              Your trusted partner in finding the perfect home in Maravilla.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/home-valuation-craig-ranch'
+                  href='/home-valuation'
                   className='hover:text-white transition-colors duration-200 hover:underline'
                 >
                   Home Valuation
@@ -87,10 +87,10 @@ export default function Footer() {
               <li className='flex items-center'>
                 <span className='mr-2'>✉️</span>
                 <a
-                  href='mailto:DrDuffy@CraigRanchHomes.com'
+                  href='mailto:DrDuffy@MaravillaHomesForSale.com'
                   className='hover:text-white transition-colors'
                 >
-                  DrDuffy@CraigRanchHomes.com
+                  DrDuffy@MaravillaHomesForSale.com
                 </a>
               </li>
               <li className='flex items-center'>
@@ -227,7 +227,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-300 space-y-2 text-sm'>
           <p>
-            &copy; 2007-2025 Craig Ranch Vegas | Homes By Dr. Jan Duffy. All rights
+            &copy; 2007-2025 Maravilla Homes for Sale | Homes By Dr. Jan Duffy. All rights
             reserved.
           </p>
           <p>&copy; 2025 BHH Affiliates, LLC.</p>

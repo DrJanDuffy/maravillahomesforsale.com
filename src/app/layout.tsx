@@ -13,7 +13,7 @@ const googleSiteVerification =
   process.env.GOOGLE_SITE_VERIFICATION;
 
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
@@ -319,7 +319,7 @@ export default function RootLayout({
                 'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
               url: siteUrl,
               telephone: '+1-702-820-5408',
-              email: 'DrDuffy@CraigRanchHomes.com',
+              email: 'DrDuffy@MaravillaHomesForSale.com',
               image: ogImageUrl,
               logo: {
                 '@type': 'ImageObject',
@@ -387,7 +387,7 @@ export default function RootLayout({
                 },
                 {
                   '@type': 'ContactPoint',
-                  email: 'DrDuffy@CraigRanchHomes.com',
+                  email: 'DrDuffy@MaravillaHomesForSale.com',
                   contactType: 'customer service',
                   areaServed: 'US',
                   availableLanguage: ['English'],

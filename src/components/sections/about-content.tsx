@@ -9,14 +9,14 @@ export default function AboutContent() {
           {/* Content */}
           <div>
             <h2 className='text-4xl font-bold text-[#0A2540] mb-6'>
-              About Dr. Jan Duffy - Your Craig Ranch Real Estate Expert
+              About Dr. Jan Duffy - Your Maravilla Real Estate Expert
             </h2>
             <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
               Dr. Jan Duffy is a REALTOR® with{' '}
               <strong>Berkshire Hathaway HomeServices® Nevada</strong>, your
               trusted partner in finding the perfect home in one of Las Vegas&apos;
-              most prestigious communities. With years of experience in the Craig
-              Ranch area and throughout Las Vegas and Henderson, she understands
+              most prestigious communities. With years of experience in the Maravilla
+              area and throughout Las Vegas and Henderson, she understands
               what makes each neighborhood special.
             </p>
             <p className='text-lg text-gray-600 mb-8 leading-relaxed'>

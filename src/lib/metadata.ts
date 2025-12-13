@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 const businessAddress = {
@@ -19,25 +19,25 @@ const businessGeo = {
   longitude: -115.1475,
 } as const;
 
-const businessName = 'Craig Ranch Vegas | Homes By Dr. Jan Duffy';
+const businessName = 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy';
 const businessPhone = '+1-702-820-5408';
-const businessEmail = 'DrDuffy@CraigRanchHomes.com';
+const businessEmail = 'DrDuffy@MaravillaHomesForSale.com';
 
-export const CRAIG_RANCH_FAQS = [
+export const MARAVILLA_FAQS = [
   {
-    question: 'What makes Craig Ranch a desirable community?',
+    question: 'What makes Maravilla a desirable community?',
     answer:
-      "Craig Ranch is a master-planned community in North Las Vegas, winner of 'Best Planned Community' in 2020. It offers family-friendly homes, excellent schools, 170-acre Craig Ranch Regional Park, 5 miles of trails, and convenient access to shopping, dining, and major highways. The tight-knit community is united around the park, which hosts over 40 events per year.",
+      'Maravilla is a premier master-planned community offering exceptional living experiences. The community features beautiful homes, excellent schools, parks, and convenient access to shopping, dining, and major highways. Residents enjoy a tight-knit community atmosphere with numerous amenities and events throughout the year.',
   },
   {
-    question: 'What is the average price range for homes in Craig Ranch?',
+    question: 'What is the average price range for homes in Maravilla?',
     answer:
-      'Home prices in Craig Ranch range from $370,000 to $1.8 million, depending on the property type, size, and location. The average home value is $427,967, with an average price per square foot of $242. The median sale price is $415,000.',
+      'Home prices in Maravilla vary depending on property type, size, and location. We offer a range of homes to suit different budgets and lifestyles. Contact us for current market information and pricing details specific to your preferences.',
   },
   {
     question: 'How long do properties typically stay on the market?',
     answer:
-      "Properties in Craig Ranch sell after an average of 46 days on market, which is faster than the national average of 53 days. The area's strong demand, excellent schools, and desirable location contribute to steady sales.",
+      'Properties in Maravilla typically sell within a competitive timeframe, reflecting the area&apos;s strong demand and desirable location. Market conditions can vary, and we can provide current market data specific to the community.',
   },
   {
     question: 'What types of properties are available?',
@@ -56,13 +56,16 @@ export const CRAIG_RANCH_FAQS = [
   },
 ] as const;
 
+// Keep CRAIG_RANCH_FAQS for backward compatibility during migration
+export const CRAIG_RANCH_FAQS = MARAVILLA_FAQS;
+
 const siteConfig = {
   name: businessName,
   url: siteUrl,
   description:
-    'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada specializing in Craig Ranch properties.',
+    'Luxury real estate services in Maravilla, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada specializing in Maravilla properties.',
   ogImage: '/54-DJI_20250707171528_0828_D.jpg',
-  twitterHandle: '@craigranchvegas',
+  twitterHandle: '@maravillahomes',
   locale: 'en_US',
   type: 'website',
 };
@@ -155,7 +158,7 @@ export function generateLocalBusinessSchema() {
     '@id': `${siteUrl}#localbusiness`,
     name: businessName,
     description:
-      'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
+      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
     url: siteUrl,
     telephone: businessPhone,
     email: businessEmail,
@@ -216,7 +219,7 @@ export function generateOrganizationSchema() {
     },
     image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
     description:
-      'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
+      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,
@@ -278,7 +281,7 @@ export function generateRealEstateAgentSchema() {
     '@id': `${siteUrl}#realestateagent`,
     name: 'Dr. Jan Duffy',
     description:
-      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Craig Ranch, Las Vegas, North Las Vegas, and Henderson',
+      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson',
     jobTitle: 'REALTOR®',
     worksFor: {
       '@type': 'Organization',
@@ -318,7 +321,7 @@ export function generateRealEstateAgentSchema() {
     ],
     serviceArea: {
       '@type': 'Place',
-      name: 'Craig Ranch',
+      name: 'Maravilla',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Las Vegas',
@@ -466,15 +469,15 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Craig Ranch Vegas',
+    name: 'Maravilla Homes for Sale',
     alternateName: [
-      'Craig Ranch Homes',
-      'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-      'craigranchhomes.com',
+      'Maravilla Homes',
+      'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+      'maravillahomesforsale.com',
     ],
     url: siteUrl,
     description:
-      'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® specializing in Craig Ranch properties.',
+      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® specializing in Maravilla properties.',
     publisher: {
       '@type': 'Organization',
       '@id': `${siteUrl}#organization`,

@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    short_name: 'Craig Ranch Vegas',
+    name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    short_name: 'Maravilla Homes',
     description:
-      'Luxury real estate services in Craig Ranch, Las Vegas, Nevada',
+      'Luxury real estate services in Maravilla, Las Vegas, Nevada',
     start_url: '/',
     display: 'standalone',
     background_color: '#0A2540',

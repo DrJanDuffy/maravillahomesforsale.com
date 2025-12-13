@@ -13,11 +13,11 @@ export async function GET(request: NextRequest) {
   try {
     // Get parameters from URL using NextRequest's nextUrl
     const title =
-      request.nextUrl.searchParams.get('title') || 'Craig Ranch Vegas | Homes By Dr. Jan Duffy';
+      request.nextUrl.searchParams.get('title') || 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy';
     const subtitle = request.nextUrl.searchParams.get('subtitle') || 'Luxury Real Estate in Las Vegas';
     const price = request.nextUrl.searchParams.get('price');
     const address = request.nextUrl.searchParams.get('address');
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com';
     const imageUrl = request.nextUrl.searchParams.get('image') || 
       `${baseUrl}/54-DJI_20250707171528_0828_D.jpg`;
 

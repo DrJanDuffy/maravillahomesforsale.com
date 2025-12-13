@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import PageLayout from '@/components/layout/page-layout';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import NorthLasVegasNeighborhoods from '@/components/sections/north-las-vegas-neighborhoods';
-import CraigRanchListings from '@/components/sections/craig-ranch-listings';
-import CraigRanchPropertySearch from '@/components/sections/craig-ranch-property-search';
+import MaravillaListings from '@/components/sections/craig-ranch-listings';
+import MaravillaPropertySearch from '@/components/sections/craig-ranch-property-search';
 import GoogleMap from '@/components/sections/google-map';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
@@ -50,18 +50,18 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Static generation with ISR - revalidate weekly for community updates
 export const revalidate = 604800; // 1 week
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Homes & Real Estate | North Las Vegas Community Guide',
+  title: 'Maravilla Homes & Real Estate | Las Vegas Community Guide',
   description:
-    'Craig Ranch in North Las Vegas features 13 floor plans by Century Communities (1,519-2,638 sq ft, up to 5 bedrooms). Award-winning community with 170-acre regional park, excellent schools, 5 miles of trails, and family-friendly amenities. Average home value: $428K. Call (702) 820-5408.',
+    'Maravilla is a premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient amenities. Discover why families choose Maravilla. Call (702) 820-5408.',
   keywords:
-    'Craig Ranch, North Las Vegas homes, Century Communities, Craig Ranch Regional Park, 89031 zip code, North Las Vegas real estate, family neighborhood, gated community, Craig Ranch schools, Craig Ranch amenities',
+    'Maravilla, Las Vegas homes, luxury homes, Las Vegas real estate, family neighborhood, master-planned community, Maravilla schools, Maravilla amenities, Las Vegas properties',
   path: '/neighborhood',
 });
 
@@ -71,7 +71,7 @@ export default function NeighborhoodPage() {
       icon: School,
       title: 'Top-Rated Schools',
       description:
-        'Excellent public and private schools serving the Craig Ranch community',
+        'Excellent public and private schools serving the Maravilla community',
       color: 'text-[#3A8DDE]',
       bgColor: 'bg-[#3A8DDE]/10',
     },
@@ -87,7 +87,7 @@ export default function NeighborhoodPage() {
       icon: TreePine,
       title: 'Parks & Trails',
       description:
-        '7 community parks, 170-acre Craig Ranch Regional Park, and 5 miles of interconnecting trails with exercise stations',
+        'Community parks, walking trails, and recreational facilities perfect for families',
       color: 'text-[#0A2540]',
       bgColor: 'bg-[#0A2540]/10',
     },
@@ -120,14 +120,11 @@ export default function NeighborhoodPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Welcome to Craig Ranch
+            Welcome to Maravilla
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             A tight-knit, vibrant master-planned community in North Las Vegas.
-            Centrally located near shopping and dining, Nellis Air Force Base,
-            and highways. Winner of &quot;Best Planned Community&quot; in 2020. Home to
-            5 miles of trails, 7 parks, and the 170-acre Craig Ranch Regional
-            Park.
+            A premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways.
           </p>
         </div>
       </div>
@@ -137,16 +134,16 @@ export default function NeighborhoodPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              View All Homes for Sale in Craig Ranch
+              View All Homes for Sale in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Explore all available properties in Craig Ranch, North Las Vegas
+              Explore all available properties in Maravilla, Las Vegas
             </p>
           </div>
 
           <div className='bg-white rounded-xl p-8 shadow-lg'>
             <Suspense fallback={<ListingsSkeleton />}>
-              <CraigRanchListings
+              <MaravillaListings
                 priceMin='400000'
                 priceMax='500000'
                 showMap={false}
@@ -160,7 +157,7 @@ export default function NeighborhoodPage() {
                 className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
               >
                 <Link href='#search-listings'>
-                  Search All Craig Ranch Homes
+                  Search All Maravilla Homes
                 </Link>
               </Button>
             </div>
@@ -173,40 +170,37 @@ export default function NeighborhoodPage() {
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-16'>
             <div>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-                About Craig Ranch
+                About Maravilla
               </h2>
               <div className='space-y-4 text-gray-600 leading-relaxed'>
                 <p>
-                  In the heart of the Mojave Desert, away from the neon glow of
-                  the Las Vegas Strip, lies Craig Ranch. Part of North Las Vegas,
-                  Craig Ranch is a master-planned community centrally located
-                  near shopping and dining, the Nellis Air Force Base and
-                  highways. The area has had quite a bit of expansion; new
-                  hospitals, new parks and new homes, all making it a super
-                  convenient place to live.
+                  Maravilla is a premier master-planned community in Las Vegas,
+                  offering exceptional living experiences for families and
+                  individuals seeking luxury homes in a beautiful setting. The
+                  community is strategically located with convenient access to
+                  shopping, dining, entertainment, and major highways, making it
+                  an ideal place to live.
                 </p>
                 <p>
-                  Winning &quot;Best Planned Community&quot; in 2020 in the Las Vegas
-                  Review-Journal&apos;s Best of Las Vegas annual contest, Craig
-                  Ranch&apos;s appeal extends beyond its strategic location and luxury
-                  modern homes. It&apos;s also home to 5 miles of trails, is a short
-                  drive to Lake Las Vegas and the Frenchman Mountains and its
-                  tight-knit community is united around Craig Ranch Regional
-                  Park, the beating heart of activity and celebrations for the
-                  area.
+                  Maravilla&apos;s appeal extends beyond its strategic location and
+                  luxury modern homes. The community features beautiful parks,
+                  recreational facilities, and a tight-knit atmosphere that
+                  brings residents together. Whether you&apos;re looking for a
+                  family-friendly environment or a peaceful retreat, Maravilla
+                  offers the perfect balance of convenience and lifestyle.
                 </p>
                 <p>
-                  Developed by homebuilder Century Communities, Craig Ranch
-                  consists of six subdivisions. Most homes were built in the
-                  early 2000s and are priced between $370,000 and $1.8 million.
-                  The gated neighborhood offers primarily Spanish and
-                  Mediterranean-style single-family homes, along with condos.
+                  The community offers a diverse selection of homes including
+                  single-family residences and luxury estates. Properties are
+                  designed with attention to detail and feature modern amenities
+                  and quality construction that defines luxury living in Las
+                  Vegas.
                 </p>
               </div>
             </div>
             <div className='bg-[#F7F9FC] rounded-xl p-8'>
               <h3 className='text-2xl font-bold text-[#0A2540] mb-6'>
-                Craig Ranch Community Stats
+                Maravilla Community Stats
               </h3>
               <div className='grid grid-cols-2 gap-6'>
                 {stats.map((stat, index) => {
@@ -230,7 +224,7 @@ export default function NeighborhoodPage() {
           {/* Real Estate Stats */}
           <div className='mb-16 bg-gradient-to-r from-[#F7F9FC] to-white rounded-xl p-8 border border-gray-200'>
             <h3 className='text-2xl font-bold text-[#0A2540] mb-6 text-center'>
-              Craig Ranch Real Estate Stats
+                Maravilla Real Estate Stats
             </h3>
             <div className='grid md:grid-cols-4 gap-6'>
               {realEstateStats.map((stat, index) => {
@@ -253,7 +247,7 @@ export default function NeighborhoodPage() {
           {/* Home Specifications */}
           <div className='mb-16 bg-gradient-to-r from-[#F7F9FC] to-white rounded-xl p-8 border border-gray-200'>
             <h3 className='text-2xl font-bold text-[#0A2540] mb-6 text-center'>
-              Craig Ranch Home Specifications
+                Maravilla Home Specifications
             </h3>
             <div className='grid md:grid-cols-4 gap-6'>
               <div className='text-center'>
@@ -287,7 +281,7 @@ export default function NeighborhoodPage() {
           </div>
 
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            What Makes Craig Ranch Special
+            What Makes Maravilla Special
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {highlights.map((highlight, index) => {
@@ -312,7 +306,7 @@ export default function NeighborhoodPage() {
         </div>
       </section>
 
-      {/* Craig Ranch Regional Park Section */}
+      {/* Maravilla Parks & Amenities Section */}
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
@@ -323,14 +317,10 @@ export default function NeighborhoodPage() {
               Craig Ranch Regional Park
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              A true asset to the community, Craig Ranch Regional Park measures
-              170 acres in size. The community&apos;s crown jewel, within walking
-              distance of residents&apos; front doors. The expansive space offers
-              three dog parks, a 65,000-square-foot skate park, an amphitheater
-              with seating for over 10,000, two basketball courts, a community
-              garden and plenty of open green space. The park hosts over 40
-              events a year, including concerts, 5K runs, movie nights, and
-              festivals.
+              beautiful outdoor spaces for recreation, relaxation, and community
+              events. Residents enjoy access to parks with walking trails,
+              recreational facilities, and gathering areas perfect for families
+              and outdoor enthusiasts.
             </p>
           </div>
 
@@ -432,30 +422,30 @@ export default function NeighborhoodPage() {
               <MapPin className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Location
+                Maravilla Location
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Located in North Las Vegas, Craig Ranch is conveniently situated near
-              the VA Hospital, Nellis Air Force Base, the 215 Beltway, and I-15.
-              The community is in the 89031 zip code with easy access to schools,
+              Located in Las Vegas, Maravilla is conveniently situated with easy
+              access to major highways, shopping centers, schools, and
+              entertainment. The community offers excellent connectivity to
               parks, and shopping.
             </p>
           </div>
           <div className='relative'>
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
-                address='Craig Ranch, North Las Vegas, NV 89031'
-                latitude={36.2831}
-                longitude={-115.1331}
+                address='Maravilla, Las Vegas, NV'
+                latitude={36.1699}
+                longitude={-115.1398}
                 zoom={13}
                 height='500px'
-                title='Craig Ranch Community Location'
+                title='Maravilla Community Location'
               />
             </Suspense>
           </div>
           <div className='mt-6 text-center'>
             <Link
-              href='https://www.google.com/maps/search/?api=1&query=Craig+Ranch+North+Las+Vegas+NV+89031'
+              href='https://www.google.com/maps/search/?api=1&query=Maravilla+Las+Vegas+NV'
               target='_blank'
               rel='noopener noreferrer'
               prefetch={false}
@@ -476,12 +466,12 @@ export default function NeighborhoodPage() {
               <School className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Schools
+                Maravilla Schools
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Craig Ranch public and private schools are located within the
-              Clark County School District. Below are the nearby schools serving
-              the Craig Ranch community:
+              Maravilla is served by excellent public and private schools within
+              the Clark County School District. Below are the nearby schools
+              serving the Maravilla community:
             </p>
           </div>
 
@@ -542,7 +532,7 @@ export default function NeighborhoodPage() {
         </div>
       </section>
 
-      {/* Search Craig Ranch Homes Section */}
+      {/* Search Maravilla Homes Section */}
       <section id='search-listings' className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
@@ -550,11 +540,11 @@ export default function NeighborhoodPage() {
               <Search className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Search Craig Ranch Homes for Sale
+              Search Maravilla Homes for Sale
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Browse available properties in Craig Ranch, North Las Vegas. Use
-              the filters below to find your perfect home.
+              Browse available properties in Maravilla, Las Vegas. Use the
+              filters below to find your perfect home.
             </p>
           </div>
 
@@ -588,20 +578,20 @@ export default function NeighborhoodPage() {
             </div>
           </div>
 
-          {/* RealScout Listings Widget - Craig Ranch Filtered */}
+          {/* RealScout Listings Widget - Maravilla Filtered */}
           <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg mb-8'>
             <div className='mb-6'>
               <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-                Current Craig Ranch Listings
+                Current Maravilla Listings
               </h3>
               <p className='text-gray-600'>
-                Properties in Craig Ranch, North Las Vegas (89031) - Price range:
-                $370,000 - $1,800,000
+                Properties in Maravilla, Las Vegas - Browse available homes
+                across various price ranges
               </p>
             </div>
 
             <Suspense fallback={<ListingsSkeleton />}>
-              <CraigRanchListings
+              <MaravillaListings
                 priceMin='370000'
                 priceMax='1800000'
                 showMap={true}
@@ -628,11 +618,11 @@ export default function NeighborhoodPage() {
           <div className='bg-white rounded-xl p-8 shadow-lg border border-gray-200'>
             <div className='mb-6'>
               <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-                Advanced Craig Ranch Property Search
+                Advanced Maravilla Property Search
               </h3>
               <p className='text-gray-600'>
                 Use our advanced search tool to find properties matching your
-                specific criteria in Craig Ranch and surrounding areas.
+                specific criteria in Maravilla and surrounding areas.
               </p>
             </div>
 
@@ -648,7 +638,7 @@ export default function NeighborhoodPage() {
                 </div>
               }
             >
-              <CraigRanchPropertySearch />
+              <MaravillaPropertySearch />
             </Suspense>
           </div>
         </div>
@@ -662,10 +652,10 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Ready to Call Craig Ranch Home?
+            Ready to Call Maravilla Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
-            Discover why so many families choose Craig Ranch. Browse available
+            Discover why so many families choose Maravilla. Browse available
             properties or contact us to learn more about this exceptional
             community.
           </p>
@@ -689,21 +679,20 @@ export default function NeighborhoodPage() {
 
       {/* Structured Data for Neighborhood/Community */}
       <Script
-        id='craig-ranch-schema'
+        id='maravilla-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             {
             '@context': 'https://schema.org',
             '@type': 'ResidentialComplex',
-            name: 'Craig Ranch',
+            name: 'Maravilla',
             description:
-              'A well-designed master-planned gated community in North Las Vegas, Nevada featuring 13 floor plans by Century Communities, ranging from 1,519 to 2,638 square feet.',
+              'A premier master-planned community in Las Vegas, Nevada featuring luxury homes, excellent schools, parks, and convenient amenities.',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'North Las Vegas',
+              addressLocality: 'Las Vegas',
               addressRegion: 'NV',
-              postalCode: '89031',
               addressCountry: 'US',
             },
             geo: {
@@ -752,24 +741,24 @@ export default function NeighborhoodPage() {
             nearbyAttraction: [
               {
                 '@type': 'TouristAttraction',
-                name: 'Craig Ranch Regional Park',
+                name: 'Maravilla Parks',
                 description:
-                  '170-acre park featuring amphitheater, skate park, sports fields, dog parks, and community gardens',
+                  'Community parks featuring recreational facilities, walking trails, and gathering areas for residents',
               },
             ],
             },
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
-              { name: 'Craig Ranch Neighborhood', url: `${baseUrl}/neighborhood` },
+              { name: 'Maravilla Neighborhood', url: `${baseUrl}/neighborhood` },
             ]),
             generateWebPageSchema({
-              name: 'Craig Ranch Homes & Real Estate | North Las Vegas Community Guide',
+              name: 'Maravilla Homes & Real Estate | Las Vegas Community Guide',
               description:
-                'Craig Ranch homes for sale in North Las Vegas features 13 floor plans by Century Communities. Sizes from 1,519 to 2,638-square feet, up to 5 bedrooms, 3 bathrooms and 2 bay garages.',
+                'Maravilla homes for sale in Las Vegas. Discover luxury homes in this premier master-planned community with excellent schools, parks, and convenient amenities.',
               url: `${baseUrl}/neighborhood`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
-                { name: 'Craig Ranch Neighborhood', url: `${baseUrl}/neighborhood` },
+                { name: 'Maravilla Neighborhood', url: `${baseUrl}/neighborhood` },
               ],
             }),
           ]),

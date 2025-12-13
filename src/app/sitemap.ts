@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = (
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
   ).replace(/\/$/, '');
 
   // Cache this metadata route so Google doesn't see "changes"
@@ -56,44 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/craig-ranch-realtor`,
+      url: `${baseUrl}/home-valuation`,
       changeFrequency: 'weekly',
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/sell-craig-ranch`,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/home-valuation-craig-ranch`,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-market-report`,
-      changeFrequency: 'daily',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-schools`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-regional-park`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/craig-ranch-hoa`,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/new-construction-craig-ranch`,
-      changeFrequency: 'weekly',
-      priority: 0.7,
     },
   ];
 }

@@ -36,18 +36,18 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Incremental Static Regeneration - revalidate every 30 minutes for fresh listings
 export const revalidate = 1800; // 30 minutes
 
 export const metadata = genMetadata({
-  title: 'Homes for Sale in Craig Ranch, Las Vegas | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Homes for Sale in Maravilla, Las Vegas | Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    "Browse luxury homes for sale in Craig Ranch, Las Vegas. View current listings from $370K to $1.8M with detailed photos, virtual tours, and market data. Average home value: $428K. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.",
+    'Browse luxury homes for sale in Maravilla, Las Vegas. View current listings with detailed photos, virtual tours, and market data. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.',
   keywords:
-    'homes for sale Craig Ranch, Las Vegas homes, luxury homes for sale, Craig Ranch real estate, North Las Vegas homes, property listings, real estate agent Las Vegas',
+    'homes for sale Maravilla, Las Vegas homes, luxury homes for sale, Maravilla real estate, Las Vegas homes, property listings, real estate agent Las Vegas',
   path: '/homes',
 });
 
@@ -57,10 +57,10 @@ export default function HomesPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Homes for Sale in Craig Ranch
+            Homes for Sale in Maravilla
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            Discover homes for sale in the Craig Ranch community in North Las
+            Discover homes for sale in the Maravilla community in Las
             Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada, to find your perfect property. Prices range
             from $370,000 to $1.8 million, with 206 homes currently available.
@@ -79,7 +79,7 @@ export default function HomesPage() {
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-12'>
             <div>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Working with Dr. Jan Duffy for Craig Ranch Homes
+                Working with Dr. Jan Duffy for Maravilla Homes
               </h2>
               <p className='text-lg text-gray-600 mb-6'>
                 Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices®
@@ -153,7 +153,7 @@ export default function HomesPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Why Buy in Craig Ranch?
+            Why Buy in Maravilla?
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Card className='border-0 shadow-lg'>
@@ -229,11 +229,11 @@ export default function HomesPage() {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-                Homes for Sale in Craig Ranch
+                Homes for Sale in Maravilla
               </h2>
               <div className='space-y-4 text-gray-700'>
                 <p>
-                  <strong>Community Information:</strong> Craig Ranch is a
+                  <strong>Community Information:</strong> Maravilla is a
                   master-planned community located in North Las Vegas, near the
                   VA Hospital and major access routes like the 215-beltway and
                   I-15.
@@ -260,12 +260,12 @@ export default function HomesPage() {
 
             <div>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-                Craig Ranch Community Amenities
+                Maravilla Community Amenities
               </h2>
               <div className='space-y-4'>
                 <p className='text-gray-700'>
                   The community features multiple neighborhoods, several parks, and
-                  is in close proximity to the 170-acre Craig Ranch Regional Park,
+                  is in close proximity to beautiful parks and recreational facilities,
                   which includes:
                 </p>
                 <ul className='space-y-2 text-gray-700'>
@@ -303,7 +303,7 @@ export default function HomesPage() {
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Dr. Jan Duffy can provide you with the most current and specific
-            listings within the Craig Ranch community that match your
+            listings within the Maravilla community that match your
             requirements. Contact her directly or utilize her online resources.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -335,16 +335,16 @@ export default function HomesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateCollectionPageSchema({
-              name: 'Homes for Sale in Craig Ranch, Las Vegas',
+              name: 'Homes for Sale in Maravilla, Las Vegas',
               description:
-                "Browse luxury homes for sale in Craig Ranch, Las Vegas. Find your dream home in one of Las Vegas' most prestigious communities.",
+                'Browse luxury homes for sale in Maravilla, Las Vegas. Find your dream home in one of Las Vegas&apos; most prestigious communities.',
               url: `${baseUrl}/homes`,
             }),
             {
               '@context': 'https://schema.org',
               '@type': 'ItemList',
-              name: 'Craig Ranch Homes for Sale',
-              description: 'Luxury homes for sale in Craig Ranch, Las Vegas',
+              name: 'Maravilla Homes for Sale',
+              description: 'Luxury homes for sale in Maravilla, Las Vegas',
               url: `${baseUrl}/homes`,
               numberOfItems: 206,
               itemListElement: {
@@ -353,7 +353,7 @@ export default function HomesPage() {
                 item: {
                   '@type': 'Product',
                   '@id': `${baseUrl}/homes`,
-                  name: 'Craig Ranch Homes',
+                  name: 'Maravilla Homes',
                   description: 'Luxury homes in Craig Ranch ranging from $370,000 to $1.8 million',
                   category: 'Real Estate',
                   offers: {

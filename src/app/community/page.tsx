@@ -29,7 +29,7 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Static generation with ISR - revalidate weekly for community updates
@@ -37,11 +37,11 @@ export const revalidate = 604800; // 1 week
 
 export const metadata = genMetadata({
   title:
-    'Craig Ranch Community Guide: Schools, Amenities & Lifestyle | Las Vegas',
+    'Maravilla Community Guide: Schools, Amenities & Lifestyle | Las Vegas',
   description:
-    'Discover Craig Ranch community: 170-acre regional park, excellent schools, 5 miles of trails, shopping centers, and family-friendly amenities. Award-winning master-planned community in North Las Vegas. Learn about schools, parks, and lifestyle. Call (702) 820-5408.',
+    'Discover Maravilla community: excellent schools, parks, shopping centers, and family-friendly amenities. Premier master-planned community in Las Vegas. Learn about schools, parks, and lifestyle. Call (702) 820-5408.',
   keywords:
-    'Craig Ranch community, Las Vegas schools, Craig Ranch amenities, community guide, Las Vegas lifestyle, North Las Vegas community, Craig Ranch parks, Craig Ranch shopping',
+    'Maravilla community, Las Vegas schools, Maravilla amenities, community guide, Las Vegas lifestyle, Las Vegas community, Maravilla parks, Maravilla shopping',
   path: '/community',
 });
 
@@ -72,7 +72,7 @@ export default function CommunityPage() {
 
   const amenities = [
     {
-      name: 'Craig Ranch Regional Park',
+      name: 'Maravilla Parks',
       icon: TreePine,
       description: '170-acre park with amphitheater (10,000+ seats), 65,000 sq ft skate park, 3 dog parks, sports fields, and community gardens',
     },
@@ -129,13 +129,13 @@ export default function CommunityPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Craig Ranch Community Guide
+            Maravilla Community Guide
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            A tight-knit, vibrant master-planned community in North Las Vegas.
-            Winner of &quot;Best Planned Community&quot; in 2020. Home to 5 miles of
-            trails, 7 parks, and the 170-acre Craig Ranch Regional Park. Centrally
-            located near shopping, dining, Nellis Air Force Base, and highways.
+            A premier master-planned community in Las Vegas offering luxury
+            homes, excellent schools, beautiful parks, and convenient access to
+            shopping, dining, and major highways. Experience the perfect blend of
+            lifestyle and convenience.
           </p>
         </div>
       </div>
@@ -148,10 +148,10 @@ export default function CommunityPage() {
               <School className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Top-Rated Schools in Craig Ranch
+              Top-Rated Schools in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Craig Ranch is served by excellent public and private schools,
+              Maravilla is served by excellent public and private schools,
               making it an ideal location for families with children.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function CommunityPage() {
               Community Amenities
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Everything you need is just minutes away in Craig Ranch
+              Everything you need is just minutes away in Maravilla
             </p>
           </div>
 
@@ -237,7 +237,8 @@ export default function CommunityPage() {
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Most shopping and dining options are along West Craig Road, now
-              known as &quot;Restaurant Row&quot; in North Las Vegas, with more than 25
+              with a variety of dining options and shopping centers conveniently
+              located nearby. The area features more than 25
               restaurants opening in just the last two years.
             </p>
           </div>
@@ -297,10 +298,10 @@ export default function CommunityPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Lifestyle & Community in Craig Ranch
+              Lifestyle & Community in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Experience the lifestyle that makes Craig Ranch special
+              Experience the lifestyle that makes Maravilla special
             </p>
           </div>
 
@@ -330,10 +331,10 @@ export default function CommunityPage() {
       <section className='py-16 bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold mb-4'>
-            Ready to Join the Craig Ranch Community?
+            Ready to Join the Maravilla Community?
           </h2>
           <p className='text-xl text-gray-200 mb-8'>
-            Discover why so many families choose to call Craig Ranch home.
+            Discover why so many families choose to call Maravilla home.
             Browse available properties or contact us for a personalized
             community tour.
           </p>
@@ -364,9 +365,9 @@ export default function CommunityPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Craig Ranch Community Guide: Schools, Amenities & Lifestyle',
+              name: 'Maravilla Community Guide: Schools, Amenities & Lifestyle',
               description:
-                'Discover schools, amenities, shopping, dining, and lifestyle in Craig Ranch, Las Vegas. Your complete guide to community living.',
+                'Discover schools, amenities, shopping, dining, and lifestyle in Maravilla, Las Vegas. Your complete guide to community living.',
               url: `${baseUrl}/community`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
@@ -376,7 +377,7 @@ export default function CommunityPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'Place',
-              name: 'Craig Ranch Community',
+              name: 'Maravilla Community',
               description:
                 'Master-planned community in North Las Vegas with excellent schools, parks, shopping, and dining',
               address: {

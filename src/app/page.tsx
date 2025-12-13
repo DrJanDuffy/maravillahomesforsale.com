@@ -18,14 +18,14 @@ import Link from 'next/link';
 import { ArrowRight, Home as HomeIcon, MapPin, TrendingUp } from 'lucide-react';
 import {
   generateMetadata as genMetadata,
-  CRAIG_RANCH_FAQS,
+  MARAVILLA_FAQS,
   generateFAQPageSchema,
   generateWebPageSchema,
   generateRealEstateAgentSchema,
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Dynamically import heavy components with loading states
@@ -77,11 +77,11 @@ const DynamicBlogPosts = dynamic(
 export const revalidate = 3600; // 1 hour
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    "Find your dream home in Craig Ranch, Las Vegas. Browse luxury homes from $370K to $1.8M, explore the award-winning community with 170-acre park, excellent schools, and 5 miles of trails. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.",
+    'Find your dream home in Maravilla, Las Vegas. Browse luxury homes and explore this premier community with excellent schools, parks, and convenient amenities. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.',
   keywords:
-    'Craig Ranch, Las Vegas real estate, luxury homes, Las Vegas homes for sale, North Las Vegas, Nevada real estate, Craig Ranch community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
+    'Maravilla, Las Vegas real estate, luxury homes, Las Vegas homes for sale, Nevada real estate, Maravilla community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
   path: '/',
 });
 
@@ -114,7 +114,7 @@ export default function Home() {
                 >
                   <MapPin className='h-8 w-8 text-[#16B286]' />
                   <span className='text-lg font-semibold'>
-                    Explore Craig Ranch
+                    Explore Maravilla
                   </span>
                   <span className='text-sm text-gray-600'>
                     Learn about the neighborhood
@@ -283,7 +283,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/craig-ranch-hoa'
+                    href='/maravilla-hoa'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     HOA Information
@@ -312,16 +312,16 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
               description:
-                "Find your dream home in Craig Ranch, Las Vegas. Browse luxury homes, explore the neighborhood, and discover why Craig Ranch is one of Las Vegas' most prestigious communities.",
+                'Find your dream home in Maravilla, Las Vegas. Browse luxury homes, explore the neighborhood, and discover why Maravilla is one of Las Vegas&apos; most prestigious communities.',
               url: baseUrl,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
               ],
             }),
             generateRealEstateAgentSchema(),
-            generateFAQPageSchema(CRAIG_RANCH_FAQS),
+            generateFAQPageSchema(MARAVILLA_FAQS),
           ]),
         }}
       />

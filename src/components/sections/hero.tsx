@@ -18,7 +18,7 @@ export default function Hero() {
         <div className='absolute inset-0 w-full h-full'>
           <Image
             src={backgroundImage}
-            alt='Craig Ranch neighborhood aerial view'
+            alt='Maravilla neighborhood aerial view'
             fill
             priority
             fetchPriority='high'
@@ -52,7 +52,7 @@ export default function Hero() {
             Find Your Dream Home in
           </span>
           <span className='block mt-2 animate-fade-in-delay hero-green-text'>
-            Craig Ranch
+            Maravilla
           </span>
         </h1>
 

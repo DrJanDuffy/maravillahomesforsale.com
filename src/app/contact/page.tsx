@@ -25,7 +25,7 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Static generation - contact info rarely changes
@@ -33,11 +33,11 @@ export const dynamic = 'force-static';
 export const revalidate = false; // Static page, no revalidation needed
 
 export const metadata = genMetadata({
-  title: 'Contact Dr. Jan Duffy - Craig Ranch Vegas | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
+  title: 'Contact Dr. Jan Duffy - Maravilla Homes for Sale | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
   description:
-    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Craig Ranch, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@CraigRanchHomes.com.',
+    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@MaravillaHomesForSale.com.',
   keywords:
-    'contact real estate agent, Dr. Jan Duffy, Craig Ranch real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
+    'contact real estate agent, Dr. Jan Duffy, Maravilla real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
   path: '/contact',
 });
 
@@ -47,12 +47,12 @@ export default function ContactPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Contact Dr. Jan Duffy for Craig Ranch Homes
+            Contact Dr. Jan Duffy for Maravilla Homes
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada. Get expert, data-driven advice and personalized
-            consultations for homes in Craig Ranch and throughout Las Vegas.
+            consultations for homes in Maravilla and throughout Las Vegas.
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-2'>
-                Send Us a Message About Craig Ranch
+                Send Us a Message About Maravilla
               </h2>
               <p className='text-gray-600 mb-6'>
                 Fill out the form below and Dr. Jan Duffy will get back to you
@@ -105,10 +105,10 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href='mailto:DrDuffy@CraigRanchHomes.com'
+                    href='mailto:DrDuffy@MaravillaHomesForSale.com'
                     className='text-lg font-semibold text-[#0A2540] hover:text-[#16B286] transition-colors'
                   >
-                    DrDuffy@CraigRanchHomes.com
+                    DrDuffy@MaravillaHomesForSale.com
                   </a>
                   <p className='text-gray-600 text-sm mt-1'>
                     We typically respond within 24 hours
@@ -154,7 +154,7 @@ export default function ContactPage() {
                   </p>
                   <p className='text-gray-700'>
                     She offers expert, data-driven advice and personalized
-                    consultations to help you find the perfect home in Craig Ranch
+                    consultations to help you find the perfect home in Maravilla
                     and other premier communities.
                   </p>
                   <div className='pt-2'>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                 longitude={-115.1475}
                 zoom={14}
                 height='500px'
-                title='Craig Ranch Vegas | Homes By Dr. Jan Duffy Office Location'
+                title='Maravilla Homes for Sale | Homes By Dr. Jan Duffy Office Location'
               />
             </Suspense>
           </div>
@@ -264,7 +264,7 @@ export default function ContactPage() {
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Browse our available properties or schedule a consultation to
-            discuss your real estate needs in Craig Ranch.
+            discuss your real estate needs in Maravilla.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
@@ -296,9 +296,9 @@ export default function ContactPage() {
           __html: JSON.stringify([
             generateLocalBusinessSchema(),
             generateWebPageSchema({
-              name: 'Contact Dr. Jan Duffy - Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Contact Dr. Jan Duffy - Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
               description:
-                'Get in touch with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Contact our expert real estate team for buying, selling, or investing in Craig Ranch, Las Vegas.',
+                'Get in touch with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Contact our expert real estate team for buying, selling, or investing in Maravilla, Las Vegas.',
               url: `${baseUrl}/contact`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },

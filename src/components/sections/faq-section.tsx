@@ -6,10 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { CRAIG_RANCH_FAQS } from '@/lib/metadata';
+import { MARAVILLA_FAQS } from '@/lib/metadata';
 
 export default function FAQSection() {
-  const faqs = CRAIG_RANCH_FAQS;
+  const faqs = MARAVILLA_FAQS;
 
   return (
     <section className='py-20 bg-[#F7F9FC]'>
@@ -17,11 +17,10 @@ export default function FAQSection() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Frequently Asked Questions About Craig Ranch
+            Frequently Asked Questions About Maravilla
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Find answers to common questions about buying and selling in Craig
-            Ranch
+            Find answers to common questions about buying and selling in Maravilla
           </p>
         </div>
 
