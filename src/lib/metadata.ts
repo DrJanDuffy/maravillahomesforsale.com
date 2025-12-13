@@ -20,7 +20,7 @@ const businessGeo = {
 } as const;
 
 const businessName = 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy';
-const businessPhone = '+1-702-820-5408';
+const businessPhone = '+1-702-500-1953';
 const businessEmail = 'DrDuffy@MaravillaHomesForSale.com';
 
 export const MARAVILLA_FAQS = [

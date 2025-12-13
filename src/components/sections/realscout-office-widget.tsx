@@ -48,9 +48,9 @@ function RealScoutOfficeWidgetContent({
         if (typeof customElements !== 'undefined' && customElements.get('realscout-office-listings')) {
           const widget = document.createElement('realscout-office-listings');
           widget.setAttribute('agent-encoded-id', agentEncodedId);
-          widget.setAttribute('sort-order', 'STATUS_AND_SIGNIFICANT_CHANGE');
-          widget.setAttribute('listing-status', 'For Sale');
-          widget.setAttribute('property-types', 'SFR,MF,TC');
+          widget.setAttribute('sort-order', 'NEWEST');
+          widget.setAttribute('listing-status', ',For Sale');
+          widget.setAttribute('property-types', ',SFR,MOBILE');
           if (priceMin) {
             widget.setAttribute('price-min', priceMin);
           }
