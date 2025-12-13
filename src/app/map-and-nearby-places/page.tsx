@@ -2,6 +2,7 @@ import PageLayout from '@/components/layout/page-layout';
 import GoogleMap from '@/components/sections/google-map';
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,

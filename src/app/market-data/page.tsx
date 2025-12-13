@@ -1,5 +1,6 @@
 import PageLayout from '@/components/layout/page-layout';
 import MarketDataSection from '@/components/sections/market-data';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
