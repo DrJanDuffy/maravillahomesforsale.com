@@ -294,13 +294,9 @@ export default function RootLayout({
                 name: 'Berkshire Hathaway HomeServices Nevada',
               },
               sameAs: [
-                'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
-                'https://www.instagram.com/drjanduffy',
+                'https://www.facebook.com/maravillahomesforsale',
                 'https://www.youtube.com/@DrDuffy',
-                'https://twitter.com/drjanduffy',
-                'https://www.linkedin.com/in/lvrmembers',
-                'https://www.tiktok.com/@dr.janduffy',
-                'https://www.pinterest.com/bhhsluxury',
+                'https://www.linkedin.com/company/maravilla-homes-for-sale/',
               ],
             }),
           }}
