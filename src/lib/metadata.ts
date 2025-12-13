@@ -64,7 +64,7 @@ const siteConfig = {
   name: businessName,
   url: siteUrl,
   description:
-    'Luxury real estate services in Maravilla, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada specializing in Maravilla properties.',
+    'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
   ogImage: '/54-DJI_20250707171528_0828_D.jpg',
   twitterHandle: '@maravillahomes',
   locale: 'en_US',
@@ -159,7 +159,7 @@ export function generateLocalBusinessSchema() {
     '@id': `${siteUrl}#localbusiness`,
     name: businessName,
     description:
-      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
+      'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
     url: siteUrl,
     telephone: businessPhone,
     email: businessEmail,
@@ -183,17 +183,10 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '06:00',
+        closes: '21:00',
       },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday'],
-        opens: '10:00',
-        closes: '16:00',
-      },
-      // Sunday: By appointment (omit hours rather than guessing)
     ],
     priceRange: '$$$',
     currenciesAccepted: 'USD',
@@ -220,7 +213,7 @@ export function generateOrganizationSchema() {
     },
     image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
     description:
-      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
+      'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,
@@ -261,13 +254,9 @@ export function generateOrganizationSchema() {
       },
     ],
     sameAs: [
-      'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
-      'https://www.instagram.com/drjanduffy',
+      'https://www.facebook.com/maravillahomesforsale',
       'https://www.youtube.com/@DrDuffy',
-      'https://twitter.com/drjanduffy',
-      'https://www.linkedin.com/in/lvrmembers',
-      'https://www.tiktok.com/@dr.janduffy',
-      'https://www.pinterest.com/bhhsluxury',
+      'https://www.linkedin.com/company/maravilla-homes-for-sale/',
     ],
   };
 }
@@ -357,13 +346,9 @@ export function generateRealEstateAgentSchema() {
       name: 'Berkshire Hathaway HomeServices Nevada',
     },
     sameAs: [
-      'https://www.facebook.com/DrJanDuffyRealtorCentennialHills',
-      'https://www.instagram.com/drjanduffy',
+      'https://www.facebook.com/maravillahomesforsale',
       'https://www.youtube.com/@DrDuffy',
-      'https://twitter.com/drjanduffy',
-      'https://www.linkedin.com/in/lvrmembers',
-      'https://www.tiktok.com/@dr.janduffy',
-      'https://www.pinterest.com/bhhsluxury',
+      'https://www.linkedin.com/company/maravilla-homes-for-sale/',
     ],
   };
 }

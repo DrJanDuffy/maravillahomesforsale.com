@@ -173,7 +173,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href='https://www.linkedin.com/in/lvrmembers'
+                href='https://www.linkedin.com/company/maravilla-homes-for-sale/'
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}
