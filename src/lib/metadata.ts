@@ -227,15 +227,9 @@ export function generateOrganizationSchema() {
         availableLanguage: ['English'],
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: [
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-          ],
-          opens: '09:00',
-          closes: '18:00',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '06:00',
+          closes: '21:00',
         },
       },
       {
@@ -329,15 +323,9 @@ export function generateRealEstateAgentSchema() {
         availableLanguage: ['English'],
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: [
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-          ],
-          opens: '09:00',
-          closes: '18:00',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '06:00',
+          closes: '21:00',
         },
       },
     ],
