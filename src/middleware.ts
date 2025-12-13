@@ -26,7 +26,6 @@ export function middleware(request: NextRequest) {
     '/tour': '/search',
     '/tour/mls': '/search',
     '/ap': '/homes', // "ap" might be "apartment" or abbreviation - redirect to homes
-    '/privacy': '/contact', // Privacy page doesn't exist yet - redirect to contact for now
   };
 
   // Check if this path should redirect to another page
