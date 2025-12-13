@@ -36,7 +36,7 @@ export const revalidate = 900; // 15 minutes
 export const metadata = genMetadata({
   title: 'Maravilla Real Estate Market Data & Trends | Las Vegas',
   description:
-    'Latest Maravilla real estate market data: Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 820-5408 for market insights.',
+    'Latest Maravilla real estate market data: Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 500-1953 for market insights.',
   keywords:
     'Maravilla market data, Las Vegas real estate trends, market statistics, home prices, days on market, real estate market analysis, Las Vegas housing market',
   path: '/market-data',
@@ -96,11 +96,11 @@ export default function MarketDataPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Craig Ranch Market Data
+            Maravilla Market Data
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Stay informed with the latest real estate market trends, statistics,
-            and insights for Craig Ranch, Las Vegas.
+            and insights for Maravilla, Las Vegas.
           </p>
         </div>
       </div>
@@ -115,10 +115,10 @@ export default function MarketDataPage() {
               <BarChart3 className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Market Trends Over Time
+              Maravilla Market Trends Over Time
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Track how the Craig Ranch market has evolved
+              Track how the Maravilla market has evolved
             </p>
           </div>
 
@@ -174,7 +174,7 @@ export default function MarketDataPage() {
               Market Insights
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Key factors driving the Craig Ranch real estate market
+              Key factors driving the Maravilla real estate market
             </p>
           </div>
 
@@ -211,32 +211,31 @@ export default function MarketDataPage() {
               <div className='w-16 h-16 bg-[#0A2540]/10 rounded-lg flex items-center justify-center mx-auto mb-4'>
                 <Calendar className='h-8 w-8 text-[#0A2540]' />
               </div>
-              <CardTitle className='text-2xl'>Craig Ranch Market Outlook</CardTitle>
+              <CardTitle className='text-2xl'>Maravilla Market Outlook</CardTitle>
             </CardHeader>
             <CardContent className='space-y-4 text-gray-600 leading-relaxed'>
               <p>
-                On average, homes in Craig Ranch, North Las Vegas sell after 46
+                On average, homes in Maravilla, North Las Vegas sell after 25
                 days on the market compared to the national average of 53 days.
-                The median sale price for homes in Craig Ranch over the last 12
-                months is $415,000, up 1% from the previous 12 months. The
-                average price per square foot is $242, making it an attractive
-                market for both buyers and sellers.
+                The median sale price for homes in Maravilla over the last 12
+                months is $525,000, reflecting the luxury nature of the community.
+                The average price per square foot varies by property type, making
+                it an attractive market for both buyers and sellers.
               </p>
               <p>
-                The neighborhood has 206 homes currently for sale, with a median
-                list price of $425,000. The market shows 2.90 months of supply,
-                indicating a balanced market. Homes range from $370,000 to
-                $1.8 million, offering options for various budgets. The area has
-                21,469 total homes, with most built in the early 2000s.
+                Maravilla features luxury homes with premium amenities and
+                distinctive floor plans. The market shows strong demand for
+                well-maintained properties with modern features. Homes range from
+                $380,000 to $600,000+, offering options for various budgets
+                while maintaining the community&apos;s luxury standards.
               </p>
               <p>
-                Craig Ranch&apos;s appeal extends beyond its strategic location
-                and luxury modern homes. It&apos;s also home to 5 miles of
-                trails, is a short drive to Lake Las Vegas and the Frenchman
-                Mountains, and its tight-knit community is united around Craig
-                Ranch Regional Park. The area&apos;s excellent schools,
-                amenities, and convenient location continue to drive buyer
-                interest.
+                Maravilla&apos;s appeal extends beyond its strategic location
+                and luxury modern homes. The community offers excellent amenities,
+                convenient access to shopping and dining, proximity to parks and
+                recreational facilities, and a tight-knit community atmosphere.
+                The area&apos;s excellent schools, amenities, and convenient
+                location continue to drive buyer interest.
               </p>
             </CardContent>
           </Card>
@@ -250,9 +249,9 @@ export default function MarketDataPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Craig Ranch Real Estate Market Data & Trends',
+              name: 'Maravilla Real Estate Market Data & Trends',
               description:
-                'Stay informed with the latest real estate market data, trends, and statistics for Craig Ranch, Las Vegas. Average prices, days on market, and more.',
+                'Stay informed with the latest real estate market data, trends, and statistics for Maravilla, Las Vegas. Average prices, days on market, and more.',
               url: `${baseUrl}/market-data`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
@@ -260,9 +259,9 @@ export default function MarketDataPage() {
               ],
             }),
             generateDatasetSchema({
-              name: 'Craig Ranch Real Estate Market Data',
+              name: 'Maravilla Real Estate Market Data',
               description:
-                'Comprehensive real estate market data and statistics for Craig Ranch, Las Vegas including average prices, days on market, inventory levels, and market trends.',
+                'Comprehensive real estate market data and statistics for Maravilla, Las Vegas including average prices, days on market, inventory levels, and market trends.',
               url: `${baseUrl}/market-data`,
             }),
             generateBreadcrumbSchema([

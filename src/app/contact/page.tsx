@@ -35,7 +35,7 @@ export const revalidate = false; // Static page, no revalidation needed
 export const metadata = genMetadata({
   title: 'Contact Dr. Jan Duffy - Maravilla Homes for Sale | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
   description:
-    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 820-5408 or email DrDuffy@MaravillaHomesForSale.com.',
+    'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 500-1953 or email DrDuffy@MaravillaHomesForSale.com.',
   keywords:
     'contact real estate agent, Dr. Jan Duffy, Maravilla real estate agent, Las Vegas realtor, Berkshire Hathaway, contact form, real estate consultation',
   path: '/contact',
@@ -84,14 +84,14 @@ export default function ContactPage() {
                 <CardContent className='space-y-3'>
                   <div>
                     <a
-                      href='tel:7028205408'
+                      href='tel:7025001953'
                       className='text-lg font-semibold text-[#0A2540] hover:text-[#3A8DDE] transition-colors'
                     >
-                      (702) 820-5408
+                      (702) 500-1953
                     </a>
                   </div>
                   <p className='text-gray-600 text-sm mt-2'>
-                    Available Monday - Saturday, 9 AM - 6 PM
+                    Available 6AM - 9PM Daily
                   </p>
                 </CardContent>
               </Card>
@@ -227,7 +227,7 @@ export default function ContactPage() {
           </div>
           <div className='mt-6 flex flex-col sm:flex-row gap-3 justify-center'>
             <Button asChild className='bg-[#16B286] hover:bg-[#15A276] text-white'>
-              <a href='tel:7028205408'>Call Now</a>
+              <a href='tel:7025001953'>Call Now</a>
             </Button>
             <Button asChild variant='outline'>
               <Link

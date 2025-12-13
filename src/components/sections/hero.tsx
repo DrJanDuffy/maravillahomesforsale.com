@@ -29,14 +29,14 @@ export default function Hero() {
           />
         </div>
 
-        {/* Video Embed Option - Uncomment if you want to use the homes.com video */}
+        {/* Video Embed Option - Uncomment if you want to use a video background */}
         {/* 
         <iframe
-          src='https://www.homes.com/local-guide/north-las-vegas-nv/craig-ranch-neighborhood/video/jjc2l3y321hql/?autoplay=1&mute=1&loop=1&controls=0&playsinline=1'
+          src='https://www.homes.com/local-guide/north-las-vegas-nv/maravilla-neighborhood/video/.../?autoplay=1&mute=1&loop=1&controls=0&playsinline=1'
           className='absolute inset-0 w-full h-full object-cover'
           allow='autoplay; encrypted-media'
           allowFullScreen
-          title='Craig Ranch Neighborhood Video Background'
+          title='Maravilla Neighborhood Video Background'
           aria-hidden='true'
         />
         */}

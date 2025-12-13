@@ -39,7 +39,7 @@ export const metadata = genMetadata({
   title:
     'Maravilla Neighborhoods & Communities | Las Vegas',
   description:
-    'Explore Maravilla and surrounding neighborhoods in Las Vegas. Find your perfect community with luxury homes and excellent amenities. Call (702) 820-5408.',
+    'Explore Maravilla and surrounding neighborhoods in Las Vegas. Find your perfect community with luxury homes and excellent amenities. Call (702) 500-1953.',
   keywords:
     'Maravilla neighborhoods, Las Vegas communities, luxury neighborhoods, Las Vegas real estate communities',
   path: '/neighborhoods',
@@ -104,12 +104,12 @@ export default function NeighborhoodsPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Craig Ranch Neighborhoods & Collections
+            Maravilla Neighborhoods & Communities
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            Explore the distinct subdivisions and builder collections within the
-            master-planned community of Craig Ranch in North Las Vegas. Each
-            neighborhood offers unique housing options and amenities.
+            Explore the distinct neighborhoods and communities within and around
+            Maravilla in North Las Vegas. Each area offers unique housing options
+            and amenities for luxury living.
           </p>
         </div>
       </div>
@@ -122,12 +122,12 @@ export default function NeighborhoodsPage() {
               <MapPin className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Key Craig Ranch Neighborhoods & Subdivisions
+              Key Maravilla Neighborhoods & Communities
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Craig Ranch features a mix of single-family homes and condos across
-              several distinct subdivisions, each with its own character and
-              amenities.
+              Maravilla and surrounding areas feature a mix of luxury single-family
+              homes and condos across several distinct neighborhoods, each with its
+              own character and amenities.
             </p>
           </div>
 
@@ -180,12 +180,12 @@ export default function NeighborhoodsPage() {
               <Building2 className='h-8 w-8 text-[#16B286]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Century Communities Collections in Craig Ranch
+              Luxury Home Collections in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              A significant portion of Craig Ranch was built by Century
-              Communities, which grouped their offerings into several collections
-              of floor plans, each with multiple home designs.
+              Maravilla features luxury home collections with distinctive floor
+              plans, each designed for modern living with premium finishes and
+              thoughtful design elements.
             </p>
           </div>
 
@@ -215,14 +215,14 @@ export default function NeighborhoodsPage() {
               <TreePine className='h-8 w-8 text-[#0A2540]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Housing Styles & Community Amenities
+              Maravilla Housing Styles & Community Amenities
             </h2>
           </div>
 
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <h3 className='text-2xl font-bold text-[#0A2540] mb-6'>
-                Craig Ranch Housing Styles
+                Maravilla Housing Styles
               </h3>
               <div className='space-y-4 text-gray-700'>
                 <p>
@@ -254,17 +254,17 @@ export default function NeighborhoodsPage() {
 
             <div>
               <h3 className='text-2xl font-bold text-[#0A2540] mb-6'>
-                Craig Ranch Community Amenities
+                Maravilla Community Amenities
               </h3>
               <div className='space-y-4 text-gray-700'>
                 <p>
-                  The entire master plan is connected by a network of parks,
-                  walking trails, and a private{' '}
-                  <strong>3.5-acre community park</strong>.
+                  Maravilla is connected by a network of parks, walking trails, and
+                  community amenities designed for luxury living and active
+                  lifestyles.
                 </p>
                 <div className='bg-[#F7F9FC] rounded-lg p-6'>
                   <h4 className='font-semibold text-[#0A2540] mb-3'>
-                    Craig Ranch Regional Park (170 acres)
+                    Maravilla Community Features
                   </h4>
                   <ul className='space-y-2 text-sm'>
                     <li className='flex items-center'>
@@ -306,7 +306,7 @@ export default function NeighborhoodsPage() {
               Home Price Range
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Home prices in Craig Ranch vary, with new construction and resale
+              Home prices in Maravilla vary, with luxury new construction and resale
               options available across different square footage ranges.
             </p>
           </div>
@@ -366,29 +366,29 @@ export default function NeighborhoodsPage() {
               <MapPin className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Location
+              Maravilla Location
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Explore the location of Craig Ranch and its distinct neighborhoods in
+              Explore the location of Maravilla and its distinct neighborhoods in
               North Las Vegas. The community is conveniently located near major
-              access routes, schools, and the 170-acre Craig Ranch Regional Park.
+              access routes, schools, parks, and shopping.
             </p>
           </div>
           <div className='relative'>
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
-                address='Craig Ranch, North Las Vegas, NV 89031'
-                latitude={36.2831}
-                longitude={-115.1331}
-                zoom={13}
+                address='Maravilla, North Las Vegas, NV 89031'
+                latitude={36.26276}
+                longitude={-115.17182}
+                zoom={15}
                 height='500px'
-                title='Craig Ranch Neighborhoods Location'
+                title='Maravilla Neighborhoods Location'
               />
             </Suspense>
           </div>
           <div className='mt-6 text-center'>
             <Link
-              href='https://www.google.com/maps/search/?api=1&query=Craig+Ranch+North+Las+Vegas+NV+89031'
+              href='https://www.google.com/maps/search/?api=1&query=Maravilla+North+Las+Vegas+NV+89031'
               target='_blank'
               rel='noopener noreferrer'
               prefetch={false}
@@ -405,11 +405,11 @@ export default function NeighborhoodsPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Find Your Perfect Craig Ranch Neighborhood
+            Find Your Perfect Maravilla Neighborhood
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Dr. Jan Duffy can provide you with the most current and specific
-            listings within the Craig Ranch community that match your
+            listings within the Maravilla community that match your
             requirements. Contact her today for personalized guidance.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -443,9 +443,9 @@ export default function NeighborhoodsPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'ResidentialComplex',
-              name: 'Craig Ranch',
+              name: 'Maravilla',
               description:
-                'Master-planned community in North Las Vegas featuring multiple neighborhoods including Jasmine Ranch, Centennial Crossing, Seabreeze, and Century Communities collections.',
+                'Luxury master-planned community in North Las Vegas featuring multiple neighborhoods with distinctive floor plans and premium amenities.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'North Las Vegas',
@@ -460,17 +460,17 @@ export default function NeighborhoodsPage() {
               amenityFeature: [
                 {
                   '@type': 'LocationFeatureSpecification',
-                  name: 'Craig Ranch Regional Park',
-                  value: true,
-                },
-                {
-                  '@type': 'LocationFeatureSpecification',
                   name: 'Community Parks',
                   value: true,
                 },
                 {
                   '@type': 'LocationFeatureSpecification',
                   name: 'Walking Trails',
+                  value: true,
+                },
+                {
+                  '@type': 'LocationFeatureSpecification',
+                  name: 'Luxury Amenities',
                   value: true,
                 },
               ],
@@ -480,9 +480,9 @@ export default function NeighborhoodsPage() {
               { name: 'Neighborhoods', url: `${baseUrl}/neighborhoods` },
             ]),
             generateWebPageSchema({
-              name: 'Craig Ranch Neighborhoods & Collections | North Las Vegas Communities',
+              name: 'Maravilla Neighborhoods & Communities | North Las Vegas',
               description:
-                'Explore the distinct neighborhoods in Craig Ranch: Jasmine Ranch, Centennial Crossing, Seabreeze, and Century Communities collections.',
+                'Explore the distinct neighborhoods in Maravilla, North Las Vegas. Luxury homes with premium amenities and distinctive floor plans.',
               url: `${baseUrl}/neighborhoods`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },

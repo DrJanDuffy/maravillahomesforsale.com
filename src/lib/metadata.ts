@@ -1,27 +1,28 @@
 import type { Metadata } from 'next';
+import { BUSINESS_INFO } from './config/business-info';
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 const businessAddress = {
-  streetAddress: '851 W Lone Mountain Rd',
-  addressLocality: 'North Las Vegas',
-  addressRegion: 'NV',
-  postalCode: '89032',
-  addressCountry: 'US',
+  streetAddress: BUSINESS_INFO.address.streetAddress,
+  addressLocality: BUSINESS_INFO.address.addressLocality,
+  addressRegion: BUSINESS_INFO.address.addressRegion,
+  postalCode: BUSINESS_INFO.address.postalCode,
+  addressCountry: BUSINESS_INFO.address.addressCountry,
 } as const;
 
 // Approximate coordinates for the office location.
 // If you need exact GPS from GBP, replace these values.
 const businessGeo = {
-  latitude: 36.2465,
-  longitude: -115.1475,
+  latitude: BUSINESS_INFO.geo.latitude,
+  longitude: BUSINESS_INFO.geo.longitude,
 } as const;
 
-const businessName = 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy';
-const businessPhone = '+1-702-500-1953';
-const businessEmail = 'DrDuffy@MaravillaHomesForSale.com';
+const businessName = BUSINESS_INFO.name;
+const businessPhone = BUSINESS_INFO.phone.schema;
+const businessEmail = BUSINESS_INFO.email;
 
 export const MARAVILLA_FAQS = [
   {

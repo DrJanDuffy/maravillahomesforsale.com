@@ -129,7 +129,7 @@ export async function GET(request: NextRequest) {
                 opacity: 0.9,
               }}
             >
-              (702) 820-5408
+              (702) 500-1953
             </div>
           </div>
         </div>

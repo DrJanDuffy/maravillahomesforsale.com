@@ -80,8 +80,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               ],
             }),
             generateBreadcrumbSchema([
-              { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com' },
-              { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search` },
+              { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com' },
+              { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'}/search` },
             ]),
           ]),
         }}

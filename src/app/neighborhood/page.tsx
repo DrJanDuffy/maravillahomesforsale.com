@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import PageLayout from '@/components/layout/page-layout';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import NorthLasVegasNeighborhoods from '@/components/sections/north-las-vegas-neighborhoods';
-import MaravillaListings from '@/components/sections/craig-ranch-listings';
-import MaravillaPropertySearch from '@/components/sections/craig-ranch-property-search';
+import MaravillaListings from '@/components/sections/maravilla-listings';
+import MaravillaPropertySearch from '@/components/sections/maravilla-property-search';
 import GoogleMap from '@/components/sections/google-map';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
@@ -63,7 +63,7 @@ export const revalidate = 604800; // 1 week
 export const metadata = genMetadata({
   title: 'Maravilla Homes & Real Estate | Las Vegas Community Guide',
   description:
-    'Maravilla is a premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient amenities. Discover why families choose Maravilla. Call (702) 820-5408.',
+    'Maravilla is a premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient amenities. Discover why families choose Maravilla. Call (702) 500-1953.',
   keywords:
     'Maravilla, Las Vegas homes, luxury homes, Las Vegas real estate, family neighborhood, master-planned community, Maravilla schools, Maravilla amenities, Las Vegas properties',
   path: '/neighborhood',
@@ -1041,8 +1041,8 @@ export default function NeighborhoodPage() {
             },
             geo: {
               '@type': 'GeoCoordinates',
-              latitude: 36.2831,
-              longitude: -115.1331,
+              latitude: 36.26276,
+              longitude: -115.17182,
             },
             numberOfBedrooms: {
               '@type': 'QuantitativeValue',

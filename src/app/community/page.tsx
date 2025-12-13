@@ -39,7 +39,7 @@ export const metadata = genMetadata({
   title:
     'Maravilla Community Guide: Schools, Amenities & Lifestyle | Las Vegas',
   description:
-    'Discover Maravilla community: excellent schools, parks, shopping centers, and family-friendly amenities. Premier master-planned community in Las Vegas. Learn about schools, parks, and lifestyle. Call (702) 820-5408.',
+    'Discover Maravilla community: excellent schools, parks, shopping centers, and family-friendly amenities. Premier master-planned community in Las Vegas. Learn about schools, parks, and lifestyle. Call (702) 500-1953.',
   keywords:
     'Maravilla community, Las Vegas schools, Maravilla amenities, community guide, Las Vegas lifestyle, Las Vegas community, Maravilla parks, Maravilla shopping',
   path: '/community',
@@ -389,8 +389,8 @@ export default function CommunityPage() {
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: 36.2831,
-                longitude: -115.1331,
+                latitude: 36.26276,
+                longitude: -115.17182,
               },
             },
             generateBreadcrumbSchema([

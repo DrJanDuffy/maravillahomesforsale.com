@@ -26,7 +26,7 @@ const baseUrl = (
 export const metadata = genMetadata({
   title: 'Maravilla Las Vegas Homes Market Insights | Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    'Read the latest real estate market insights and trends for Maravilla, Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 820-5408.',
+    'Read the latest real estate market insights and trends for Maravilla, Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 500-1953.',
   keywords:
     'Maravilla market insights, Maravilla real estate news, Las Vegas market insights, Las Vegas real estate trends',
   path: '/market-insights',
@@ -115,7 +115,7 @@ export default async function MarketInsightsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Las Vegas Homes Market Insights
+              Maravilla Las Vegas Homes Market Insights
             </h1>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               The latest real estate insights and trends (source:{' '}
@@ -208,9 +208,9 @@ export default async function MarketInsightsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Craig Ranch Las Vegas Homes Market Insights',
+              name: 'Maravilla Las Vegas Homes Market Insights',
               description:
-                'Read the latest real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada.',
+                'Read the latest real estate market insights and trends for Maravilla, North Las Vegas and Las Vegas, Nevada.',
               url: `${baseUrl}/market-insights`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
@@ -218,12 +218,12 @@ export default async function MarketInsightsPage() {
               ],
             }),
             generateBlogSchema({
-              name: 'Craig Ranch Las Vegas Homes Market Insights',
+              name: 'Maravilla Las Vegas Homes Market Insights',
               description:
-                'Real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada.',
+                'Real estate market insights and trends for Maravilla, North Las Vegas and Las Vegas, Nevada.',
               url: `${baseUrl}/market-insights`,
               author: 'Simplifying the Market',
-              publisher: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              publisher: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
             }),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },

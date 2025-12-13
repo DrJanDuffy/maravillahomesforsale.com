@@ -26,7 +26,7 @@ export default function MarketSnapshot() {
           <div className='bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-lg border border-gray-200'>
             <div className='prose prose-lg max-w-none'>
               <p className='text-gray-700 leading-relaxed mb-4'>
-                Maravilla showcases homes from $400,000 to $600,000 in North Las Vegas&apos;s sought-after 89084 zip code. Recent market data shows an average sale price of $525,000 with homes selling within 25 days. Properties feature 3-5 bedrooms, 2-4 bathrooms, spanning 2,000-4,000 square feet.
+                Maravilla showcases homes from $400,000 to $600,000 in North Las Vegas&apos;s sought-after 89031 zip code. Recent market data shows an average sale price of $525,000 with homes selling within 25 days. Properties feature 3-5 bedrooms, 2-4 bathrooms, spanning 2,000-4,000 square feet.
               </p>
               
               <p className='text-gray-700 font-semibold mb-3'>Key highlights:</p>

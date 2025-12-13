@@ -82,7 +82,7 @@ export const revalidate = 3600; // 1 hour
 export const metadata = genMetadata({
   title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    'Find your dream home in Maravilla, Las Vegas. Browse luxury homes and explore this premier community with excellent schools, parks, and convenient amenities. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 820-5408.',
+    'Find your dream home in Maravilla, Las Vegas. Browse luxury homes and explore this premier community with excellent schools, parks, and convenient amenities. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 500-1953.',
   keywords:
     'Maravilla, Las Vegas real estate, luxury homes, Las Vegas homes for sale, Nevada real estate, Maravilla community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
   path: '/',
