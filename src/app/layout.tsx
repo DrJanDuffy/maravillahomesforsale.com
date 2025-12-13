@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
-      "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities with premium amenities and excellent location.",
+      "Find exceptional value in Maravilla, North Las Vegas. Discover quality homes with great value in a well-planned community featuring excellent amenities and convenient location.",
     url: siteUrl,
     siteName: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     locale: 'en_US',
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
-      "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities.",
+      "Find exceptional value in Maravilla, North Las Vegas. Discover quality homes with great value in a well-planned community.",
     images: ['/photos/01-1 (2).jpg'],
     // 2025 Best Practice: Add Twitter site handle if available
     creator: '@maravillahomes',
