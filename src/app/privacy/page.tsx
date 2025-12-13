@@ -5,6 +5,7 @@ import {
   generateBreadcrumbSchema,
 } from '@/lib/metadata';
 import Script from 'next/script';
+import { BUSINESS_INFO } from '@/lib/config/business-info';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
