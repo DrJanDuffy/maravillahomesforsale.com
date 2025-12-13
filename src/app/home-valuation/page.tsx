@@ -171,7 +171,7 @@ export default function MaravillaHomeValuationPage() {
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
             Condition matters, but so does how buyers perceive condition. A home
-            that feels "move-in ready" often commands a premium over a similar
+            that feels &quot;move-in ready&quot; often commands a premium over a similar
             home that needs work, even if the work is cosmetic. Upgrades like
             updated kitchens, modern bathrooms, and energy-efficient systems can
             significantly impact value in Maravilla.
@@ -214,7 +214,7 @@ export default function MaravillaHomeValuationPage() {
               not just algorithmic estimates.
             </p>
             <p className='text-gray-700 leading-relaxed'>
-              A local valuation also considers factors that AVMs can\'t easily
+              A local valuation also considers factors that AVMs can&apos;t easily
               quantify: the appeal of specific floor plans, the value of recent
               upgrades, the impact of lot location, and how your home compares to
               what buyers are actively viewing. This comprehensive approach helps
@@ -249,7 +249,7 @@ export default function MaravillaHomeValuationPage() {
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Contact Dr. Jan Duffy for a comprehensive valuation that considers all
-            factors affecting your home\'s value in the Maravilla market.
+            factors affecting your home&apos;s value in the Maravilla market.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button

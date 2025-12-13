@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import PageLayout from '@/components/layout/page-layout';
 import JustSoldGallery from '@/components/sections/just-sold-gallery';
 import GoogleMap from '@/components/sections/google-map';

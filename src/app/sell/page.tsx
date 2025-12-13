@@ -78,7 +78,7 @@ export default function SellMaravillaPage() {
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Selling in <strong>Maravilla</strong> is about more than listing a
-            property—it\'s about positioning your home so it\'s the clear best choice
+            property—it&apos;s about positioning your home so it&apos;s the clear best choice
             for buyers comparing Maravilla inventory right now. Dr. Jan Duffy,
             REALTOR®, helps you prep, price, market, and negotiate with a plan
             built for the <strong>Maravilla</strong> buyer.
@@ -148,11 +148,11 @@ export default function SellMaravillaPage() {
             Maravilla seller strategy: what drives results
           </h2>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
-            Buyers compare "Maravilla vs. everything else"
+            Buyers compare &quot;Maravilla vs. everything else&quot;
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
-            Your Maravilla home isn\'t only competing against other Maravilla
-            listings—it\'s competing against nearby neighborhoods, new construction
+            Your Maravilla home isn&apos;t only competing against other Maravilla
+            listings—it&apos;s competing against nearby neighborhoods, new construction
             incentives, and alternative floor plans at similar price points. We
             position your home to win that comparison with clear feature language,
             strong visuals, and pricing strategy that matches current demand.
@@ -162,7 +162,7 @@ export default function SellMaravillaPage() {
           </h3>
           <p className='text-gray-700 leading-relaxed mb-4'>
             In Maravilla, the first couple of weeks typically bring your most
-            qualified buyers. That\'s why "launch quality" matters: photos,
+            qualified buyers. That&apos;s why &quot;launch quality&quot; matters: photos,
             listing copy, disclosures, showing readiness, and a price that makes
             buyers act. A weak launch can cost you time and negotiating leverage.
           </p>
@@ -172,7 +172,7 @@ export default function SellMaravillaPage() {
           <p className='text-gray-700 leading-relaxed mb-4'>
             The best Maravilla offer is the one that closes smoothly and protects
             your net proceeds. That means evaluating not just price, but financing
-            strength, contingencies, timeline, and the buyer\'s ability to complete
+            strength, contingencies, timeline, and the buyer&apos;s ability to complete
             the transaction. We help you compare offers holistically.
           </p>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
@@ -193,10 +193,10 @@ export default function SellMaravillaPage() {
             Preparing your Maravilla home to sell (high-ROI checklist)
           </h2>
           <p className='text-gray-700 leading-relaxed mb-4'>
-            Most Maravilla sellers get the best return from "friction reducers":
-            items that make buyers say "yes" faster. These include repairs,
+            Most Maravilla sellers get the best return from &quot;friction reducers&quot;:
+            items that make buyers say &quot;yes&quot; faster. These include repairs,
             touch-up paint, deep cleaning, decluttering, and professional
-            photography that showcases your home\'s best features.
+            photography that showcases your home&apos;s best features.
           </p>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
             Common buyer objections in Maravilla showings
