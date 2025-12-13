@@ -204,7 +204,7 @@ const NorthLasVegasNeighborhoods = () => {
               Find Your Perfect North Las Vegas Home
             </h3>
             <p className='text-gray-600 mb-6 leading-relaxed'>
-              Whether you're looking for a family-friendly community, luxury
+              Whether you&apos;re looking for a family-friendly community, luxury
               living, or an active adult lifestyle, North Las Vegas has the
               perfect neighborhood for you. Let us help you find your dream
               home.

@@ -133,7 +133,7 @@ export default function CommunityPage() {
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             A tight-knit, vibrant master-planned community in North Las Vegas.
-            Winner of "Best Planned Community" in 2020. Home to 5 miles of
+            Winner of &quot;Best Planned Community&quot; in 2020. Home to 5 miles of
             trails, 7 parks, and the 170-acre Craig Ranch Regional Park. Centrally
             located near shopping, dining, Nellis Air Force Base, and highways.
           </p>
@@ -237,7 +237,7 @@ export default function CommunityPage() {
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Most shopping and dining options are along West Craig Road, now
-              known as "Restaurant Row" in North Las Vegas, with more than 25
+              known as &quot;Restaurant Row&quot; in North Las Vegas, with more than 25
               restaurants opening in just the last two years.
             </p>
           </div>

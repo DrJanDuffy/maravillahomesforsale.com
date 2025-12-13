@@ -125,7 +125,7 @@ export default function NeighborhoodPage() {
           <p className='text-xl text-gray-200 max-w-3xl'>
             A tight-knit, vibrant master-planned community in North Las Vegas.
             Centrally located near shopping and dining, Nellis Air Force Base,
-            and highways. Winner of "Best Planned Community" in 2020. Home to
+            and highways. Winner of &quot;Best Planned Community&quot; in 2020. Home to
             5 miles of trails, 7 parks, and the 170-acre Craig Ranch Regional
             Park.
           </p>
@@ -186,10 +186,10 @@ export default function NeighborhoodPage() {
                   convenient place to live.
                 </p>
                 <p>
-                  Winning "Best Planned Community" in 2020 in the Las Vegas
-                  Review-Journal's Best of Las Vegas annual contest, Craig
-                  Ranch's appeal extends beyond its strategic location and luxury
-                  modern homes. It's also home to 5 miles of trails, is a short
+                  Winning &quot;Best Planned Community&quot; in 2020 in the Las Vegas
+                  Review-Journal&apos;s Best of Las Vegas annual contest, Craig
+                  Ranch&apos;s appeal extends beyond its strategic location and luxury
+                  modern homes. It&apos;s also home to 5 miles of trails, is a short
                   drive to Lake Las Vegas and the Frenchman Mountains and its
                   tight-knit community is united around Craig Ranch Regional
                   Park, the beating heart of activity and celebrations for the
@@ -324,8 +324,8 @@ export default function NeighborhoodPage() {
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               A true asset to the community, Craig Ranch Regional Park measures
-              170 acres in size. The community's crown jewel, within walking
-              distance of residents' front doors. The expansive space offers
+              170 acres in size. The community&apos;s crown jewel, within walking
+              distance of residents&apos; front doors. The expansive space offers
               three dog parks, a 65,000-square-foot skate park, an amphitheater
               with seating for over 10,000, two basketball courts, a community
               garden and plenty of open green space. The park hosts over 40
@@ -415,7 +415,7 @@ export default function NeighborhoodPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Nature discovery area at the edge of the park's pond for
+                  Nature discovery area at the edge of the park&apos;s pond for
                   children to explore
                 </CardDescription>
               </CardContent>
@@ -532,7 +532,7 @@ export default function NeighborhoodPage() {
                   <strong>Mojave High School</strong>
                   <br />
                   <span className='text-sm text-gray-500 mt-2 block'>
-                    C ranking on Niche • Guitar club • Bowling team • Boys'
+                    C ranking on Niche • Guitar club • Bowling team • Boys&apos;
                     basketball back-to-back state championships (2022, 2023)
                   </span>
                 </CardDescription>
@@ -611,7 +611,7 @@ export default function NeighborhoodPage() {
 
             <div className='mt-6 text-center'>
               <p className='text-gray-400 text-xs mb-4'>
-                If listings don't appear, please refresh the page or contact us
+                If listings don&apos;t appear, please refresh the page or contact us
                 directly.
               </p>
               <Button
