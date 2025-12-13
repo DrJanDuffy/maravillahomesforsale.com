@@ -12,11 +12,11 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/homes', label: 'Homes' },
+    { href: '/home-descriptions', label: 'Home Descriptions' },
+    { href: '/amenities', label: 'Amenities' },
     { href: '/neighborhood', label: 'Neighborhood' },
-    { href: '/neighborhoods', label: 'Neighborhoods' },
-    { href: '/community', label: 'Community' },
-    { href: '/market-data', label: 'Market Data' },
-    { href: '/market-insights', label: 'Market Insights' },
+    { href: '/map-and-nearby-places', label: 'Map & Nearby' },
+    { href: '/real-estate-services', label: 'Services' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -27,7 +27,7 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <Link href='/' className='flex items-center'>
             <h1 className='text-2xl font-bold text-[#0A2540]'>
-              (702) 820-5408
+              (702) 500-1953
             </h1>
           </Link>
 

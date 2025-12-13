@@ -86,11 +86,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
     description:
-      "Discover luxury homes in Craig Ranch, Las Vegas. Find your dream home in one of the city's most prestigious communities with premium amenities and excellent location.",
+      "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities with premium amenities and excellent location.",
     url: siteUrl,
-    siteName: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    siteName: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -98,15 +98,15 @@ export const metadata: Metadata = {
         url: '/54-DJI_20250707171528_0828_D.jpg',
         width: 1200,
         height: 630,
-        alt: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+        alt: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
     description:
-      "Discover luxury homes in Craig Ranch, Las Vegas. Find your dream home in one of the city's most prestigious communities.",
+      "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities.",
     images: ['/54-DJI_20250707171528_0828_D.jpg'],
   },
   robots: {
@@ -130,19 +130,19 @@ export const metadata: Metadata = {
     'geo.placename': 'North Las Vegas, Las Vegas',
     'geo.position': '36.2465;-115.1475',
     ICBM: '36.2465, -115.1475',
-    'DC.title': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.creator': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.subject': 'Luxury Real Estate, Las Vegas, Craig Ranch',
-    'DC.description': 'Luxury homes in Craig Ranch, Las Vegas',
-    'DC.publisher': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
-    'DC.contributor': 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    'DC.title': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.creator': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.subject': 'Luxury Real Estate, North Las Vegas, Maravilla',
+    'DC.description': 'Luxury homes in Maravilla, North Las Vegas',
+    'DC.publisher': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.contributor': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
     'DC.date': '2024',
     'DC.type': 'Text',
     'DC.format': 'text/html',
     'DC.identifier': siteUrl,
     'DC.language': 'en',
-    'DC.coverage': 'Las Vegas, Nevada',
-    'DC.rights': 'Copyright 2007-2025 Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+    'DC.coverage': 'North Las Vegas, Nevada',
+    'DC.rights': 'Copyright 2007-2025 Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   },
 };
 
@@ -235,7 +235,7 @@ export default function RootLayout({
               '@id': `${siteUrl}#realestateagent`,
               name: 'Dr. Jan Duffy',
               description:
-                'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Craig Ranch, Las Vegas, North Las Vegas, and Henderson',
+                'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, North Las Vegas, Las Vegas, and Henderson',
               jobTitle: 'REALTOR®',
               worksFor: {
                 '@type': 'Organization',
@@ -274,17 +274,17 @@ export default function RootLayout({
               ],
               serviceArea: {
                 '@type': 'Place',
-                name: 'Craig Ranch',
+                name: 'Maravilla',
                 address: {
                   '@type': 'PostalAddress',
-                  addressLocality: 'Las Vegas',
+                  addressLocality: 'North Las Vegas',
                   addressRegion: 'NV',
                   addressCountry: 'US',
                 },
               },
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+1-702-820-5408',
+                telephone: '+1-702-500-1953',
                 contactType: 'customer service',
                 areaServed: 'US',
                 availableLanguage: 'English',
@@ -314,11 +314,11 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               '@id': `${siteUrl}#localbusiness`,
-              name: 'Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+              name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
               description:
-                'Luxury real estate services in Craig Ranch, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Craig Ranch homes and properties.',
+                'Luxury real estate services in Maravilla, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
               url: siteUrl,
-              telephone: '+1-702-820-5408',
+              telephone: '+1-702-500-1953',
               email: 'DrDuffy@MaravillaHomesForSale.com',
               image: ogImageUrl,
               logo: {
@@ -368,7 +368,7 @@ export default function RootLayout({
               contactPoint: [
                 {
                   '@type': 'ContactPoint',
-                  telephone: '+1-702-820-5408',
+                  telephone: '+1-702-500-1953',
                   contactType: 'customer service',
                   areaServed: 'US',
                   availableLanguage: ['English'],

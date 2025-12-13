@@ -40,6 +40,10 @@ import {
   TrendingUp,
   MapPin,
   Search,
+  Hospital,
+  Dumbbell,
+  Building2,
+  UtensilsCrossed,
 } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
@@ -301,6 +305,347 @@ export default function NeighborhoodPage() {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Neighborhood Information */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Property Overview
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Nestled in the heart of North Las Vegas&apos;s 89031 zip code, Maravilla offers the perfect blend of suburban serenity and urban convenience. Celebrated for its pristine upkeep and desert-friendly landscaping, this residence is part of a well-established neighborhood that has matured beautifully over the years. The community features a diverse selection of homes ranging from $380,000 to $600,000, providing options for various budgets and preferences.
+          </p>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Maravilla homes are known for their quality construction, modern amenities, and thoughtful design. Properties feature 3-5 bedrooms, 2-4 bathrooms, and range from 1,800 to 3,500 square feet. The homes were built between 2005 and 2014, representing a period of quality construction in North Las Vegas. These properties benefit from established neighborhoods with mature landscaping, proven construction methods, and well-maintained infrastructure.
+          </p>
+        </div>
+      </section>
+
+      {/* Location & Transportation */}
+      <section className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Location & Transportation
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Maravilla is conveniently connected to major routes, making it easy to access the entire Las Vegas Valley and beyond. The strategic location provides excellent connectivity while maintaining a peaceful residential atmosphere.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Highway Access
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <MapPin className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Just 5 minutes from the I-215 Northern Beltway, providing easy access to the entire Las Vegas Valley</span>
+                </li>
+                <li className='flex items-start'>
+                  <MapPin className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>8 minutes to I-15, connecting to California, Utah, and regional destinations</span>
+                </li>
+                <li className='flex items-start'>
+                  <MapPin className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>A short 20-minute drive to Downtown Las Vegas for entertainment and business</span>
+                </li>
+                <li className='flex items-start'>
+                  <MapPin className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Only 25 minutes to Harry Reid International Airport (formerly McCarran) for convenient travel</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Public Transportation
+              </h3>
+              <p className='text-gray-700 leading-relaxed mb-4'>
+                RTC bus stops located nearby on Craig Road provide public transportation access throughout the Las Vegas Valley. This convenient option is perfect for those who prefer not to drive or want to reduce transportation costs. The public transit system connects Maravilla to employment centers, shopping districts, and entertainment venues throughout the region.
+              </p>
+              <p className='text-gray-700 leading-relaxed'>
+                The proximity to major highways and public transportation options means residents can easily commute to work, access shopping and entertainment, and travel throughout the Las Vegas area without long drive times. This connectivity is one of Maravilla&apos;s key advantages, providing the best of both worlds—peaceful residential living with easy access to everything the Las Vegas Valley has to offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shopping & Dining */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Shopping & Dining in Maravilla
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Within a 1-2 mile radius, you&apos;ll find a variety of shopping and dining options that make daily errands convenient and dining out enjoyable. The area offers everything from everyday essentials to specialty retailers, and from casual family restaurants to upscale dining establishments.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Shopping Centers
+              </h3>
+              <p className='text-gray-700 leading-relaxed mb-4'>
+                <strong>Shopping:</strong>
+              </p>
+              <ul className='space-y-2 text-gray-700 mb-6'>
+                <li className='flex items-start'>
+                  <ShoppingBag className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Smith&apos;s Marketplace at Craig Crossing - Full-service grocery store with pharmacy, bakery, and deli</span>
+                </li>
+                <li className='flex items-start'>
+                  <ShoppingBag className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Walmart Supercenter on Craig Road - Large supercenter offering groceries, household items, electronics, and more</span>
+                </li>
+                <li className='flex items-start'>
+                  <ShoppingBag className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Aliante Market Square - Shopping center featuring various retailers, services, and dining options</span>
+                </li>
+                <li className='flex items-start'>
+                  <ShoppingBag className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Target at Decatur Commons - Popular retailer offering clothing, home goods, electronics, and groceries</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Dining Options
+              </h3>
+              <p className='text-gray-700 leading-relaxed mb-4'>
+                A mix of national chains and local favorites provides diverse dining options for every taste and occasion. The area features:
+              </p>
+              <ul className='space-y-2 text-gray-700'>
+                <li className='flex items-start'>
+                  <UtensilsCrossed className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Applebee&apos;s - Family-friendly casual dining with American favorites</span>
+                </li>
+                <li className='flex items-start'>
+                  <UtensilsCrossed className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Buffalo Wild Wings - Sports bar atmosphere with wings and American cuisine</span>
+                </li>
+                <li className='flex items-start'>
+                  <UtensilsCrossed className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>IHOP - Breakfast and family dining with extensive menu</span>
+                </li>
+                <li className='flex items-start'>
+                  <UtensilsCrossed className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Authentic Mexican restaurants - Local favorites offering traditional Mexican cuisine</span>
+                </li>
+                <li className='flex items-start'>
+                  <UtensilsCrossed className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Numerous fast-food options - Quick, convenient meals for busy families</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recreation & Entertainment */}
+      <section className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Recreation & Entertainment
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Endless opportunities for relaxation and fun are available within minutes of Maravilla. From outdoor recreation to entertainment venues, residents have access to a wide variety of activities that enhance quality of life.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Outdoor Recreation
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Aliante Golf Club</strong> - 5 minutes away, offering challenging play, beautiful desert scenery, and club amenities</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Local Community Parks</strong> - Within walking distance, featuring sports fields, playgrounds, walking trails, and picnic areas</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Aliante Nature Discovery Park</strong> - 7 minutes away, offering walking trails, wildlife viewing, and educational programs</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Walking distance to local parks with playgrounds, sports courts, and open green spaces</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Entertainment Venues
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Aliante Casino + Hotel</strong> - 10 minutes away, offering world-class gaming, fine dining, live entertainment, and resort amenities</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Las Vegas Strip</strong> - Approximately 20 minutes away, providing access to world-renowned shows, restaurants, shopping, and attractions</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Downtown Las Vegas</strong> - Within easy reach, featuring a revitalized entertainment district with restaurants, bars, and attractions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Essential Services */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Essential Services
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Convenient access to critical services ensures that Maravilla residents can meet all their essential needs without traveling far from home. These services are strategically located to provide easy access when needed.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Healthcare Facilities
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <Hospital className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>North Vista Hospital</strong> - 7 minutes away, providing emergency care, surgery, and comprehensive medical services</span>
+                </li>
+                <li className='flex items-start'>
+                  <Hospital className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>VA Medical Center</strong> - 15 minutes away, offering comprehensive healthcare services for veterans</span>
+                </li>
+                <li className='flex items-start'>
+                  <Hospital className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Pharmacies</strong> - CVS and Walgreens within 2 miles, providing prescription services and health products</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Public Safety & Government Services
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>North Las Vegas Police Department</strong> - 5 minutes away, providing law enforcement and public safety services</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>North Las Vegas Fire Station 52</strong> - 3 minutes away, ensuring rapid response to emergencies</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>North Las Vegas DMV</strong> - 10 minutes away, providing vehicle registration and driver&apos;s license services</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>US Post Office</strong> - On Craig Road, 5 minutes away, providing mail services and package shipping</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Features */}
+      <section className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Community Features
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            Maravilla is enriched with community amenities that enhance quality of life and provide opportunities for recreation, education, and social connection. These features make the neighborhood more than just a place to live—they create a true community.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Fitness & Recreation Facilities
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <Dumbbell className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Local YMCA</strong> - Just 3 miles away, offering fitness facilities, swimming pools, youth programs, and community activities</span>
+                </li>
+                <li className='flex items-start'>
+                  <Dumbbell className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Planet Fitness</strong> - Nearby affordable fitness center with modern equipment and group classes</span>
+                </li>
+                <li className='flex items-start'>
+                  <Dumbbell className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>EoS Fitness</strong> - Full-service fitness center with extensive equipment, group classes, and spa services</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Educational & Cultural Resources
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Alexander Library</strong> - 5 minutes away, offering books, digital resources, computer access, and community programs</span>
+                </li>
+                <li className='flex items-start'>
+                  <Building2 className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span><strong>Community Programs</strong> - Various community events, classes, and activities organized throughout the year</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Climate */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
+            Local Climate
+          </h2>
+          <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
+            North Las Vegas boasts a sunny desert climate that attracts residents seeking year-round outdoor activities and comfortable living. The climate is characterized by abundant sunshine, low humidity, and minimal rainfall, making it ideal for those who enjoy outdoor recreation and prefer to avoid harsh winters.
+          </p>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Weather Patterns
+              </h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Around 294 sunny days per year, providing ample opportunity for outdoor activities</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Summer highs averaging 106°F in July, with low humidity making temperatures more comfortable</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Winter lows dipping to around 39°F in December, providing mild winters without harsh cold</span>
+                </li>
+                <li className='flex items-start'>
+                  <TreePine className='h-5 w-5 text-[#3A8DDE] mr-2 mt-0.5 flex-shrink-0' />
+                  <span>Minimal rainfall, typical of a desert environment, reducing concerns about weather-related disruptions</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-2xl font-semibold text-[#0A2540] mb-4'>
+                Climate Benefits
+              </h3>
+              <p className='text-gray-700 leading-relaxed mb-4'>
+                The desert climate offers numerous benefits for residents, including the ability to enjoy outdoor activities year-round. The low humidity makes even hot summer days more bearable, and the mild winters mean you can spend time outdoors throughout the year. The abundant sunshine provides natural light for homes and creates a bright, cheerful atmosphere.
+              </p>
+              <p className='text-gray-700 leading-relaxed'>
+                The climate is also ideal for desert landscaping, which requires minimal water and maintenance. This makes it easier and more cost-effective to maintain attractive yards and gardens. The dry climate also means fewer issues with mold, mildew, and other moisture-related problems that can affect homes in more humid climates.
+              </p>
+            </div>
           </div>
         </div>
       </section>
