@@ -145,17 +145,18 @@ export default function Footer() {
               <li className='flex items-center'>
                 <span className='mr-2'>📍</span>
                 <a
-                  href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                  href={BUSINESS_INFO.maps.business}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='hover:text-white transition-colors'
+                  aria-label='View our office on Google Maps'
                 >
-                  851 W Lone Mountain Rd, North Las Vegas, NV 89032
+                  {BUSINESS_INFO.address.full}
                 </a>
               </li>
               <li className='mt-4'>
                 <a
-                  href='https://www.google.com/maps/search/?api=1&query=851+W+Lone+Mountain+Rd+North+Las+Vegas+NV+89032'
+                  href={BUSINESS_INFO.maps.business}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='inline-flex items-center text-[#3A8DDE] hover:text-white transition-colors text-sm font-medium'
