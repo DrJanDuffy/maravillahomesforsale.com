@@ -242,7 +242,7 @@ export default function ContactPage() {
             </Button>
             <Button asChild variant='outline'>
               <Link
-                href={BUSINESS_INFO.maps.business}
+                href={BUSINESS_INFO.googleBusinessProfile}
                 target='_blank'
                 rel='noopener noreferrer'
                 prefetch={false}

@@ -65,5 +65,8 @@ export const BUSINESS_INFO = {
     business: 'https://www.google.com/maps/search/?api=1&query=4380+W+Ann+Rd+Suite+201+North+Las+Vegas+NV+89031',
     community: 'https://www.google.com/maps/search/?api=1&query=Maravilla+North+Las+Vegas+NV+89031',
   },
+  
+  // Google Business Profile
+  googleBusinessProfile: 'https://share.google/jwKcbkiXP5lxFx8Kf',
 } as const;
 

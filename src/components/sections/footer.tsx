@@ -156,7 +156,7 @@ export default function Footer() {
               </li>
               <li className='mt-4'>
                 <a
-                  href={BUSINESS_INFO.maps.business}
+                  href={BUSINESS_INFO.googleBusinessProfile}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='inline-flex items-center text-[#3A8DDE] hover:text-white transition-colors text-sm font-medium'
