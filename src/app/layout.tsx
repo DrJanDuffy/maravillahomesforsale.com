@@ -120,10 +120,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-video-preview': -1,
+      // 2025 Best Practice: Allow large image previews for Google Images
       'max-image-preview': 'large',
       'max-snippet': -1,
-      // 2025 Best Practice: Allow indexing of images for Google Images
-      'googlebot-image': 'index, follow',
     },
   },
   ...(googleSiteVerification
