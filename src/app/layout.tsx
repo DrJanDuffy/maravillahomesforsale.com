@@ -427,16 +427,19 @@ export default function RootLayout({
                   '@type': 'City',
                   name: 'North Las Vegas',
                   addressRegion: 'NV',
+                  addressCountry: 'US',
                 },
                 {
                   '@type': 'City',
                   name: 'Las Vegas',
                   addressRegion: 'NV',
+                  addressCountry: 'US',
                 },
                 {
                   '@type': 'City',
                   name: 'Henderson',
                   addressRegion: 'NV',
+                  addressCountry: 'US',
                 },
               ],
               hasOfferCatalog: {
@@ -448,6 +451,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Home Buying Services',
+                      description: 'Expert assistance finding and purchasing your dream home in Maravilla and North Las Vegas',
                     },
                   },
                   {
@@ -455,6 +459,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Home Selling Services',
+                      description: 'Professional marketing and sales services to maximize your property value',
                     },
                   },
                   {
@@ -462,6 +467,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Property Valuation',
+                      description: 'Accurate home valuations and market analysis for Maravilla properties',
                     },
                   },
                   {
@@ -469,6 +475,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Market Analysis',
+                      description: 'Comprehensive market insights and trends for North Las Vegas real estate',
                     },
                   },
                 ],

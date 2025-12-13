@@ -447,6 +447,7 @@ export function generateWebSiteSchema() {
     alternateName: [
       'Maravilla Homes',
       'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+      'www.maravillahomesforsale.com',
       'maravillahomesforsale.com',
     ],
     url: siteUrl,
