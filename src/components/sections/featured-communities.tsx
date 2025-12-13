@@ -90,9 +90,9 @@ export default function FeaturedCommunities() {
                 <Separator className='my-4' />
 
                 <div>
-                  <h4 className='text-sm font-semibold text-[#0A2540] mb-3'>
+                  <h3 className='text-sm font-semibold text-[#0A2540] mb-3'>
                     Key Amenities:
-                  </h4>
+                  </h3>
                   <div className='flex flex-wrap gap-2'>
                     {community.amenities.map((amenity, amenityIndex) => (
                       <Badge

@@ -149,9 +149,9 @@ export default function NeighborhoodsPage() {
                       {neighborhood.description}
                     </CardDescription>
                     <div className='space-y-2'>
-                      <h4 className='text-sm font-semibold text-[#0A2540] mb-2'>
+                      <h3 className='text-sm font-semibold text-[#0A2540] mb-2'>
                         Key Features:
-                      </h4>
+                      </h3>
                       <ul className='space-y-1'>
                         {neighborhood.features.map((feature, featureIndex) => (
                           <li

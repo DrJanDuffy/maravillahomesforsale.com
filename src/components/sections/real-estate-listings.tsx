@@ -79,41 +79,46 @@ export default function RealEstateListings() {
         </div>
 
         {/* Additional Information */}
-        <div className='mt-12 grid md:grid-cols-3 gap-8'>
-          <div className='text-center'>
-            <div className='bg-[#3A8DDE] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl'>🏠</span>
+        <div className='mt-12'>
+          <h3 className='text-2xl font-bold text-[#0A2540] mb-8 text-center'>
+            Why Choose Maravilla Properties
+          </h3>
+          <div className='grid md:grid-cols-3 gap-8'>
+            <div className='text-center'>
+              <div className='bg-[#3A8DDE] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>🏠</span>
+              </div>
+              <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
+                Premium Properties
+              </h4>
+              <p className='text-gray-600'>
+                Hand-selected luxury homes with exceptional quality and amenities
+              </p>
             </div>
-            <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
-              Premium Properties
-            </h4>
-            <p className='text-gray-600'>
-              Hand-selected luxury homes with exceptional quality and amenities
-            </p>
-          </div>
 
-          <div className='text-center'>
-            <div className='bg-[#16B286] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl'>📍</span>
+            <div className='text-center'>
+              <div className='bg-[#16B286] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>📍</span>
+              </div>
+              <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
+                Prime Location
+              </h4>
+              <p className='text-gray-600'>
+                Properties in the most desirable areas of Maravilla
+              </p>
             </div>
-            <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
-              Prime Location
-            </h4>
-            <p className='text-gray-600'>
-              Properties in the most desirable areas of Maravilla
-            </p>
-          </div>
 
-          <div className='text-center'>
-            <div className='bg-[#0A2540] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl'>💎</span>
+            <div className='text-center'>
+              <div className='bg-[#0A2540] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>💎</span>
+              </div>
+              <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
+                Luxury Features
+              </h4>
+              <p className='text-gray-600'>
+                High-end finishes, modern amenities, and exceptional craftsmanship
+              </p>
             </div>
-            <h4 className='text-lg font-semibold text-[#0A2540] mb-2'>
-              Luxury Features
-            </h4>
-            <p className='text-gray-600'>
-              High-end finishes, modern amenities, and exceptional craftsmanship
-            </p>
           </div>
         </div>
       </div>

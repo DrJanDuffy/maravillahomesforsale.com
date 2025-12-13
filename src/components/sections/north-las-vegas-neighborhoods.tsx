@@ -146,9 +146,9 @@ const NeighborhoodCard = ({ neighborhood }: { neighborhood: Neighborhood }) => {
         </div>
 
         <div className='mb-6'>
-          <h4 className='text-sm font-semibold text-[#0A2540] mb-2'>
+          <h3 className='text-sm font-semibold text-[#0A2540] mb-2'>
             Key Amenities:
-          </h4>
+          </h3>
           <div className='flex flex-wrap gap-2'>
             {neighborhood.amenities.map((amenity, index) => (
               <span

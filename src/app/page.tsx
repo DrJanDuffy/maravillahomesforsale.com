@@ -174,26 +174,26 @@ export default function Home() {
             <h2 className='text-3xl font-bold text-white mb-4'>
               Maravilla Market Overview
             </h2>
-            <p className='text-xl text-gray-200 mb-8 max-w-3xl mx-auto'>
+            <p className='text-xl text-white mb-8 max-w-3xl mx-auto'>
               Stay informed with the latest real estate trends in Las
               Vegas&apos; most prestigious community
             </p>
             <div className='grid md:grid-cols-4 gap-6 mb-8'>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
                 <div className='text-3xl font-bold text-white mb-1'>$525K</div>
-                <div className='text-gray-300 text-sm'>Average Sale Price</div>
+                <div className='text-white/90 text-sm'>Average Sale Price</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
                 <div className='text-3xl font-bold text-white mb-1'>25</div>
-                <div className='text-gray-300 text-sm'>Days on Market</div>
+                <div className='text-white/90 text-sm'>Days on Market</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
                 <div className='text-3xl font-bold text-white mb-1'>8</div>
-                <div className='text-gray-300 text-sm'>Active Listings</div>
+                <div className='text-white/90 text-sm'>Active Listings</div>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
                 <div className='text-3xl font-bold text-white mb-1'>+4.8%</div>
-                <div className='text-gray-300 text-sm'>YoY Appreciation</div>
+                <div className='text-white/90 text-sm'>YoY Appreciation</div>
               </div>
             </div>
             <Button

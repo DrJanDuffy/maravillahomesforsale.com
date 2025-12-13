@@ -63,7 +63,7 @@ export default function MarketDataSection() {
           <h2 className='text-4xl font-bold text-white mb-4'>
             Maravilla Market Data
           </h2>
-          <p className='text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-xl text-white max-w-3xl mx-auto leading-relaxed'>
             Stay informed with the latest real estate market trends and
             statistics
           </p>
@@ -73,13 +73,13 @@ export default function MarketDataSection() {
           <TabsList className='grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-white/10 backdrop-blur-sm'>
             <TabsTrigger
               value='current'
-              className='data-[state=active]:bg-white/20 data-[state=active]:text-white text-gray-200'
+              className='data-[state=active]:bg-white/20 data-[state=active]:text-white text-white/90'
             >
               Current Stats
             </TabsTrigger>
             <TabsTrigger
               value='trends'
-              className='data-[state=active]:bg-white/20 data-[state=active]:text-white text-gray-200'
+              className='data-[state=active]:bg-white/20 data-[state=active]:text-white text-white/90'
             >
               Market Trends
             </TabsTrigger>
@@ -114,7 +114,7 @@ export default function MarketDataSection() {
                     >
                       {stat.change}
                     </Badge>
-                    <CardDescription className='text-gray-300 text-sm mt-2'>
+                    <CardDescription className='text-white/90 text-sm mt-2'>
                       {stat.description}
                     </CardDescription>
                   </CardContent>
@@ -135,7 +135,7 @@ export default function MarketDataSection() {
                   </CardHeader>
                   <CardContent className='space-y-3'>
                     <div className='flex justify-between items-center'>
-                      <span className='text-gray-300'>Price Change:</span>
+                      <span className='text-white/90'>Price Change:</span>
                       <Badge
                         variant='secondary'
                         className='bg-[#16B286]/20 text-[#16B286] border-[#16B286]/30'
@@ -144,7 +144,7 @@ export default function MarketDataSection() {
                       </Badge>
                     </div>
                     <div className='flex justify-between items-center'>
-                      <span className='text-gray-300'>Sales Volume:</span>
+                      <span className='text-white/90'>Sales Volume:</span>
                       <Badge
                         variant='secondary'
                         className='bg-[#16B286]/20 text-[#16B286] border-[#16B286]/30'
@@ -153,7 +153,7 @@ export default function MarketDataSection() {
                       </Badge>
                     </div>
                     <div className='flex justify-between items-center'>
-                      <span className='text-gray-300'>Inventory:</span>
+                      <span className='text-white/90'>Inventory:</span>
                       <Badge
                         variant='secondary'
                         className='bg-white/20 text-white border-white/30'
@@ -177,7 +177,7 @@ export default function MarketDataSection() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className='text-gray-200 text-lg leading-relaxed max-w-4xl mx-auto'>
+              <CardDescription className='text-white text-lg leading-relaxed max-w-4xl mx-auto'>
                 The Maravilla market continues to show strong growth with
                 increasing demand for luxury homes. Properties are selling
                 faster than ever, with competitive market conditions. The
