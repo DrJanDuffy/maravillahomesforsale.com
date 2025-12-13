@@ -33,7 +33,10 @@ export function middleware(request: NextRequest) {
     url.pathname = redirectMap[pathname];
     url.protocol = canonicalProtocol;
     url.hostname = canonicalDomain;
-    return NextResponse.redirect(url, 301); // Permanent redirect
+    // Add canonical header to redirect response to help Google understand the canonical URL
+    const response = NextResponse.redirect(url, 301); // Permanent redirect
+    response.headers.set('Link', `<${url.toString()}>; rel="canonical"`);
+    return response;
   }
 
   // Redirect HTTP to HTTPS
