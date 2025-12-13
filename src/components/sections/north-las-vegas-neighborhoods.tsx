@@ -27,13 +27,13 @@ const neighborhoods: Neighborhood[] = [
     image: '/images/ardiente.jpg',
   },
   {
-    name: 'Craig Ranch',
+    name: 'Maravilla',
     description:
-      'Prestigious community with luxury homes and premium amenities',
-    avgPrice: '$875K',
-    homesAvailable: 25,
-    amenities: ['Golf Course', 'Clubhouse', 'Tennis Courts', 'Walking Trails'],
-    image: '/images/craig-ranch.jpg',
+      'Premier master-planned community with luxury homes and exceptional amenities',
+    avgPrice: 'Contact for Pricing',
+    homesAvailable: 0,
+    amenities: ['Parks', 'Excellent Schools', 'Convenient Location', 'Luxury Homes'],
+    image: '/images/maravilla.jpg',
   },
   {
     name: 'Del Webb at North Ranch',

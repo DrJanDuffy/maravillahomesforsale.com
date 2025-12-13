@@ -27,18 +27,18 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Incremental Static Regeneration - revalidate every 15 minutes for fresh market data
 export const revalidate = 900; // 15 minutes
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Real Estate Market Data & Trends | Las Vegas',
+  title: 'Maravilla Real Estate Market Data & Trends | Las Vegas',
   description:
-    'Latest Craig Ranch real estate market data: Average home value $428K, median sale price $415K, 46 days on market (faster than national average). Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 820-5408 for market insights.',
+    'Latest Maravilla real estate market data: Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 820-5408 for market insights.',
   keywords:
-    'Craig Ranch market data, Las Vegas real estate trends, market statistics, home prices, days on market, real estate market analysis, Las Vegas housing market',
+    'Maravilla market data, Las Vegas real estate trends, market statistics, home prices, days on market, real estate market analysis, Las Vegas housing market',
   path: '/market-data',
 });
 

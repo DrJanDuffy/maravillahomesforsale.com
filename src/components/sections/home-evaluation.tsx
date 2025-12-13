@@ -89,10 +89,10 @@ export default function HomeEvaluationSection() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Get Your Craig Ranch Home&apos;s Value
+            Get Your Maravilla Home&apos;s Value
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Discover what your Craig Ranch property is worth with our advanced
+            Discover what your Maravilla property is worth with our advanced
             evaluation tools
           </p>
         </div>

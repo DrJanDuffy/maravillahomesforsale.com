@@ -44,10 +44,10 @@ export default function FeaturedCommunities() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Featured Craig Ranch Communities
+            Featured Maravilla Communities
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Discover the unique character of each area within Craig Ranch
+            Discover the unique character of Maravilla and surrounding areas
           </p>
         </div>
 

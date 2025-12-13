@@ -29,7 +29,7 @@ import {
 } from '@/lib/metadata';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 // Static generation with ISR - revalidate weekly for neighborhood updates
@@ -37,11 +37,11 @@ export const revalidate = 604800; // 1 week
 
 export const metadata = genMetadata({
   title:
-    'Craig Ranch Neighborhoods & Collections | North Las Vegas Communities',
+    'Maravilla Neighborhoods & Communities | Las Vegas',
   description:
-    'Explore Craig Ranch neighborhoods: Jasmine Ranch, Centennial Crossing, Seabreeze, and Century Communities collections (Mohave, Essence, Serenity, Olympic, Monarch). Homes from $370K to $1.8M. Find your perfect community in North Las Vegas. Call (702) 820-5408.',
+    'Explore Maravilla and surrounding neighborhoods in Las Vegas. Find your perfect community with luxury homes and excellent amenities. Call (702) 820-5408.',
   keywords:
-    'Craig Ranch neighborhoods, Jasmine Ranch, Centennial Crossing, Seabreeze, Century Communities, Mohave Collection, Essence Collection, Serenity Collection, Olympic Collection, Monarch Collection, North Las Vegas communities',
+    'Maravilla neighborhoods, Las Vegas communities, luxury neighborhoods, Las Vegas real estate communities',
   path: '/neighborhoods',
 });
 

@@ -17,7 +17,7 @@ export default function PropertyCategories() {
       title: 'Single Story Homes',
       description: 'Spacious single-story homes perfect for families',
       price: '1,519 - 2,947 sq.ft.',
-      image: '/single story Craig Ranch Homes (2).jpg',
+      image: '/single story Maravilla Homes.jpg',
       count: '17 Floor Plans',
       features: ['Up to 5 Bedrooms', 'Up to 3 Bathrooms', '2 Bay Garage'],
     },
@@ -25,7 +25,7 @@ export default function PropertyCategories() {
       title: 'Two Story Homes',
       description: 'Elegant two-story homes with modern layouts',
       price: '1,519 - 2,947 sq.ft.',
-      image: '/double story home craig ranch las vegas.jpg',
+      image: '/double story home maravilla las vegas.jpg',
       count: '17 Floor Plans',
       features: ['Up to 5 Bedrooms', 'Up to 3 Bathrooms', '2 Bay Garage'],
     },
@@ -33,7 +33,7 @@ export default function PropertyCategories() {
       title: 'Gated Community',
       description: 'Master planned community with incredible amenities',
       price: '6 Neighborhoods',
-      image: '/gated community home craig ranch las vegas.jpg',
+      image: '/gated community home maravilla las vegas.jpg',
       count: '7 Parks + Trails',
       features: ['Gated Entry', 'Regional Park', 'Miles of Trails'],
     },
@@ -45,10 +45,10 @@ export default function PropertyCategories() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Craig Ranch Property Categories
+            Maravilla Property Categories
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Explore our diverse selection of premium properties in Craig Ranch
+            Explore our diverse selection of premium properties in Maravilla
           </p>
         </div>
 

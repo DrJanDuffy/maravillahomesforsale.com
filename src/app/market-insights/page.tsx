@@ -20,15 +20,15 @@ import {
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
 const baseUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Craig Ranch Las Vegas Homes Market Insights | Craig Ranch Vegas | Homes By Dr. Jan Duffy',
+  title: 'Maravilla Las Vegas Homes Market Insights | Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
   description:
-    'Read the latest real estate market insights and trends for Craig Ranch, North Las Vegas and Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 820-5408.',
+    'Read the latest real estate market insights and trends for Maravilla, Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 820-5408.',
   keywords:
-    'Craig Ranch market insights, Craig Ranch real estate news, Las Vegas market insights, North Las Vegas real estate trends',
+    'Maravilla market insights, Maravilla real estate news, Las Vegas market insights, Las Vegas real estate trends',
   path: '/market-insights',
 });
 

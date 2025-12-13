@@ -37,10 +37,10 @@ export default function RealEstateListings() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Available Craig Ranch Properties
+            Available Maravilla Properties
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-            Discover the latest luxury homes available in Craig Ranch
+            Discover the latest luxury homes available in Maravilla
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function RealEstateListings() {
         <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg'>
           <div className='mb-6'>
             <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-              Current Craig Ranch Listings
+              Current Maravilla Listings
             </h3>
             <p className='text-gray-600'>
               Browse our curated selection of premium properties in the $600K -
@@ -64,7 +64,7 @@ export default function RealEstateListings() {
             <div className='text-center'>
               <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4'></div>
               <p className='text-gray-500 text-sm'>
-                Loading luxury properties in Craig Ranch...
+                Loading luxury properties in Maravilla...
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function RealEstateListings() {
               Prime Location
             </h4>
             <p className='text-gray-600'>
-              Properties in the most desirable areas of Craig Ranch
+              Properties in the most desirable areas of Maravilla
             </p>
           </div>
 

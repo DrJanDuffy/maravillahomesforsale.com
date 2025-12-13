@@ -61,7 +61,7 @@ export default function MarketDataSection() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-white mb-4'>
-            Craig Ranch Market Data
+            Maravilla Market Data
           </h2>
           <p className='text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed'>
             Stay informed with the latest real estate market trends and
@@ -178,9 +178,9 @@ export default function MarketDataSection() {
             </CardHeader>
             <CardContent>
               <CardDescription className='text-gray-200 text-lg leading-relaxed max-w-4xl mx-auto'>
-                The Craig Ranch market continues to show strong growth with
+                The Maravilla market continues to show strong growth with
                 increasing demand for luxury homes. Properties are selling
-                faster than ever, with an average of 23 days on market. The
+                faster than ever, with competitive market conditions. The
                 area&apos;s excellent schools, amenities, and convenient
                 location continue to drive buyer interest.
               </CardDescription>

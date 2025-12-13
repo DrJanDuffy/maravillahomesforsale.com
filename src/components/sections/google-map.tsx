@@ -13,13 +13,13 @@ type GoogleMapProps = {
 };
 
 export default function GoogleMap({
-  address = 'Craig Ranch, North Las Vegas, NV 89031',
+  address = 'Maravilla, Las Vegas, NV',
   latitude = 36.2831,
   longitude = -115.1331,
   zoom = 14,
   height = '400px',
   className = '',
-  title = 'Craig Ranch Location',
+  title = 'Maravilla Location',
 }: GoogleMapProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
 

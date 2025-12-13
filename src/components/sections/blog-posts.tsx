@@ -194,10 +194,10 @@ const BlogPosts = async () => {
             id='blog-posts-heading'
             className='text-[32px] font-primary font-regular text-[#333333] mb-3'
           >
-            Craig Ranch Las Vegas Homes Market Insights
+            Maravilla Las Vegas Homes Market Insights
           </h2>
           <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-            Stay informed with the latest real estate market insights and trends for Craig Ranch, Las Vegas homes and luxury properties
+            Stay informed with the latest real estate market insights and trends for Maravilla, Las Vegas homes and luxury properties
           </p>
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]'>
@@ -210,7 +210,7 @@ const BlogPosts = async () => {
             href='/market-insights'
             prefetch={false}
             className='inline-block bg-[#3A8DDE] text-white font-primary font-medium text-sm py-[10px] px-6 rounded-lg hover:bg-[#2A7DCE] transition-colors duration-300'
-            aria-label='View all Craig Ranch Las Vegas market insights'
+            aria-label='View all Maravilla Las Vegas market insights'
           >
             View All Market Insights
           </Link>
