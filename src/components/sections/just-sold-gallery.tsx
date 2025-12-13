@@ -3,27 +3,47 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// Photo IDs from the live site
-const PHOTO_IDS = [
-  2923016, 2916762, 2916763, 2916764, 2916765, 2916766, 2916767, 2916768,
-  2916769, 2916770, 2916771, 2916772, 2916773, 2916774, 2916775, 2916776,
-  2916777, 2916778, 2916779, 2916780, 2916781, 2916782, 2916783, 2916784,
-  2916785, 2916761, 2916786, 2916787, 2916788, 2916789, 2916790, 2916791,
+// Local photos from public/photos directory
+// Using the primary versions (without -2 or -3 suffixes) and ordering them numerically
+const PHOTO_PATHS = [
+  '/photos/01-1 (2).jpg',
+  '/photos/02-1 (1).jpg',
+  '/photos/03-1 (3)-2.jpg',
+  '/photos/04-1 (4).jpg',
+  '/photos/05-1 (5).jpg',
+  '/photos/06-1 (6).jpg',
+  '/photos/07-1 (7).jpg',
+  '/photos/08-1 (8).jpg',
+  '/photos/09-1 (9).jpg',
+  '/photos/10-1 (10).jpg',
+  '/photos/11-1 (11).jpg',
+  '/photos/12-1 (12).jpg',
+  '/photos/13-1 (15).jpg',
+  '/photos/14-1 (22).jpg',
+  '/photos/15-1 (16).jpg',
+  '/photos/16-1 (18).jpg',
+  '/photos/17-1 (19).jpg',
+  '/photos/18-1 (17).jpg',
+  '/photos/19-1 (20).jpg',
+  '/photos/20-1 (23).jpg',
+  '/photos/21-1 (24).jpg',
+  '/photos/22-1 (25).jpg',
+  '/photos/23-1 (21).jpg',
+  '/photos/24-1 (26).jpg',
+  '/photos/25-1 (13).jpg',
+  '/photos/26-1 (14).jpg',
+  '/photos/27-1 (30).jpg',
+  '/photos/28-1 (27).jpg',
+  '/photos/29-1 (31).jpg',
+  '/photos/30-1 (28).jpg',
+  '/photos/31-1 (29)-3.jpg',
 ];
-
-function getPhotoUrl(photoId: number, size: 'thumb' | 'full' = 'thumb'): string {
-  const baseUrl = 'https://photos.cribflyer-proxy.com/cdn-cgi/image';
-  if (size === 'thumb') {
-    return `${baseUrl}/width=400,fit=contain,rotate=0,format=auto,quality=85/4616/59105/${photoId}/photo.jpg`;
-  }
-  return `${baseUrl}/width=1500,fit=contain,rotate=0,format=auto,quality=85/4616/59105/${photoId}/photo.jpg`;
-}
 
 export default function JustSoldGallery() {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
 
-  const openLightbox = (photoId: number) => {
-    setSelectedPhoto(photoId);
+  const openLightbox = (index: number) => {
+    setSelectedPhoto(index);
     document.body.style.overflow = 'hidden';
   };
 
@@ -34,16 +54,15 @@ export default function JustSoldGallery() {
 
   const navigatePhoto = (direction: 'prev' | 'next') => {
     if (selectedPhoto === null) return;
-    const currentIndex = PHOTO_IDS.indexOf(selectedPhoto);
     let newIndex: number;
     
     if (direction === 'prev') {
-      newIndex = currentIndex === 0 ? PHOTO_IDS.length - 1 : currentIndex - 1;
+      newIndex = selectedPhoto === 0 ? PHOTO_PATHS.length - 1 : selectedPhoto - 1;
     } else {
-      newIndex = currentIndex === PHOTO_IDS.length - 1 ? 0 : currentIndex + 1;
+      newIndex = selectedPhoto === PHOTO_PATHS.length - 1 ? 0 : selectedPhoto + 1;
     }
     
-    setSelectedPhoto(PHOTO_IDS[newIndex]);
+    setSelectedPhoto(newIndex);
   };
 
   // Keyboard navigation
@@ -54,13 +73,11 @@ export default function JustSoldGallery() {
       if (e.key === 'Escape') {
         closeLightbox();
       } else if (e.key === 'ArrowLeft') {
-        const currentIndex = PHOTO_IDS.indexOf(selectedPhoto);
-        const newIndex = currentIndex === 0 ? PHOTO_IDS.length - 1 : currentIndex - 1;
-        setSelectedPhoto(PHOTO_IDS[newIndex]);
+        const newIndex = selectedPhoto === 0 ? PHOTO_PATHS.length - 1 : selectedPhoto - 1;
+        setSelectedPhoto(newIndex);
       } else if (e.key === 'ArrowRight') {
-        const currentIndex = PHOTO_IDS.indexOf(selectedPhoto);
-        const newIndex = currentIndex === PHOTO_IDS.length - 1 ? 0 : currentIndex + 1;
-        setSelectedPhoto(PHOTO_IDS[newIndex]);
+        const newIndex = selectedPhoto === PHOTO_PATHS.length - 1 ? 0 : selectedPhoto + 1;
+        setSelectedPhoto(newIndex);
       }
     };
 
@@ -77,21 +94,21 @@ export default function JustSoldGallery() {
               Just Sold: Maravilla Homes
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Browse through 32 stunning photos of recently sold Maravilla properties
+              Browse through {PHOTO_PATHS.length} stunning photos of recently sold Maravilla properties
             </p>
           </div>
 
           {/* Desktop Grid */}
           <div className='hidden md:grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6'>
-            {PHOTO_IDS.map((photoId, index) => (
+            {PHOTO_PATHS.map((photoPath, index) => (
               <div
-                key={photoId}
+                key={photoPath}
                 className='group relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer bg-gray-100'
-                onClick={() => openLightbox(photoId)}
+                onClick={() => openLightbox(index)}
               >
                 <Image
-                  src={getPhotoUrl(photoId, 'thumb')}
-                  alt={`Maravilla Homes, North Las Vegas, NV - Photo ${index + 1}`}
+                  src={photoPath}
+                  alt={`Maravilla Homes, North Las Vegas, NV - Just Sold Property Photo ${index + 1}`}
                   fill
                   className='object-cover group-hover:scale-105 transition-transform duration-300'
                   sizes='(max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 20vw'
@@ -104,15 +121,15 @@ export default function JustSoldGallery() {
 
           {/* Mobile Grid */}
           <div className='md:hidden grid grid-cols-2 gap-4'>
-            {PHOTO_IDS.map((photoId, index) => (
+            {PHOTO_PATHS.map((photoPath, index) => (
               <div
-                key={photoId}
+                key={photoPath}
                 className='relative aspect-[4/3] rounded-lg overflow-hidden shadow-md active:scale-95 transition-transform bg-gray-100'
-                onClick={() => openLightbox(photoId)}
+                onClick={() => openLightbox(index)}
               >
                 <Image
-                  src={getPhotoUrl(photoId, 'thumb')}
-                  alt={`Maravilla Homes, North Las Vegas, NV - Photo ${index + 1}`}
+                  src={photoPath}
+                  alt={`Maravilla Homes, North Las Vegas, NV - Just Sold Property Photo ${index + 1}`}
                   fill
                   className='object-cover'
                   sizes='50vw'
@@ -124,7 +141,7 @@ export default function JustSoldGallery() {
 
           <div className='text-center mt-8'>
             <p className='text-gray-500 text-sm'>
-              Click any photo to view full size • {PHOTO_IDS.length} photos total
+              Click any photo to view full size • {PHOTO_PATHS.length} photos total
             </p>
           </div>
         </div>
@@ -206,23 +223,25 @@ export default function JustSoldGallery() {
 
           {/* Photo Counter */}
           <div className='absolute top-4 left-1/2 -translate-x-1/2 text-white text-sm z-10'>
-            {PHOTO_IDS.indexOf(selectedPhoto) + 1} of {PHOTO_IDS.length}
+            {selectedPhoto !== null ? selectedPhoto + 1 : 0} of {PHOTO_PATHS.length}
           </div>
 
           {/* Full Size Image */}
-          <div
-            className='relative w-full h-full max-w-7xl max-h-[90vh]'
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={getPhotoUrl(selectedPhoto, 'full')}
-              alt={`Maravilla Homes, North Las Vegas, NV - Photo ${PHOTO_IDS.indexOf(selectedPhoto) + 1}`}
-              fill
-              className='object-contain'
-              sizes='100vw'
-              priority
-            />
-          </div>
+          {selectedPhoto !== null && (
+            <div
+              className='relative w-full h-full max-w-7xl max-h-[90vh]'
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={PHOTO_PATHS[selectedPhoto]}
+                alt={`Maravilla Homes, North Las Vegas, NV - Just Sold Property Photo ${selectedPhoto + 1}`}
+                fill
+                className='object-contain'
+                sizes='100vw'
+                priority
+              />
+            </div>
+          )}
 
         </div>
       )}
