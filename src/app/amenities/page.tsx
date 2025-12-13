@@ -51,7 +51,7 @@ export default function AmenitiesPage() {
               Maravilla Homes Amenities
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
-              Explore the comprehensive amenities that make Maravilla homes exceptional. From interior features to community amenities, discover what sets these properties apart in North Las Vegas.
+              Explore the comprehensive amenities that make <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>Maravilla homes</Link> exceptional. From interior features to community amenities, discover what sets these properties apart in North Las Vegas. See <Link href='/home-descriptions' className='text-white hover:text-gray-200 underline font-medium'>detailed home descriptions</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or view <Link href='/map-and-nearby-places' className='text-white hover:text-gray-200 underline font-medium'>nearby places</Link>.
             </p>
           </div>
         </section>

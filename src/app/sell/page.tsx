@@ -81,7 +81,7 @@ export default function SellMaravillaPage() {
             property—it&apos;s about positioning your home so it&apos;s the clear best choice
             for buyers comparing Maravilla inventory right now. Dr. Jan Duffy,
             REALTOR®, helps you prep, price, market, and negotiate with a plan
-            built for the <strong>Maravilla</strong> buyer.
+            built for the <strong>Maravilla</strong> buyer. Get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>free home valuation</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or explore <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>selling services</Link>.
           </p>
         </div>
       </div>

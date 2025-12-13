@@ -38,7 +38,7 @@ export default function HomeDescriptionsPage() {
               Maravilla Homes: Detailed Property Descriptions
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
-              Discover the exceptional features and specifications of luxury homes in Maravilla, North Las Vegas. From gourmet kitchens to smart home technology, explore what makes these properties truly special.
+              Discover the exceptional features and specifications of <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>luxury homes in Maravilla</Link>, North Las Vegas. From gourmet kitchens to smart home technology, explore what makes these properties truly special. View <Link href='/amenities' className='text-white hover:text-gray-200 underline font-medium'>community amenities</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or see <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home values</Link>.
             </p>
           </div>
         </section>
@@ -67,7 +67,7 @@ export default function HomeDescriptionsPage() {
               </div>
             </div>
             <p className='text-lg text-gray-700 text-center max-w-3xl mx-auto'>
-              Maravilla homes represent exceptional value in North Las Vegas&apos;s 89031 zip code, offering luxury living at competitive prices. These properties combine modern design with practical features, making them ideal for families, professionals, and investors seeking quality real estate in a thriving community.
+              Maravilla homes represent exceptional value in North Las Vegas&apos;s 89031 zip code, offering luxury living at competitive prices. These properties combine modern design with practical features, making them ideal for families, professionals, and investors seeking quality real estate in a thriving community. Browse <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>available homes</Link>, explore <Link href='/amenities' className='text-[#3A8DDE] hover:underline font-medium'>amenities</Link>, or learn about the <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>Maravilla neighborhood</Link>.
             </p>
           </div>
         </section>

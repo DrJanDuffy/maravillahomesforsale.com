@@ -15,16 +15,15 @@ export default function AboutContent() {
               Dr. Jan Duffy is a REALTOR® with{' '}
               <strong>Berkshire Hathaway HomeServices® Nevada</strong>, your
               trusted partner in finding the perfect home with exceptional value in one of Las Vegas&apos;
-              best value communities. With years of experience in the Maravilla
-              area and throughout Las Vegas and Henderson, she understands
-              what makes each neighborhood special and how to find the best value for your investment.
+              best value communities. With years of experience in the <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>Maravilla area</Link> and throughout Las Vegas and Henderson, she understands
+              what makes each neighborhood special and how to find the best value for your investment. Browse <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>available homes in Maravilla</Link> or explore our <Link href='/real-estate-services' className='text-[#3A8DDE] hover:underline font-medium'>real estate services</Link>.
             </p>
             <p className='text-lg text-gray-600 mb-8 leading-relaxed'>
               Dr. Duffy is committed to providing exceptional service, expert
               guidance, and personalized attention to every client. She offers
               expert, data-driven advice and personalized consultations. Whether
-              you&apos;re buying, selling, or investing, she&apos;s here to help
-              you achieve your real estate goals.
+              you&apos;re <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>buying</Link>, <Link href='/sell' className='text-[#3A8DDE] hover:underline font-medium'>selling</Link>, or investing, she&apos;s here to help
+              you achieve your real estate goals. Learn more about <Link href='/home-valuation' className='text-[#3A8DDE] hover:underline font-medium'>home valuation services</Link> or <Link href='/contact' className='text-[#3A8DDE] hover:underline font-medium'>contact Dr. Duffy</Link> directly.
             </p>
 
             {/* Key Features */}

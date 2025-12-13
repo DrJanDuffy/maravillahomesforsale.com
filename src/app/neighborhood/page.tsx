@@ -316,10 +316,10 @@ export default function NeighborhoodPage() {
             Property Overview
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
-            Nestled in the heart of North Las Vegas&apos;s 89031 zip code, Maravilla offers the perfect blend of suburban serenity and urban convenience. Celebrated for its pristine upkeep and desert-friendly landscaping, this residence is part of a well-established neighborhood that has matured beautifully over the years. The community features a diverse selection of homes ranging from $380,000 to $600,000, providing options for various budgets and preferences.
+            Nestled in the heart of North Las Vegas&apos;s 89031 zip code, Maravilla offers the perfect blend of suburban serenity and urban convenience. Celebrated for its pristine upkeep and desert-friendly landscaping, this residence is part of a well-established neighborhood that has matured beautifully over the years. The community features a diverse selection of <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>homes ranging from $380,000 to $600,000</Link>, providing options for various budgets and preferences. Explore <Link href='/home-descriptions' className='text-[#3A8DDE] hover:underline font-medium'>detailed home descriptions</Link> and <Link href='/amenities' className='text-[#3A8DDE] hover:underline font-medium'>community amenities</Link>.
           </p>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
-            Maravilla homes are known for their quality construction, modern amenities, and thoughtful design. Properties feature 3-5 bedrooms, 2-4 bathrooms, and range from 1,800 to 3,500 square feet. The homes were built between 2005 and 2014, representing a period of quality construction in North Las Vegas. These properties benefit from established neighborhoods with mature landscaping, proven construction methods, and well-maintained infrastructure.
+            Maravilla homes are known for their quality construction, modern amenities, and thoughtful design. Properties feature 3-5 bedrooms, 2-4 bathrooms, and range from 1,800 to 3,500 square feet. The homes were built between 2005 and 2014, representing a period of quality construction in North Las Vegas. These properties benefit from established neighborhoods with mature landscaping, proven construction methods, and well-maintained infrastructure. View <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>nearby places</Link> and <Link href='/community' className='text-[#3A8DDE] hover:underline font-medium'>community features</Link>.
           </p>
         </div>
       </section>
@@ -331,7 +331,7 @@ export default function NeighborhoodPage() {
             Location & Transportation
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
-            Maravilla is conveniently connected to major routes, making it easy to access the entire Las Vegas Valley and beyond. The strategic location provides excellent connectivity while maintaining a peaceful residential atmosphere.
+            Maravilla is conveniently connected to major routes, making it easy to access the entire Las Vegas Valley and beyond. The strategic location provides excellent connectivity while maintaining a peaceful residential atmosphere. See our <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>interactive map</Link> and explore <Link href='/community' className='text-[#3A8DDE] hover:underline font-medium'>community amenities</Link>.
           </p>
           <div className='grid md:grid-cols-2 gap-8'>
             <div>
@@ -379,7 +379,7 @@ export default function NeighborhoodPage() {
             Shopping & Dining in Maravilla
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
-            Within a 1-2 mile radius, you&apos;ll find a variety of shopping and dining options that make daily errands convenient and dining out enjoyable. The area offers everything from everyday essentials to specialty retailers, and from casual family restaurants to upscale dining establishments.
+            Within a 1-2 mile radius, you&apos;ll find a variety of shopping and dining options that make daily errands convenient and dining out enjoyable. The area offers everything from everyday essentials to specialty retailers, and from casual family restaurants to upscale dining establishments. Discover more <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>nearby places</Link> and <Link href='/community' className='text-[#3A8DDE] hover:underline font-medium'>community features</Link>.
           </p>
           <div className='grid md:grid-cols-2 gap-8'>
             <div>

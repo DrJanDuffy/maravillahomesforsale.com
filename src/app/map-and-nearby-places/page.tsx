@@ -47,7 +47,7 @@ export default function MapAndNearbyPlacesPage() {
               Maravilla Map & Nearby Places
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
-              Discover everything Maravilla, North Las Vegas has to offer. Explore schools, parks, restaurants, shopping, and essential services all within minutes of your new home.
+              Discover everything Maravilla, North Las Vegas has to offer. Explore schools, parks, restaurants, shopping, and essential services all within minutes of your new home. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>available homes</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood guide</Link>, or see <Link href='/community' className='text-white hover:text-gray-200 underline font-medium'>community features</Link>.
             </p>
           </div>
         </section>

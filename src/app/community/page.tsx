@@ -132,10 +132,9 @@ export default function CommunityPage() {
             Maravilla Community Guide
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            A premier master-planned community in Las Vegas offering luxury
-            homes, excellent schools, beautiful parks, and convenient access to
+            A premier master-planned community in Las Vegas offering <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>luxury homes</Link>, excellent schools, beautiful parks, and convenient access to
             shopping, dining, and major highways. Experience the perfect blend of
-            lifestyle and convenience.
+            lifestyle and convenience. Explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>Maravilla neighborhood</Link>, view <Link href='/amenities' className='text-white hover:text-gray-200 underline font-medium'>community amenities</Link>, or see our <Link href='/map-and-nearby-places' className='text-white hover:text-gray-200 underline font-medium'>interactive map</Link>.
           </p>
         </div>
       </div>
@@ -152,7 +151,7 @@ export default function CommunityPage() {
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Maravilla is served by excellent public and private schools,
-              making it an ideal location for families with children.
+              making it an ideal location for families with children. See our <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>map of nearby schools</Link> and explore the <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>neighborhood guide</Link>.
             </p>
           </div>
 
@@ -200,7 +199,7 @@ export default function CommunityPage() {
               Community Amenities
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              Everything you need is just minutes away in Maravilla
+              Everything you need is just minutes away in Maravilla. View <Link href='/amenities' className='text-[#3A8DDE] hover:underline font-medium'>detailed amenities</Link> and <Link href='/home-descriptions' className='text-[#3A8DDE] hover:underline font-medium'>home features</Link>.
             </p>
           </div>
 

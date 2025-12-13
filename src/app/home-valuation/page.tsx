@@ -80,7 +80,7 @@ export default function MaravillaHomeValuationPage() {
             Wondering <strong>what your Maravilla home is worth</strong>? A
             valuation should be more than a generic estimate—it should reflect how
             buyers are shopping Maravilla today. Dr. Jan Duffy, REALTOR®, provides
-            a practical value range and a pricing plan you can actually use.
+            a practical value range and a pricing plan you can actually use. View <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>current market data</Link>, explore <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>similar homes for sale</Link>, or learn about <Link href='/sell' className='text-white hover:text-gray-200 underline font-medium'>selling your home</Link>.
           </p>
         </div>
       </div>

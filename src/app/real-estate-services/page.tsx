@@ -47,7 +47,7 @@ export default function RealEstateServicesPage() {
               Full-Service Real Estate Services
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
-              Comprehensive support for buyers, sellers, and investors in Maravilla, North Las Vegas. From property transactions to investment consulting, Dr. Jan Duffy provides expert guidance every step of the way.
+              Comprehensive support for buyers, sellers, and investors in Maravilla, North Las Vegas. From property transactions to investment consulting, Dr. Jan Duffy provides expert guidance every step of the way. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</Link>, get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>, or learn about <Link href='/sell' className='text-white hover:text-gray-200 underline font-medium'>selling your home</Link>.
             </p>
           </div>
         </section>

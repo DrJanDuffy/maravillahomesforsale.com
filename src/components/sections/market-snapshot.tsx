@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -5,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 export default function MarketSnapshot() {
   return (
@@ -26,18 +28,30 @@ export default function MarketSnapshot() {
           <div className='bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-lg border border-gray-200'>
             <div className='prose prose-lg max-w-none'>
               <p className='text-gray-700 leading-relaxed mb-4'>
-                Maravilla showcases homes from $400,000 to $600,000 in North Las Vegas&apos;s sought-after 89031 zip code. Recent market data shows an average sale price of $525,000 with homes selling within 25 days. Properties feature 3-5 bedrooms, 2-4 bathrooms, spanning 2,000-4,000 square feet.
+                Maravilla showcases <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>homes from $400,000 to $600,000</Link> in North Las Vegas&apos;s sought-after 89031 zip code. Recent <Link href='/market-data' className='text-[#3A8DDE] hover:underline font-medium'>market data</Link> shows an average sale price of $525,000 with homes selling within 25 days. Properties feature 3-5 bedrooms, 2-4 bathrooms, spanning 2,000-4,000 square feet. Explore the <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>Maravilla neighborhood</Link> to learn more about this premier community.
               </p>
               
               <p className='text-gray-700 font-semibold mb-3'>Key highlights:</p>
               <ul className='list-disc list-inside space-y-2 text-gray-700 mb-6'>
                 <li>4.8% year-over-year appreciation</li>
                 <li>$245 per square foot average</li>
-                <li>8 active listings available</li>
+                <li>8 <Link href='/homes' className='text-[#3A8DDE] hover:underline'>active listings available</Link></li>
                 <li>Premium desert modern designs</li>
                 <li>Smart home technology</li>
                 <li>Energy-efficient features</li>
               </ul>
+              
+              <div className='flex flex-wrap gap-3 mt-6'>
+                <Button asChild variant='outline' size='sm'>
+                  <Link href='/market-data'>View Full Market Report</Link>
+                </Button>
+                <Button asChild variant='outline' size='sm'>
+                  <Link href='/homes'>Browse Maravilla Homes</Link>
+                </Button>
+                <Button asChild variant='outline' size='sm'>
+                  <Link href='/home-valuation'>Get Home Valuation</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@ export default function ContactPage() {
           <p className='text-xl text-gray-200 max-w-3xl'>
             Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada. Get expert, data-driven advice and personalized
-            consultations for homes in Maravilla and throughout Las Vegas.
+            consultations for <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes in Maravilla</Link> and throughout Las Vegas. Explore <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>real estate services</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
           </p>
         </div>
       </div>

@@ -33,7 +33,39 @@ export default function Footer() {
                   href='/neighborhood'
                   className='hover:text-white transition-colors duration-200 hover:underline'
                 >
-                  Neighborhood
+                  Neighborhood Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/community'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/home-descriptions'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Home Descriptions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/amenities'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Amenities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/map-and-nearby-places'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Map & Nearby Places
                 </Link>
               </li>
               <li>
@@ -58,6 +90,22 @@ export default function Footer() {
                   className='hover:text-white transition-colors duration-200 hover:underline'
                 >
                   Home Valuation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/sell'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Sell Your Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/real-estate-services'
+                  className='hover:text-white transition-colors duration-200 hover:underline'
+                >
+                  Real Estate Services
                 </Link>
               </li>
               <li>

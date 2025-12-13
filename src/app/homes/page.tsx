@@ -60,11 +60,11 @@ export default function HomesPage() {
             Homes for Sale in Maravilla
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            Discover homes for sale in the Maravilla community in Las
+            Discover <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale in the Maravilla community</Link> in Las
             Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada, to find your perfect property. Prices range
             from $370,000 to $1.8 million, with 206 homes currently available.
-            Average home value: $427,967.
+            Average home value: $427,967. Explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>Maravilla neighborhood</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function HomesPage() {
                 Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices®
                 Nevada, specializing in various communities across Las Vegas and
                 Henderson. She offers expert, data-driven advice and personalized
-                consultations.
+                consultations. Learn more about <Link href='/real-estate-services' className='text-[#3A8DDE] hover:underline font-medium'>her real estate services</Link>, explore <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>Maravilla neighborhood information</Link>, or view <Link href='/market-insights' className='text-[#3A8DDE] hover:underline font-medium'>market insights</Link> for the latest trends.
               </p>
               <AgentPhoto
                 src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
@@ -166,7 +166,7 @@ export default function HomesPage() {
               <CardContent>
                 <CardDescription>
                   Luxury homes with modern amenities, high-end finishes, and
-                  exceptional craftsmanship
+                  exceptional craftsmanship. See <Link href='/home-descriptions' className='text-[#3A8DDE] hover:underline'>detailed home descriptions</Link> and <Link href='/amenities' className='text-[#3A8DDE] hover:underline'>community amenities</Link>.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -181,7 +181,7 @@ export default function HomesPage() {
               <CardContent>
                 <CardDescription>
                   Convenient access to shopping, dining, entertainment, and
-                  excellent schools
+                  excellent schools. Explore <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline'>nearby places</Link> and the <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline'>neighborhood guide</Link>.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -196,7 +196,7 @@ export default function HomesPage() {
               <CardContent>
                 <CardDescription>
                   Properties sell quickly with strong appreciation and growing
-                  demand
+                  demand. View <Link href='/market-data' className='text-[#3A8DDE] hover:underline'>current market data</Link> and <Link href='/market-insights' className='text-[#3A8DDE] hover:underline'>market insights</Link>.
                 </CardDescription>
               </CardContent>
             </Card>
