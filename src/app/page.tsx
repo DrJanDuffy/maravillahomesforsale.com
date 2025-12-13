@@ -165,7 +165,7 @@ export default function Home() {
         <section className='py-16 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>
-              Craig Ranch Market Overview
+              Maravilla Market Overview
             </h2>
             <p className='text-xl text-gray-200 mb-8 max-w-3xl mx-auto'>
               Stay informed with the latest real estate trends in Las
@@ -251,7 +251,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/home-valuation-craig-ranch'
+                    href='/home-valuation'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Home Valuation
@@ -267,7 +267,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/new-construction-craig-ranch'
+                    href='/new-construction'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     New Construction
@@ -275,7 +275,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/craig-ranch-schools'
+                    href='/schools'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Schools

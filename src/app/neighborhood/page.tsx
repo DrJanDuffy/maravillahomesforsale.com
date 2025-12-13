@@ -724,7 +724,7 @@ export default function NeighborhoodPage() {
               },
               {
                 '@type': 'LocationFeatureSpecification',
-                name: 'Craig Ranch Regional Park',
+                name: 'Maravilla Parks',
                 value: true,
               },
               {

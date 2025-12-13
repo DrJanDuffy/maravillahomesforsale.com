@@ -3,7 +3,7 @@
 import { useIsMobile } from '@/hooks';
 import { useEffect, useRef } from 'react';
 
-export default function CraigRanchPropertySearch() {
+export default function MaravillaPropertySearch() {
   const isMobile = useIsMobile();
   const widgetRef = useRef<HTMLDivElement>(null);
 

@@ -3,14 +3,14 @@
 import { useIsMobile } from '@/hooks';
 import { useEffect, useRef } from 'react';
 
-type CraigRanchListingsProps = {
+type MaravillaListingsProps = {
   priceMin?: string;
   priceMax?: string;
   showMap?: boolean;
   listingsPerPage?: string;
 };
 
-export default function CraigRanchListings({
+export default function MaravillaListings({
   priceMin = '400000',
   priceMax = '500000',
   showMap = true,
