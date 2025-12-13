@@ -142,7 +142,7 @@ export default function Home() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Featured Craig Ranch Listings from Dr. Jan Duffy
+                Featured Maravilla Listings from Dr. Jan Duffy
               </h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
                 Browse our current office listings. Dr. Jan Duffy specializes in
@@ -259,7 +259,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link
-                    href='/sell-craig-ranch'
+                    href='/sell'
                     className='text-[#0A2540] hover:text-[#3A8DDE] hover:underline transition-colors font-medium'
                   >
                     Sell Your Home

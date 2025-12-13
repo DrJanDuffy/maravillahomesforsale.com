@@ -233,7 +233,7 @@ export default function CommunityPage() {
               <ShoppingCart className='h-8 w-8 text-[#16B286]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Shopping & Dining in Craig Ranch
+              Shopping & Dining in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Most shopping and dining options are along West Craig Road, now

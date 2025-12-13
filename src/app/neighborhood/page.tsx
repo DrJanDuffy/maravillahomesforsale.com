@@ -314,7 +314,7 @@ export default function NeighborhoodPage() {
               <TreePine className='h-8 w-8 text-[#16B286]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Craig Ranch Regional Park
+              Maravilla Parks & Amenities
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               beautiful outdoor spaces for recreation, relaxation, and community

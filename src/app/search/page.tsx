@@ -73,10 +73,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               name: 'Search Maravilla Homes',
               description:
                 'Search Maravilla homes and explore real estate listings, market data, and neighborhood information in Maravilla, Las Vegas, Nevada.',
-              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search`,
+              url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'}/search`,
               breadcrumb: [
-                { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com' },
-                { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.craigranchhomes.com'}/search` },
+                { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com' },
+                { name: 'Search', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'}/search` },
               ],
             }),
             generateBreadcrumbSchema([
