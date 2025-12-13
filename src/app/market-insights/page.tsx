@@ -16,6 +16,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateBlogSchema,
+  generateArticleSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
@@ -40,6 +41,7 @@ type BlogPost = {
   postLink: string;
   author: string;
   date: string;
+  dateISO: string;
   description?: string;
 };
 
@@ -81,6 +83,7 @@ async function getBlogPosts(limit: number): Promise<BlogPost[]> {
         categoryLink,
         author: item.creator,
         date: formatDate(item.pubDate),
+        dateISO: formatDateISO(item.pubDate),
         imageUrl: item.imageUrl || '/placeholder-blog.jpg',
       };
     });
@@ -103,6 +106,17 @@ function formatDate(pubDate: string): string {
     });
   } catch {
     return pubDate;
+  }
+}
+
+/**
+ * Format date to ISO 8601 for schema
+ */
+function formatDateISO(pubDate: string): string {
+  try {
+    return new Date(pubDate).toISOString();
+  } catch {
+    return new Date().toISOString();
   }
 }
 
@@ -225,6 +239,23 @@ export default async function MarketInsightsPage() {
               author: 'Simplifying the Market',
               publisher: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
             }),
+            // Add Article schema for each blog post (2025 Best Practice)
+            ...posts.slice(0, 5).map((post) =>
+              generateArticleSchema({
+                headline: post.title,
+                description: post.description || `Read about ${post.title} in Maravilla real estate market insights.`,
+                url: post.postLink,
+                image: post.imageUrl,
+                datePublished: post.dateISO,
+                author: {
+                  name: post.author || 'Simplifying the Market',
+                },
+                publisher: {
+                  name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+                  logo: '/globe.svg',
+                },
+              })
+            ),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Market Insights', url: `${baseUrl}/market-insights` },

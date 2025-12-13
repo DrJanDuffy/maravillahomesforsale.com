@@ -503,6 +503,77 @@ export function generateBlogSchema({
 }
 
 /**
+ * Generate Article schema for individual blog posts/articles
+ * 2025 Best Practice: Article schema helps Google understand content structure and improves rich results
+ */
+export function generateArticleSchema({
+  headline,
+  description,
+  url,
+  image,
+  datePublished,
+  dateModified,
+  author,
+  publisher,
+}: {
+  headline: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: {
+    name: string;
+    url?: string;
+  };
+  publisher?: {
+    name: string;
+    logo?: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url,
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image.startsWith('http') ? image : `${siteUrl}${image}`,
+      },
+    }),
+    datePublished,
+    dateModified: dateModified || datePublished,
+    ...(author && {
+      author: {
+        '@type': 'Person',
+        name: author.name,
+        ...(author.url && { url: author.url }),
+      },
+    }),
+    ...(publisher && {
+      publisher: {
+        '@type': 'Organization',
+        name: publisher.name,
+        ...(publisher.logo && {
+          logo: {
+            '@type': 'ImageObject',
+            url: publisher.logo.startsWith('http') ? publisher.logo : `${siteUrl}${publisher.logo}`,
+            width: 512,
+            height: 512,
+          },
+        }),
+      },
+    }),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+  };
+}
+
+/**
  * Generate Dataset schema for market data pages
  */
 export function generateDatasetSchema({
