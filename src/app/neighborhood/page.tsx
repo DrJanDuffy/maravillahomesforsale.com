@@ -122,9 +122,8 @@ export default function NeighborhoodPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Welcome to Maravilla
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
-            A tight-knit, vibrant master-planned community in North Las Vegas.
-            A premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways.
+            <p className='text-xl text-gray-200 max-w-3xl'>
+            A premier master-planned community in North Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways.
           </p>
         </div>
       </div>
@@ -434,10 +433,10 @@ export default function NeighborhoodPage() {
           <div className='relative'>
             <Suspense fallback={<MapSkeleton />}>
               <GoogleMap
-                address='Maravilla, Las Vegas, NV'
-                latitude={36.1699}
-                longitude={-115.1398}
-                zoom={13}
+                address='Maravilla, North Las Vegas, NV 89031'
+                latitude={36.26276}
+                longitude={-115.17182}
+                zoom={15}
                 height='500px'
                 title='Maravilla Community Location'
               />
@@ -445,7 +444,7 @@ export default function NeighborhoodPage() {
           </div>
           <div className='mt-6 text-center'>
             <Link
-              href='https://www.google.com/maps/search/?api=1&query=Maravilla+Las+Vegas+NV'
+              href='https://www.google.com/maps/search/?api=1&query=Maravilla+North+Las+Vegas+NV+89031'
               target='_blank'
               rel='noopener noreferrer'
               prefetch={false}

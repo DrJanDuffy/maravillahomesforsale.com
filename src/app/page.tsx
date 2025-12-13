@@ -10,6 +10,7 @@ import BlogPosts from '@/components/sections/blog-posts';
 import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
 import FAQSection from '@/components/sections/faq-section';
 import RecentSales from '@/components/sections/recent-sales';
+import MarketSnapshot from '@/components/sections/market-snapshot';
 import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
@@ -203,6 +204,7 @@ export default function Home() {
           </div>
         </section>
 
+        <MarketSnapshot />
         <Suspense fallback={<PropertyCategoriesSkeleton />}>
           <DynamicPropertyCategories />
         </Suspense>

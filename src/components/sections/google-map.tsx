@@ -13,9 +13,9 @@ type GoogleMapProps = {
 };
 
 export default function GoogleMap({
-  address = 'Maravilla, Las Vegas, NV',
-  latitude = 36.2831,
-  longitude = -115.1331,
+  address = 'Maravilla, North Las Vegas, NV 89031',
+  latitude = 36.26276,
+  longitude = -115.17182,
   zoom = 14,
   height = '400px',
   className = '',
