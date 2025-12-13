@@ -72,10 +72,10 @@ export const metadata: Metadata = {
   keywords:
     'Maravilla, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Maravilla community, luxury homes Las Vegas, Maravilla properties, Las Vegas luxury real estate, Maravilla homes for sale, Las Vegas real estate agent, Maravilla neighborhood, luxury properties Las Vegas, Maravilla real estate market, Las Vegas home values',
   authors: [
-    { name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy', url: siteUrl },
+    { name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy', url: siteUrl },
   ],
-  creator: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
-  publisher: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  creator: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+  publisher: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   formatDetection: {
     email: false,
     address: false,
@@ -86,11 +86,11 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
       "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities with premium amenities and excellent location.",
     url: siteUrl,
-    siteName: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    siteName: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -98,13 +98,13 @@ export const metadata: Metadata = {
         url: '/54-DJI_20250707171528_0828_D.jpg',
         width: 1200,
         height: 630,
-        alt: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+        alt: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
       "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities.",
     images: ['/54-DJI_20250707171528_0828_D.jpg'],
@@ -130,19 +130,19 @@ export const metadata: Metadata = {
     'geo.placename': 'North Las Vegas, Las Vegas',
     'geo.position': '36.2465;-115.1475',
     ICBM: '36.2465, -115.1475',
-    'DC.title': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
-    'DC.creator': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.title': 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+    'DC.creator': 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     'DC.subject': 'Luxury Real Estate, North Las Vegas, Maravilla',
     'DC.description': 'Luxury homes in Maravilla, North Las Vegas',
-    'DC.publisher': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
-    'DC.contributor': 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.publisher': 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+    'DC.contributor': 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     'DC.date': '2024',
     'DC.type': 'Text',
     'DC.format': 'text/html',
     'DC.identifier': siteUrl,
     'DC.language': 'en',
     'DC.coverage': 'North Las Vegas, Nevada',
-    'DC.rights': 'Copyright 2007-2025 Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    'DC.rights': 'Copyright 2007-2025 North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   },
 };
 
