@@ -5,8 +5,8 @@
 
 export const BUSINESS_INFO = {
   // Business Name
-  name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
-  legalName: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+  legalName: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   
   // Phone Number (use consistent format)
   phone: {

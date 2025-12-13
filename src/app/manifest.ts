@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
-    short_name: 'Maravilla Homes',
+    name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+    short_name: 'North Las Vegas Family Homes',
     description:
       'Luxury real estate services in Maravilla, Las Vegas, Nevada',
     start_url: '/',

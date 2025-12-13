@@ -33,7 +33,7 @@ export const dynamic = 'force-static';
 export const revalidate = false; // Static page, no revalidation needed
 
 export const metadata = genMetadata({
-  title: 'Contact Dr. Jan Duffy - Maravilla Homes for Sale | Homes By Dr. Jan Duffy | Las Vegas Real Estate',
+  title: 'Contact Dr. Jan Duffy - North Las Vegas Family Homes | Homes by Dr. Jan Duffy | Las Vegas Real Estate',
   description:
     'Contact Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Get expert guidance for buying, selling, or investing in Maravilla, Las Vegas. Office: 851 W Lone Mountain Rd, North Las Vegas, NV 89032. Call (702) 500-1953 or email DrDuffy@MaravillaHomesForSale.com.',
   keywords:
@@ -221,7 +221,7 @@ export default function ContactPage() {
                 longitude={-115.1475}
                 zoom={14}
                 height='500px'
-                title='Maravilla Homes for Sale | Homes By Dr. Jan Duffy Office Location'
+                title='North Las Vegas Family Homes | Homes by Dr. Jan Duffy Office Location'
               />
             </Suspense>
           </div>
@@ -296,7 +296,7 @@ export default function ContactPage() {
           __html: JSON.stringify([
             generateLocalBusinessSchema(),
             generateWebPageSchema({
-              name: 'Contact Dr. Jan Duffy - Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+              name: 'Contact Dr. Jan Duffy - North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               description:
                 'Get in touch with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Contact our expert real estate team for buying, selling, or investing in Maravilla, Las Vegas.',
               url: `${baseUrl}/contact`,

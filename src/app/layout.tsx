@@ -314,7 +314,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               '@id': `${siteUrl}#localbusiness`,
-              name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+              name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               description:
                 'Luxury real estate services in Maravilla, North Las Vegas, Las Vegas, Nevada. Expert real estate agent specializing in Maravilla homes and properties.',
               url: siteUrl,

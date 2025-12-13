@@ -470,10 +470,10 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Maravilla Homes for Sale',
+    name: 'North Las Vegas Family Homes',
     alternateName: [
       'Maravilla Homes',
-      'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+      'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
       'maravillahomesforsale.com',
     ],
     url: siteUrl,

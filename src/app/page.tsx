@@ -80,7 +80,7 @@ const DynamicBlogPosts = dynamic(
 export const revalidate = 3600; // 1 hour
 
 export const metadata = genMetadata({
-  title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
     'Find your dream home in Maravilla, Las Vegas. Browse luxury homes and explore this premier community with excellent schools, parks, and convenient amenities. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 500-1953.',
   keywords:
@@ -320,7 +320,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+              name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               description:
                 'Find your dream home in Maravilla, Las Vegas. Browse luxury homes, explore the neighborhood, and discover why Maravilla is one of Las Vegas&apos; most prestigious communities.',
               url: baseUrl,

@@ -24,7 +24,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Las Vegas Homes Market Insights | Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  title: 'Maravilla Las Vegas Homes Market Insights | North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
     'Read the latest real estate market insights and trends for Maravilla, Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 500-1953.',
   keywords:
@@ -223,7 +223,7 @@ export default async function MarketInsightsPage() {
                 'Real estate market insights and trends for Maravilla, North Las Vegas and Las Vegas, Nevada.',
               url: `${baseUrl}/market-insights`,
               author: 'Simplifying the Market',
-              publisher: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+              publisher: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
             }),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },

@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   ...genMetadata({
-    title: 'Search Maravilla Homes | Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+    title: 'Search Maravilla Homes | North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
       'Search Maravilla homes and explore real estate listings, market data, and neighborhood information in Maravilla, Las Vegas, Nevada.',
     keywords:
