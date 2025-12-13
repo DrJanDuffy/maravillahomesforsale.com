@@ -44,10 +44,13 @@ export function middleware(request: NextRequest) {
   }
 
   // Redirect non-www to www (only for production domain)
+  // Check if hostname is exactly the non-www version (not localhost, not vercel preview, etc.)
   if (
     protocol === canonicalProtocol &&
     hostname === 'maravillahomesforsale.com' &&
-    !hostname.startsWith('www.')
+    !hostname.startsWith('www.') &&
+    !hostname.includes('localhost') &&
+    !hostname.includes('vercel.app')
   ) {
     url.hostname = canonicalDomain;
     return NextResponse.redirect(url, 301); // Permanent redirect
