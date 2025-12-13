@@ -18,6 +18,8 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/visit-api', // Legacy API route
           '/message/', // Legacy message/share routes
+          '/tour', // Legacy tour route (redirects to /homes)
+          '/tour/mls', // Legacy MLS tour route (redirects to /homes)
           '/mls', // Legacy MLS route (redirects to /homes)
           '/lc', // Legacy route (redirects to /contact)
           '/ub', // Legacy route (redirects to /homes)
