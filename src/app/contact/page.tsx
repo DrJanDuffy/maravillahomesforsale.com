@@ -23,6 +23,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
+import { BUSINESS_INFO } from '@/lib/config/business-info';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
