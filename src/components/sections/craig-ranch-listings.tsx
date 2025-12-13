@@ -15,7 +15,7 @@ export default function MaravillaListings({
   priceMax = '500000',
   showMap = true,
   listingsPerPage = '12',
-}: CraigRanchListingsProps) {
+}: MaravillaListingsProps) {
   const isMobile = useIsMobile();
   const widgetRef = useRef<HTMLDivElement>(null);
 
@@ -84,7 +84,7 @@ export default function MaravillaListings({
       <div className='text-center'>
         <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#3A8DDE] mx-auto mb-4'></div>
         <p className='text-gray-500 text-sm'>
-          Loading Craig Ranch properties...
+          Loading Maravilla properties...
         </p>
       </div>
     </div>
