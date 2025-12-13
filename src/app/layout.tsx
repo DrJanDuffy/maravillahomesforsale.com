@@ -17,7 +17,7 @@ const siteUrl = (
 ).replace(/\/$/, '');
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID ?? 'G-RZ48JCVXWJ';
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID ?? 'G-ZG0VF199TR';
 const facebookPixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
 
 function isNonPlaceholderId(value: string | undefined): value is string {
