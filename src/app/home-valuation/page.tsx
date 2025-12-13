@@ -38,7 +38,7 @@ export default function MaravillaHomeValuationPage() {
     addressLine: BUSINESS_INFO.community.address,
     hoursLine: BUSINESS_INFO.hours.display,
     mapsHref: BUSINESS_INFO.maps.community,
-    reviewsHref: BUSINESS_INFO.maps.community,
+    reviewsHref: BUSINESS_INFO.googleBusinessProfile,
   } as const;
 
   const faqs = [
