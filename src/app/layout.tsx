@@ -122,9 +122,9 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      // 2025 Best Practice: Allow indexing of images for Google Images
+      'googlebot-image': 'index, follow',
     },
-    // 2025 Best Practice: Allow indexing of images for Google Images
-    'googlebot-image': 'index, follow',
   },
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
