@@ -64,6 +64,16 @@ const nextConfig = {
           },
         ],
       },
+      // Cache CSS files for better repeat visit performance
+      {
+        source: '/:path*.css',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
 
     return [

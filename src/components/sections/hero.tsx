@@ -24,7 +24,7 @@ export default function Hero() {
             fetchPriority='high'
             className='object-cover'
             sizes='100vw'
-            quality={65}
+            quality={75}
             aria-hidden='true'
           />
         </div>

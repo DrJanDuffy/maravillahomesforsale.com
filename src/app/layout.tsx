@@ -167,11 +167,16 @@ export default function RootLayout({
         {/* Apple Touch Icon for iOS devices */}
         <link rel='apple-touch-icon' href='/favicon.ico' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
+        {/* RealScout: Preconnect for widget (310ms LCP savings per Lighthouse) */}
         <link rel='preconnect' href='https://em.realscout.com' crossOrigin='anonymous' />
+        {/* Google Analytics: Preconnect for tracking */}
         <link rel='preconnect' href='https://www.googletagmanager.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://www.google-analytics.com' crossOrigin='anonymous' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
+        {/* Facebook Pixel: DNS prefetch only (loaded lazily) */}
         <link rel='dns-prefetch' href='https://connect.facebook.net' />
+        {/* AWS S3: DNS prefetch for background images */}
+        <link rel='dns-prefetch' href='https://cribflyer-publicsite.s3.amazonaws.com' />
         {/* Preload critical hero image for LCP optimization */}
         <link
           rel='preload'
@@ -187,16 +192,17 @@ export default function RootLayout({
           }
         `}</style>
 
-        {/* Google Analytics (GA4) - only load when configured */}
+        {/* Google Analytics (GA4) - Defer to lazyOnload to improve LCP/FCP */}
+        {/* Analytics doesn't need to block initial render */}
         {isValidGaId(gaMeasurementId) ? (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
                 gaMeasurementId
               )}`}
-              strategy='afterInteractive'
+              strategy='lazyOnload'
             />
-            <Script id='google-analytics' strategy='afterInteractive'>
+            <Script id='google-analytics' strategy='lazyOnload'>
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -500,12 +506,13 @@ export default function RootLayout({
           </noscript>
         ) : null}
 
-        {/* RealScout Web Components Script - Load with high priority for better performance */}
+        {/* RealScout Web Components Script - Defer to lazyOnload since widget uses intersection observer */}
+        {/* Widget only loads when in viewport, so script can load lazily too */}
         <Script
           id='realscout-script'
           src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
           type='module'
-          strategy='afterInteractive'
+          strategy='lazyOnload'
         />
         {children}
       </body>
