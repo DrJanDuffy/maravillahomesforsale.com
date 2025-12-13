@@ -99,9 +99,8 @@ export default function MarketDataPage() {
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
             Maravilla Market Data
           </h1>
-          <p className='text-xl text-gray-200 max-w-3xl'>
+          <p className='text-xl text-white max-w-3xl'>
             Stay informed with the latest real estate market trends, statistics, and data for <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>Maravilla homes</Link>. Track pricing, sales volume, and market conditions. View <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>available homes</Link>, explore <Link href='/market-insights' className='text-white hover:text-gray-200 underline font-medium'>market insights</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
-            and insights for Maravilla, Las Vegas.
           </p>
         </div>
       </div>
