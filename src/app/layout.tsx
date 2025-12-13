@@ -66,7 +66,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Maravilla Homes for Sale | Homes By Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
     'Discover luxury homes in Maravilla, Las Vegas. Find your dream home in one of the city&apos;s most prestigious communities with premium amenities, excellent schools, and convenient location.',
   keywords:
