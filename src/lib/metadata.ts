@@ -65,7 +65,7 @@ const siteConfig = {
   url: siteUrl,
   description:
     'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
-  ogImage: '/54-DJI_20250707171528_0828_D.jpg',
+  ogImage: '/photos/01-1 (2).jpg',
   twitterHandle: '@maravillahomes',
   locale: 'en_US',
   type: 'website',
@@ -163,7 +163,7 @@ export function generateLocalBusinessSchema() {
     url: siteUrl,
     telephone: businessPhone,
     email: businessEmail,
-    image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
+    image: `${siteUrl}/photos/01-1 (2).jpg`,
     logo: `${siteUrl}/globe.svg`,
     address: {
       '@type': 'PostalAddress',
@@ -211,7 +211,7 @@ export function generateOrganizationSchema() {
       width: 512,
       height: 512,
     },
-    image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
+    image: `${siteUrl}/photos/01-1 (2).jpg`,
     description:
       'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
     address: {
@@ -278,7 +278,7 @@ export function generateRealEstateAgentSchema() {
       width: 512,
       height: 512,
     },
-    image: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
+    image: `${siteUrl}/photos/01-1 (2).jpg`,
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,

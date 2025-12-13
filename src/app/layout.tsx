@@ -47,7 +47,7 @@ function isValidFacebookPixelId(value: string | undefined): value is string {
 }
 
 // Ensure these assets exist in /public to avoid 404s for crawlers.
-const ogImageUrl = `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`;
+const ogImageUrl = `${siteUrl}/photos/01-1 (2).jpg`;
 const logoUrl = `${siteUrl}/globe.svg`;
 
 // Optimize fonts with next/font
@@ -93,23 +93,23 @@ export const metadata: Metadata = {
     siteName: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: '/54-DJI_20250707171528_0828_D.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
-        // 2025 Best Practice: Add secure URL for OG images
-        secureUrl: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
-      },
-    ],
+      images: [
+        {
+          url: '/photos/01-1 (2).jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Maravilla community and neighborhood area view, North Las Vegas',
+          // 2025 Best Practice: Add secure URL for OG images
+          secureUrl: `${siteUrl}/photos/01-1 (2).jpg`,
+        },
+      ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
       "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities.",
-    images: ['/54-DJI_20250707171528_0828_D.jpg'],
+    images: ['/photos/01-1 (2).jpg'],
     // 2025 Best Practice: Add Twitter site handle if available
     creator: '@maravillahomes',
   },
@@ -173,7 +173,7 @@ export default function RootLayout({
         {/* Preload critical hero image for LCP optimization */}
         <link
           rel='preload'
-          href='/54-DJI_20250707171528_0828_D.jpg'
+          href='/photos/01-1 (2).jpg'
           as='image'
           fetchPriority='high'
         />

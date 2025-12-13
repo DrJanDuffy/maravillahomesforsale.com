@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Hero() {
-  // Drone photo background from public directory
-  const backgroundImage = '/54-DJI_20250707171528_0828_D.jpg';
+  // Best area photo for hero background - highest quality community/area shot
+  const backgroundImage = '/photos/01-1 (2).jpg';
 
   return (
     <section className='relative h-screen flex items-center justify-center overflow-hidden'>
@@ -18,7 +18,7 @@ export default function Hero() {
         <div className='absolute inset-0 w-full h-full'>
           <Image
             src={backgroundImage}
-            alt='Maravilla neighborhood aerial view'
+            alt='Maravilla community and neighborhood area view, North Las Vegas'
             fill
             priority
             fetchPriority='high'

@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
     const address = request.nextUrl.searchParams.get('address');
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com';
     const imageUrl = request.nextUrl.searchParams.get('image') || 
-      `${baseUrl}/54-DJI_20250707171528_0828_D.jpg`;
+      `${baseUrl}/photos/01-1 (2).jpg`;
 
     // Generate OG image
     return new ImageResponse(
