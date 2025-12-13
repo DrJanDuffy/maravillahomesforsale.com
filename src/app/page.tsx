@@ -94,49 +94,51 @@ export default function Home() {
       <article>
         <Hero />
 
-        {/* Quick Links Section */}
-        <section className='py-12 bg-white border-b'>
+        {/* Quick Links Section - 2025 Best Practice: Semantic HTML with ARIA */}
+        <section className='py-12 bg-white border-b' aria-label='Quick navigation links'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid md:grid-cols-3 gap-6'>
-              <Link href='/homes' className='block'>
-                <Button
-                  variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
-                >
-                  <HomeIcon className='h-8 w-8 text-[#3A8DDE]' />
-                  <span className='text-lg font-semibold'>Browse Homes</span>
-                  <span className='text-sm text-gray-600'>
-                    View all available properties
-                  </span>
-                </Button>
-              </Link>
-              <Link href='/neighborhood' className='block'>
-                <Button
-                  variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
-                >
-                  <MapPin className='h-8 w-8 text-[#16B286]' />
-                  <span className='text-lg font-semibold'>
-                    Explore Maravilla
-                  </span>
-                  <span className='text-sm text-gray-600'>
-                    Learn about the neighborhood
-                  </span>
-                </Button>
-              </Link>
-              <Link href='/market-data' className='block'>
-                <Button
-                  variant='outline'
-                  className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
-                >
-                  <TrendingUp className='h-8 w-8 text-[#0A2540]' />
-                  <span className='text-lg font-semibold'>Market Insights</span>
-                  <span className='text-sm text-gray-600'>
-                    Latest trends and statistics
-                  </span>
-                </Button>
-              </Link>
-            </div>
+            <nav aria-label='Main navigation shortcuts'>
+              <div className='grid md:grid-cols-3 gap-6'>
+                <Link href='/homes' className='block' aria-label='Browse homes for sale in Maravilla'>
+                  <Button
+                    variant='outline'
+                    className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  >
+                    <HomeIcon className='h-8 w-8 text-[#3A8DDE]' aria-hidden='true' />
+                    <span className='text-lg font-semibold'>Browse Homes</span>
+                    <span className='text-sm text-gray-600'>
+                      View all available properties
+                    </span>
+                  </Button>
+                </Link>
+                <Link href='/neighborhood' className='block' aria-label='Explore Maravilla neighborhood'>
+                  <Button
+                    variant='outline'
+                    className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  >
+                    <MapPin className='h-8 w-8 text-[#16B286]' aria-hidden='true' />
+                    <span className='text-lg font-semibold'>
+                      Explore Maravilla
+                    </span>
+                    <span className='text-sm text-gray-600'>
+                      Learn about the neighborhood
+                    </span>
+                  </Button>
+                </Link>
+                <Link href='/market-data' className='block' aria-label='View market insights and trends'>
+                  <Button
+                    variant='outline'
+                    className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  >
+                    <TrendingUp className='h-8 w-8 text-[#0A2540]' aria-hidden='true' />
+                    <span className='text-lg font-semibold'>Market Insights</span>
+                    <span className='text-sm text-gray-600'>
+                      Latest trends and statistics
+                    </span>
+                  </Button>
+                </Link>
+              </div>
+            </nav>
           </div>
         </section>
 

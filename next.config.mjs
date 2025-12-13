@@ -75,13 +75,17 @@ const nextConfig = {
     ];
   },
   images: {
-    // Optimize image loading
+    // 2025 Best Practice: Optimize image loading with modern formats
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Increase cache TTL to 1 day for better repeat visit performance
     // The cache headers we set above (1 year) will take precedence for static assets
     minimumCacheTTL: 86400,
+    // 2025 Best Practice: Enable image optimization for better Core Web Vitals
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     // Allow specific external image domains
     remotePatterns: [
       {

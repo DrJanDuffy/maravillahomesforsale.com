@@ -527,3 +527,111 @@ export function generateDatasetSchema({
   };
 }
 
+/**
+ * Generate Service schema for real estate services
+ * 2025 Best Practice: Service schema helps Google understand what services you offer
+ */
+export function generateServiceSchema({
+  name,
+  description,
+  serviceType,
+  areaServed,
+  provider,
+}: {
+  name: string;
+  description: string;
+  serviceType: string;
+  areaServed?: string;
+  provider?: {
+    name: string;
+    url: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    serviceType,
+    provider: provider || {
+      '@type': 'LocalBusiness',
+      name: businessName,
+      url: siteUrl,
+      telephone: businessPhone,
+    },
+    areaServed: areaServed || {
+      '@type': 'City',
+      name: 'North Las Vegas',
+      addressRegion: 'NV',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: siteUrl,
+      servicePhone: {
+        '@type': 'ContactPoint',
+        telephone: businessPhone,
+        contactType: 'customer service',
+      },
+    },
+  };
+}
+
+/**
+ * Generate AggregateRating schema for Google Business Profile integration
+ * 2025 Best Practice: Ratings schema improves visibility in search results
+ */
+export function generateAggregateRatingSchema({
+  ratingValue,
+  reviewCount,
+  bestRating = 5,
+  worstRating = 1,
+}: {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    ratingValue,
+    reviewCount,
+    bestRating,
+    worstRating,
+  };
+}
+
+/**
+ * Generate Review schema for individual reviews
+ * 2025 Best Practice: Review schema can show star ratings in search results
+ */
+export function generateReviewSchema({
+  author,
+  datePublished,
+  reviewBody,
+  ratingValue,
+  bestRating = 5,
+}: {
+  author: string;
+  datePublished: string;
+  reviewBody: string;
+  ratingValue: number;
+  bestRating?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    datePublished,
+    reviewBody,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue,
+      bestRating,
+    },
+  };
+}
+

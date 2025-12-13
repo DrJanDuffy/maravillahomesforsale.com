@@ -99,6 +99,8 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+        // 2025 Best Practice: Add secure URL for OG images
+        secureUrl: `${siteUrl}/54-DJI_20250707171528_0828_D.jpg`,
       },
     ],
   },
@@ -108,6 +110,8 @@ export const metadata: Metadata = {
     description:
       "Discover luxury homes in Maravilla, North Las Vegas. Find your dream home in one of the area's most desirable communities.",
     images: ['/54-DJI_20250707171528_0828_D.jpg'],
+    // 2025 Best Practice: Add Twitter site handle if available
+    creator: '@maravillahomes',
   },
   robots: {
     index: true,
@@ -119,6 +123,8 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+    // 2025 Best Practice: Allow indexing of images for Google Images
+    'googlebot-image': 'index, follow',
   },
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
@@ -162,7 +168,16 @@ export default function RootLayout({
         {/* Preconnect to critical third-party origins for faster resource loading */}
         <link rel='preconnect' href='https://em.realscout.com' crossOrigin='anonymous' />
         <link rel='preconnect' href='https://www.googletagmanager.com' crossOrigin='anonymous' />
+        <link rel='preconnect' href='https://www.google-analytics.com' crossOrigin='anonymous' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
+        <link rel='dns-prefetch' href='https://connect.facebook.net' />
+        {/* Preload critical hero image for LCP optimization */}
+        <link
+          rel='preload'
+          href='/54-DJI_20250707171528_0828_D.jpg'
+          as='image'
+          fetchPriority='high'
+        />
 
         <style>{`
           realscout-office-listings {
@@ -387,6 +402,78 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateWebSiteSchema()),
+          }}
+        />
+
+        {/* Structured Data for Service - 2025 Best Practice */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: 'Real Estate Services',
+              description:
+                'Professional real estate services including home buying, selling, property valuation, and market analysis in North Las Vegas and Maravilla communities.',
+              serviceType: 'Real Estate Services',
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+                url: siteUrl,
+                telephone: '+1-702-500-1953',
+              },
+              areaServed: [
+                {
+                  '@type': 'City',
+                  name: 'North Las Vegas',
+                  addressRegion: 'NV',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Las Vegas',
+                  addressRegion: 'NV',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Henderson',
+                  addressRegion: 'NV',
+                },
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Real Estate Services',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Home Buying Services',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Home Selling Services',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Property Valuation',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Market Analysis',
+                    },
+                  },
+                ],
+              },
+            }),
           }}
         />
       </head>

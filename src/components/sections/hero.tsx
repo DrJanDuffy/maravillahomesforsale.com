@@ -69,6 +69,7 @@ export default function Hero() {
             rel='noopener noreferrer'
             prefetch={false}
             className='bg-[#16B286] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#15A276] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105'
+            aria-label='View available homes in Maravilla'
           >
             View Available Homes
           </Link>
@@ -78,6 +79,7 @@ export default function Hero() {
             rel='noopener noreferrer'
             prefetch={false}
             className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/30 transition-all duration-200 border border-white/30 hover:border-white/50 hover:scale-105'
+            aria-label='Schedule a property tour with Dr. Jan Duffy'
           >
             Schedule a Tour
           </Link>
