@@ -181,7 +181,7 @@ export default function ContactPage() {
               <div className='grid md:grid-cols-2 gap-6 items-center'>
                 <div>
                   <AgentPhoto
-                    src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
+                    src='/photos/Dr. Duffy Blue_Headshot.jpg'
                     alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
                     sizes='(max-width: 768px) 100vw, 50vw'
                   />

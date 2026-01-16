@@ -88,7 +88,7 @@ export default function HomesPage() {
                 consultations. Learn more about <Link href='/real-estate-services' className='text-[#3A8DDE] hover:underline font-medium'>her real estate services</Link>, explore <Link href='/neighborhood' className='text-[#3A8DDE] hover:underline font-medium'>Maravilla neighborhood information</Link>, or view <Link href='/market-insights' className='text-[#3A8DDE] hover:underline font-medium'>market insights</Link> for the latest trends.
               </p>
               <AgentPhoto
-                src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
+                src='/photos/Dr. Duffy Blue_Headshot.jpg'
                 alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
                 sizes='(max-width: 1024px) 100vw, 50vw'
                 priority
