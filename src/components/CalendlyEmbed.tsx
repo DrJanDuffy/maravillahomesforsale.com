@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
 
 interface CalendlyEmbedProps {
@@ -31,35 +31,63 @@ interface CalendlyEmbedProps {
  */
 export default function CalendlyEmbed({
   url,
-  height = '700px',
+  height = '900px',
   className = '',
 }: CalendlyEmbedProps) {
   const calendlyRef = useRef<HTMLDivElement>(null);
+  const [isScriptReady, setIsScriptReady] = useState(false);
 
+  // Initialize widget once script is loaded
   useEffect(() => {
-    // Initialize Calendly inline widget after script loads
-    if (typeof window !== 'undefined' && (window as any).Calendly) {
-      (window as any).Calendly.initInlineWidget({
-        url: url,
-        parentElement: calendlyRef.current,
-      });
-    }
-  }, [url]);
+    if (!isScriptReady || !calendlyRef.current) return;
+
+    let retryCount = 0;
+    const maxRetries = 10;
+
+    const initWidget = () => {
+      const w = window as any;
+      
+      if (!calendlyRef.current) {
+        console.error('Calendly container not found');
+        return;
+      }
+
+      if (w.Calendly && typeof w.Calendly.initInlineWidget === 'function') {
+        try {
+          w.Calendly.initInlineWidget({
+            url: url,
+            parentElement: calendlyRef.current,
+          });
+        } catch (error) {
+          console.error('Error initializing Calendly widget:', error);
+        }
+      } else {
+        retryCount++;
+        if (retryCount < maxRetries) {
+          // Retry after a short delay if Calendly isn't ready yet
+          setTimeout(initWidget, 300);
+        } else {
+          console.error('Calendly widget failed to load after multiple retries');
+        }
+      }
+    };
+
+    // Small delay to ensure script is fully loaded
+    const timer = setTimeout(initWidget, 200);
+    return () => clearTimeout(timer);
+  }, [isScriptReady, url]);
 
   return (
     <>
       {/* Load Calendly script */}
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         onLoad={() => {
-          // Initialize after script loads
-          if ((window as any).Calendly && calendlyRef.current) {
-            (window as any).Calendly.initInlineWidget({
-              url: url,
-              parentElement: calendlyRef.current,
-            });
-          }
+          setIsScriptReady(true);
+        }}
+        onError={(e) => {
+          console.error('Failed to load Calendly script:', e);
         }}
       />
       
