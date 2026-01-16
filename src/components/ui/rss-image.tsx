@@ -25,17 +25,14 @@ export function RSSImage({
   const [imageError, setImageError] = useState(false);
   const [imageSrc, setImageSrc] = useState(src);
 
-  // Fallback to placeholder if image fails to load
+  // Fallback UI if image fails to load
   const handleError = () => {
-    if (imageSrc !== '/placeholder-blog.jpg') {
-      console.warn(`Failed to load RSS image: ${imageSrc}, using placeholder`);
-      setImageError(true);
-      setImageSrc('/placeholder-blog.jpg');
-    }
+    console.warn(`Failed to load RSS image: ${imageSrc}`);
+    setImageError(true);
   };
 
-  // If image already errored, show placeholder
-  if (imageError || !imageSrc || imageSrc === '/placeholder-blog.jpg') {
+  // If image already errored or no source, show fallback UI
+  if (imageError || !imageSrc) {
     return (
       <div
         className={`${className || ''} bg-gradient-to-br from-[#0A2540] to-[#3A8DDE] flex items-center justify-center`}

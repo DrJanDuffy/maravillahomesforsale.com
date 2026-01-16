@@ -86,7 +86,7 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
         categoryLink,
         author: item.creator,
         date: formatDate(item.pubDate),
-        imageUrl: item.imageUrl || '/placeholder-blog.jpg',
+        imageUrl: item.imageUrl || '/photos/01-1 (2).jpg',
       };
     });
   } catch (error) {
@@ -94,7 +94,7 @@ async function getBlogPosts(limit: number = 3): Promise<BlogPost[]> {
     // Return fallback data
     return [
       {
-        imageUrl: '/placeholder-blog.jpg',
+        imageUrl: '/photos/01-1 (2).jpg',
         category: 'Real Estate News',
         categoryLink:
           'https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18',

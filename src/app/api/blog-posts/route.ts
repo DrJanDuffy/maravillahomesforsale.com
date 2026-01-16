@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
         categoryLink,
         author: item.creator,
         date: formatDate(item.pubDate),
-        imageUrl: item.imageUrl || '/placeholder-blog.jpg',
+        imageUrl: item.imageUrl || '/photos/01-1 (2).jpg',
       };
     });
 
@@ -75,7 +75,7 @@ export async function GET(request: NextRequest) {
               month: 'long',
               day: 'numeric',
             }),
-            imageUrl: '/placeholder-blog.jpg',
+            imageUrl: '/photos/01-1 (2).jpg',
           },
         ],
       },

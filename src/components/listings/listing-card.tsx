@@ -107,7 +107,7 @@ export default function ListingCard({
 }: ListingCardProps) {
   // Use Cloudinary URL if available, otherwise use provided imageUrl
   const displayImageUrl =
-    getCloudinaryUrl(cloudinaryId) || imageUrl || '/placeholder-property.jpg';
+    getCloudinaryUrl(cloudinaryId) || imageUrl || '/photos/01-1 (2).jpg';
   const displayImageAlt =
     imageAlt || `${address}, ${city}, ${state} ${zipCode}`;
 

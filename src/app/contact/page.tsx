@@ -198,16 +198,20 @@ export default function ContactPage() {
                     consultations to help you find the perfect home in Maravilla
                     and other premier communities.
                   </p>
-                  <div className='pt-2'>
-                    <Link
-                      href='http://drjanduffy.realscout.com/'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      prefetch={false}
-                      className='text-[#3A8DDE] hover:text-[#2A7DCE] font-semibold text-sm'
+                  <div className='pt-4'>
+                    <Button
+                      asChild
+                      className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
                     >
-                      View All Listings →
-                    </Link>
+                      <Link
+                        href='http://drjanduffy.realscout.com/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        prefetch={false}
+                      >
+                        View All Listings
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </div>

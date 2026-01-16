@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Neighborhood = {
   name: string;
@@ -16,7 +17,7 @@ const neighborhoods: Neighborhood[] = [
     avgPrice: '$450K',
     homesAvailable: 18,
     amenities: ['Top Schools', 'Parks', 'Shopping Center', 'Golf Course'],
-    image: '/images/aliante.jpg',
+    image: '/photos/04-1 (4).jpg',
   },
   {
     name: 'Ardiente',
@@ -24,7 +25,7 @@ const neighborhoods: Neighborhood[] = [
     avgPrice: '$750K',
     homesAvailable: 12,
     amenities: ['Resort Pool', 'Fitness Center', 'Mountain Views', 'Clubhouse'],
-    image: '/images/ardiente.jpg',
+    image: '/photos/05-1 (5).jpg',
   },
   {
     name: 'Maravilla',
@@ -33,7 +34,7 @@ const neighborhoods: Neighborhood[] = [
     avgPrice: 'Contact for Pricing',
     homesAvailable: 0,
     amenities: ['Parks', 'Excellent Schools', 'Convenient Location', 'Luxury Homes'],
-    image: '/images/maravilla.jpg',
+    image: '/photos/01-1 (2).jpg',
   },
   {
     name: 'Del Webb at North Ranch',
@@ -46,7 +47,7 @@ const neighborhoods: Neighborhood[] = [
       'Fitness Center',
       'Social Activities',
     ],
-    image: '/images/del-webb.jpg',
+    image: '/photos/06-1 (6).jpg',
   },
   {
     name: 'Eldorado',
@@ -59,7 +60,7 @@ const neighborhoods: Neighborhood[] = [
       'Convenient Location',
       'Parks',
     ],
-    image: '/images/eldorado.jpg',
+    image: '/photos/07-1 (7).jpg',
   },
   {
     name: 'Heartland at Tule Springs',
@@ -72,7 +73,7 @@ const neighborhoods: Neighborhood[] = [
       'Community Pool',
       'Playground',
     ],
-    image: '/images/heartland.jpg',
+    image: '/photos/08-1 (8).jpg',
   },
   {
     name: 'Sun City Aliante',
@@ -86,7 +87,7 @@ const neighborhoods: Neighborhood[] = [
       'Social Activities',
       'Golf',
     ],
-    image: '/images/sun-city.jpg',
+    image: '/photos/09-1 (9).jpg',
   },
   {
     name: 'Valley Vista',
@@ -94,7 +95,7 @@ const neighborhoods: Neighborhood[] = [
     avgPrice: '$420K',
     homesAvailable: 28,
     amenities: ['Affordable Homes', 'Family Friendly', 'Good Schools', 'Parks'],
-    image: '/images/valley-vista.jpg',
+    image: '/photos/10-1 (10).jpg',
   },
   {
     name: 'The Villages at Tule Springs',
@@ -107,19 +108,22 @@ const neighborhoods: Neighborhood[] = [
       'Resort Amenities',
       'Nature Trails',
     ],
-    image: '/images/villages-tule-springs.jpg',
+    image: '/photos/11-1 (11).jpg',
   },
 ];
 
 const NeighborhoodCard = ({ neighborhood }: { neighborhood: Neighborhood }) => {
   return (
     <div className='bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2'>
-      {/* Placeholder for neighborhood image */}
-      <div className='h-48 bg-gradient-to-br from-[#0A2540] to-[#3A8DDE] flex items-center justify-center'>
-        <div className='text-white text-center'>
-          <div className='text-4xl mb-2'>🏘️</div>
-          <div className='text-sm opacity-80'>{neighborhood.name}</div>
-        </div>
+      {/* Neighborhood image */}
+      <div className='relative h-48 w-full overflow-hidden bg-gray-100'>
+        <Image
+          src={neighborhood.image}
+          alt={`${neighborhood.name} neighborhood in North Las Vegas`}
+          fill
+          className='object-contain'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        />
       </div>
 
       <div className='p-6'>

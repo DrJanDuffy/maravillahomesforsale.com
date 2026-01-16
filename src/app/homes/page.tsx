@@ -118,18 +118,22 @@ export default function HomesPage() {
                   <CardTitle>Website Listings</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className='text-gray-700 mb-3'>
+                  <p className='text-gray-700 mb-4'>
                     Explore current property listings through her website:
                   </p>
-                  <Link
-                    href='http://drjanduffy.realscout.com/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    prefetch={false}
-                    className='text-[#3A8DDE] hover:underline font-semibold'
+                  <Button
+                    asChild
+                    className='w-full bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'
                   >
-                    drjanduffy.realscout.com →
-                  </Link>
+                    <Link
+                      href='http://drjanduffy.realscout.com/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      prefetch={false}
+                    >
+                      View All Listings
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
 

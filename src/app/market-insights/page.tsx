@@ -84,7 +84,7 @@ async function getBlogPosts(limit: number): Promise<BlogPost[]> {
         author: item.creator,
         date: formatDate(item.pubDate),
         dateISO: formatDateISO(item.pubDate),
-        imageUrl: item.imageUrl || '/placeholder-blog.jpg',
+        imageUrl: item.imageUrl || '/photos/01-1 (2).jpg',
       };
     });
   } catch (error) {
