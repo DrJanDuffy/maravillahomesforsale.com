@@ -33,54 +33,66 @@ export default function HomeEvaluationSection() {
 
   // Initialize widget once script is loaded
   useEffect(() => {
-    if (isScriptReady) {
-      let retryCount = 0;
-      const maxRetries = 10;
-      
-      const initWidget = () => {
-        const w = window as any;
-        const container = document.getElementById('homebot_homeowner');
-        
-        if (!container) {
-          console.error('Homebot container not found');
-          setIsLoading(false);
-          return;
-        }
-        
-        if (w.Homebot && typeof w.Homebot === 'function') {
-          try {
-            // Make sure container is visible
-            container.style.display = 'block';
-            
-            w.Homebot(
-              '#homebot_homeowner',
-              '35de8cf0a487cf0fec06278f2023805ea02eba0b58960a43'
-            );
-            
-            // Wait a bit to see if widget renders
-            setTimeout(() => {
-              setIsLoading(false);
-            }, 500);
-          } catch (error) {
-            console.error('Error initializing Homebot widget:', error);
-            setIsLoading(false);
-          }
-        } else {
-          retryCount++;
-          if (retryCount < maxRetries) {
-            // Retry after a short delay if Homebot isn't ready yet
-            setTimeout(initWidget, 300);
-          } else {
-            console.error('Homebot widget failed to load after multiple retries');
-            setIsLoading(false);
-          }
-        }
-      };
+    if (!isScriptReady) return;
 
-      // Small delay to ensure script is fully loaded
-      const timer = setTimeout(initWidget, 200);
-      return () => clearTimeout(timer);
-    }
+    let retryCount = 0;
+    const maxRetries = 15;
+    const retryDelay = 300;
+    
+    const initWidget = () => {
+      const w = window as any;
+      const container = document.getElementById('homebot_homeowner');
+      
+      if (!container) {
+        console.error('Homebot container not found');
+        setIsLoading(false);
+        return;
+      }
+      
+      // Check if Homebot is available
+      if (w.Homebot && typeof w.Homebot === 'function') {
+        try {
+          // Ensure container is visible and ready
+          container.style.display = 'block';
+          container.style.minHeight = '400px';
+          
+          // Initialize the widget
+          w.Homebot(
+            '#homebot_homeowner',
+            '35de8cf0a487cf0fec06278f2023805ea02eba0b58960a43'
+          );
+          
+          // Wait for widget to render before hiding loader
+          setTimeout(() => {
+            const hasContent = container.children.length > 0 || container.innerHTML.trim().length > 0;
+            if (hasContent) {
+              setIsLoading(false);
+            } else {
+              // If no content after 1 second, try one more time
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 1000);
+            }
+          }, 800);
+        } catch (error) {
+          console.error('Error initializing Homebot widget:', error);
+          setIsLoading(false);
+        }
+      } else {
+        // Retry if Homebot isn't ready yet
+        retryCount++;
+        if (retryCount < maxRetries) {
+          setTimeout(initWidget, retryDelay);
+        } else {
+          console.error('Homebot widget failed to load after multiple retries');
+          setIsLoading(false);
+        }
+      }
+    };
+
+    // Start initialization after a brief delay to ensure DOM is ready
+    const timer = setTimeout(initWidget, 300);
+    return () => clearTimeout(timer);
   }, [isScriptReady]);
 
   return (
@@ -110,7 +122,11 @@ export default function HomeEvaluationSection() {
             )}
             <div
               id='homebot_homeowner'
-              style={{ display: isLoading ? 'none' : 'block', minHeight: '400px' }}
+              style={{ 
+                display: isLoading ? 'none' : 'block', 
+                minHeight: '400px',
+                width: '100%'
+              }}
             ></div>
           </div>
         </div>
