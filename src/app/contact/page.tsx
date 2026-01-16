@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import PageLayout from '@/components/layout/page-layout';
-import ContactForm from '@/components/sections/contact-form';
+import CalendlyEmbed from '@/components/CalendlyEmbed';
 import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 import AgentPhoto from '@/components/ui/agent-photo';
@@ -58,24 +58,33 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* Calendly Scheduling - Full Width Prominent Section */}
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid lg:grid-cols-2 gap-12'>
-            {/* Contact Form */}
-            <div>
-              <h2 className='text-3xl font-bold text-[#0A2540] mb-2'>
-                Send Us a Message About Maravilla
-              </h2>
-              <p className='text-gray-600 mb-6'>
-                Fill out the form below and Dr. Jan Duffy will get back to you
-                with current listings and personalized guidance.
-              </p>
-              <ContactForm />
-            </div>
+          <div className='text-center mb-8'>
+            <h2 className='text-3xl md:text-4xl font-bold text-[#0A2540] mb-4'>
+              Schedule a Consultation with Dr. Jan Duffy
+            </h2>
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+              Book a strategy meeting to discuss your real estate goals, get personalized guidance,
+              and explore homes in Maravilla and throughout Las Vegas. Choose a time that works for you.
+            </p>
+          </div>
+          <div className='rounded-lg border-2 border-gray-200 shadow-lg overflow-hidden bg-white'>
+            <CalendlyEmbed 
+              url="https://calendly.com/drjanduffy"
+              height="900px"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </section>
 
-            {/* Contact Information */}
-            <div className='space-y-6'>
-              <Card className='border-0 shadow-lg bg-gradient-to-br from-[#F7F9FC] to-white'>
+      {/* Contact Information Section */}
+      <section className='py-16 bg-[#F7F9FC]'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6'>
+            <Card className='border-0 shadow-lg bg-gradient-to-br from-[#F7F9FC] to-white'>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
                     <Phone className='h-5 w-5 text-[#3A8DDE]' />
@@ -137,42 +146,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card className='border-0 shadow-lg bg-[#F7F9FC]'>
-                <CardHeader>
-                  <CardTitle className='text-xl'>About Dr. Jan Duffy</CardTitle>
-                </CardHeader>
-                <CardContent className='space-y-4'>
-                  <AgentPhoto
-                    src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
-                    alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
-                    sizes='(max-width: 768px) 100vw, 50vw'
-                  />
-                  <p className='text-gray-700'>
-                    Dr. Jan Duffy is a REALTOR® with{' '}
-                    <strong>Berkshire Hathaway HomeServices® Nevada</strong>,
-                    specializing in luxury homes and estates across Las Vegas and
-                    Henderson.
-                  </p>
-                  <p className='text-gray-700'>
-                    She offers expert, data-driven advice and personalized
-                    consultations to help you find the perfect home in Maravilla
-                    and other premier communities.
-                  </p>
-                  <div className='pt-2'>
-                    <Link
-                      href='http://drjanduffy.realscout.com/'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      prefetch={false}
-                      className='text-[#3A8DDE] hover:text-[#2A7DCE] font-semibold text-sm'
-                    >
-                      View All Listings →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className='border-0 shadow-lg bg-[#F7F9FC]'>
+            <Card className='border-0 shadow-lg bg-[#F7F9FC]'>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
                     <Clock className='h-5 w-5 text-[#3A8DDE]' />
@@ -195,9 +169,50 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            </div>
+            </Card>
           </div>
+
+          {/* About Dr. Jan Duffy - Full Width Card */}
+          <Card className='border-0 shadow-lg bg-white mt-6'>
+            <CardHeader>
+              <CardTitle className='text-2xl'>About Dr. Jan Duffy</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className='grid md:grid-cols-2 gap-6 items-center'>
+                <div>
+                  <AgentPhoto
+                    src='/Dr Duffy Blue_Headshot Enhanced 180 Size.jpg'
+                    alt='Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada'
+                    sizes='(max-width: 768px) 100vw, 50vw'
+                  />
+                </div>
+                <div className='space-y-4'>
+                  <p className='text-gray-700 leading-relaxed'>
+                    Dr. Jan Duffy is a REALTOR® with{' '}
+                    <strong>Berkshire Hathaway HomeServices® Nevada</strong>,
+                    specializing in luxury homes and estates across Las Vegas and
+                    Henderson.
+                  </p>
+                  <p className='text-gray-700 leading-relaxed'>
+                    She offers expert, data-driven advice and personalized
+                    consultations to help you find the perfect home in Maravilla
+                    and other premier communities.
+                  </p>
+                  <div className='pt-2'>
+                    <Link
+                      href='http://drjanduffy.realscout.com/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      prefetch={false}
+                      className='text-[#3A8DDE] hover:text-[#2A7DCE] font-semibold text-sm'
+                    >
+                      View All Listings →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

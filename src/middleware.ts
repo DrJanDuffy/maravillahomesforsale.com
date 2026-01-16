@@ -10,6 +10,9 @@ import type { NextRequest } from 'next/server';
  * - Missing pages to appropriate destinations
  * 
  * Canonical domain: https://www.maravillahomesforsale.com
+ * 
+ * IMPORTANT: All redirects are consolidated to avoid redirect chains.
+ * This prevents Google from seeing "Page with redirect" issues.
  */
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
@@ -20,6 +23,18 @@ export function middleware(request: NextRequest) {
   // Canonical domain
   const canonicalDomain = 'www.maravillahomesforsale.com';
   const canonicalProtocol = 'https:';
+  const isProductionDomain = 
+    hostname === 'maravillahomesforsale.com' || 
+    hostname === canonicalDomain;
+
+  // Helper function to create redirect with proper headers
+  const createRedirect = (targetUrl: URL): NextResponse => {
+    const response = NextResponse.redirect(targetUrl, 301); // Permanent redirect
+    // Add canonical header to help Google understand the final destination
+    // This signals to Google that the target URL is the canonical version
+    response.headers.set('Link', `<${targetUrl.toString()}>; rel="canonical"`);
+    return response;
+  };
 
   // Handle missing pages that should redirect
   // These are legacy routes that should redirect to appropriate pages
@@ -41,29 +56,26 @@ export function middleware(request: NextRequest) {
     url.pathname = redirectMap[pathname];
     url.protocol = canonicalProtocol;
     url.hostname = canonicalDomain;
-    // Add canonical header to redirect response to help Google understand the canonical URL
-    const response = NextResponse.redirect(url, 301); // Permanent redirect
-    response.headers.set('Link', `<${url.toString()}>; rel="canonical"`);
-    return response;
+    return createRedirect(url);
   }
 
-  // Redirect HTTP to HTTPS
-  if (protocol === 'http:') {
-    url.protocol = canonicalProtocol;
-    return NextResponse.redirect(url, 301); // Permanent redirect
-  }
-
-  // Redirect non-www to www (only for production domain)
-  // Check if hostname is exactly the non-www version (not localhost, not vercel preview, etc.)
-  if (
+  // CRITICAL: Consolidate HTTP→HTTPS and non-www→www into a single redirect
+  // This prevents redirect chains that Google flags as "Page with redirect"
+  const needsProtocolRedirect = protocol === 'http:';
+  const needsDomainRedirect = 
+    isProductionDomain &&
     protocol === canonicalProtocol &&
     hostname === 'maravillahomesforsale.com' &&
     !hostname.startsWith('www.') &&
     !hostname.includes('localhost') &&
-    !hostname.includes('vercel.app')
-  ) {
+    !hostname.includes('vercel.app');
+
+  // If both conditions are true, redirect directly to canonical URL (consolidated redirect)
+  if (needsProtocolRedirect || needsDomainRedirect) {
+    url.protocol = canonicalProtocol;
     url.hostname = canonicalDomain;
-    return NextResponse.redirect(url, 301); // Permanent redirect
+    // Preserve pathname and query string
+    return createRedirect(url);
   }
 
   // If already on canonical domain with HTTPS, continue
