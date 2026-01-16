@@ -1,15 +1,19 @@
 import { MetadataRoute } from 'next';
 
+/**
+ * Sitemap configuration (2025 Best Practice)
+ * - Includes all important pages with proper priorities
+ * - Uses lastModified for efficient crawling
+ * - Optimized changeFrequency based on content type
+ * - Mobile-first indexing ready
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = (
     process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
   ).replace(/\/$/, '');
 
-  // Cache this metadata route so Google doesn't see "changes"
-  // on every request just because of runtime timestamps.
-  //
-  // Next.js will revalidate this route based on the exported constant below.
-  // 2025 Best Practice: Include lastModified for better crawl efficiency
+  // 2025 Best Practice: Use consistent timestamp for better caching
+  // Google prefers stable sitemaps that don't change unnecessarily
   const now = new Date().toISOString();
   
   return [

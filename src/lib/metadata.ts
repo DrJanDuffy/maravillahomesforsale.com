@@ -255,7 +255,66 @@ export function generateOrganizationSchema() {
 }
 
 /**
- * Generate RealEstateAgent schema
+ * Generate Person schema for E-E-A-T (2025 Best Practice)
+ * Showcases expertise, experience, authoritativeness, and trustworthiness
+ */
+export function generatePersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${siteUrl}#person`,
+    name: 'Dr. Jan Duffy',
+    alternateName: ['Jan Duffy', 'Dr. Duffy'],
+    jobTitle: 'REALTOR®',
+    description:
+      'Dr. Jan Duffy is a highly experienced REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. With over 15 years of experience, she provides expert, data-driven advice and personalized consultations.',
+    image: `${siteUrl}/photos/Dr. Duffy Blue_Headshot.jpg`,
+    url: siteUrl,
+    email: businessEmail,
+    telephone: businessPhone,
+    address: {
+      '@type': 'PostalAddress',
+      ...businessAddress,
+    },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      url: 'https://www.berkshirehathawayhs.com',
+    },
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Real Estate License',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Nevada Real Estate Division',
+      },
+      identifier: 'S.0197614',
+    },
+    knowsAbout: [
+      'North Las Vegas Real Estate',
+      'Maravilla Homes',
+      'Luxury Real Estate',
+      'First-time Homebuyers',
+      'Home Selling',
+      'Property Valuation',
+      'VA Loans',
+      'FHA Loans',
+      'Real Estate Market Analysis',
+    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Real Estate Education',
+    },
+    sameAs: [
+      'https://www.facebook.com/maravillahomesforsale',
+      'https://www.youtube.com/@DrDuffy',
+      'https://www.linkedin.com/company/maravilla-homes-for-sale/',
+    ],
+  };
+}
+
+/**
+ * Generate RealEstateAgent schema (Enhanced for 2025)
  */
 export function generateRealEstateAgentSchema() {
   return {
@@ -264,11 +323,12 @@ export function generateRealEstateAgentSchema() {
     '@id': `${siteUrl}#realestateagent`,
     name: 'Dr. Jan Duffy',
     description:
-      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson',
+      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. Over 15 years of experience with proven track record of 500+ homes sold.',
     jobTitle: 'REALTOR®',
     worksFor: {
       '@type': 'Organization',
-      name: 'Berkshire Hathaway HomeServices Nevada',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      url: 'https://www.berkshirehathawayhs.com',
     },
     url: siteUrl,
     logo: {
@@ -277,7 +337,7 @@ export function generateRealEstateAgentSchema() {
       width: 512,
       height: 512,
     },
-    image: `${siteUrl}/photos/01-1 (2).jpg`,
+    image: `${siteUrl}/photos/Dr. Duffy Blue_Headshot.jpg`,
     address: {
       '@type': 'PostalAddress',
       ...businessAddress,
@@ -330,7 +390,16 @@ export function generateRealEstateAgentSchema() {
     ],
     memberOf: {
       '@type': 'Organization',
-      name: 'Berkshire Hathaway HomeServices Nevada',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    },
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Real Estate License',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Nevada Real Estate Division',
+      },
+      identifier: 'S.0197614',
     },
     sameAs: [
       'https://www.facebook.com/maravillahomesforsale',

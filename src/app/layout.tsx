@@ -5,6 +5,8 @@ import {
   generateOrganizationSchema,
   generateLocalBusinessSchema,
   generateWebSiteSchema,
+  generatePersonSchema,
+  generateRealEstateAgentSchema,
 } from '@/lib/metadata';
 import { BUSINESS_INFO } from '@/lib/config/business-info';
 import './globals.css';
@@ -160,8 +162,12 @@ export default function RootLayout({
   return (
     <html lang='en' className={`${sourceSansPro.variable} ${openSans.variable}`}>
       <head>
-        {/* Viewport meta tag - Next.js adds this automatically, but explicit for clarity */}
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        {/* 2025 Best Practice: Mobile-first viewport for Google's mobile-first indexing */}
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5' />
+        {/* 2025 Best Practice: Theme color for better mobile experience */}
+        <meta name='theme-color' content='#0A2540' />
+        {/* 2025 Best Practice: Color scheme for dark mode support */}
+        <meta name='color-scheme' content='light dark' />
         {/* Favicon for Google Search results - must be square, at least 48x48px, stable URL */}
         <link rel='icon' href='/favicon.ico' sizes='any' />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
@@ -246,80 +252,19 @@ export default function RootLayout({
           </Script>
         ) : null}
 
-        {/* Structured Data for Real Estate Business */}
+        {/* Structured Data for E-E-A-T: Person Schema (2025 Best Practice) */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'RealEstateAgent',
-              '@id': `${siteUrl}#realestateagent`,
-              name: 'Dr. Jan Duffy',
-              description:
-                'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, North Las Vegas, Las Vegas, and Henderson',
-              jobTitle: 'REALTOR®',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'Berkshire Hathaway HomeServices Nevada',
-              },
-              url: siteUrl,
-              logo: logoUrl,
-              image: ogImageUrl,
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: BUSINESS_INFO.address.streetAddress,
-                addressLocality: BUSINESS_INFO.address.addressLocality,
-                addressRegion: BUSINESS_INFO.address.addressRegion,
-                postalCode: BUSINESS_INFO.address.postalCode,
-                addressCountry: BUSINESS_INFO.address.addressCountry,
-              },
-              areaServed: [
-                {
-                  '@type': 'City',
-                  name: 'North Las Vegas',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-                {
-                  '@type': 'City',
-                  name: 'Las Vegas',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-                {
-                  '@type': 'City',
-                  name: 'Henderson',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-              ],
-              serviceArea: {
-                '@type': 'Place',
-                name: 'Maravilla',
-                address: {
-                  '@type': 'PostalAddress',
-                  addressLocality: 'North Las Vegas',
-                  addressRegion: 'NV',
-                  addressCountry: 'US',
-                },
-              },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+1-702-500-1953',
-                contactType: 'customer service',
-                areaServed: 'US',
-                availableLanguage: 'English',
-              },
-              memberOf: {
-                '@type': 'Organization',
-                name: 'Berkshire Hathaway HomeServices Nevada',
-              },
-              sameAs: [
-                'https://www.facebook.com/maravillahomesforsale',
-                'https://www.youtube.com/@DrDuffy',
-                'https://www.linkedin.com/company/maravilla-homes-for-sale/',
-              ],
-            }),
+            __html: JSON.stringify(generatePersonSchema()),
+          }}
+        />
+
+        {/* Structured Data for Real Estate Agent */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateRealEstateAgentSchema()),
           }}
         />
 
@@ -327,71 +272,7 @@ export default function RootLayout({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              '@id': `${siteUrl}#localbusiness`,
-              name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
-              description:
-                'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
-              url: siteUrl,
-              telephone: '+1-702-500-1953',
-              email: 'DrDuffy@MaravillaHomesForSale.com',
-              image: ogImageUrl,
-              logo: {
-                '@type': 'ImageObject',
-                url: logoUrl,
-                width: 512,
-                height: 512,
-              },
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: BUSINESS_INFO.address.streetAddress,
-                addressLocality: BUSINESS_INFO.address.addressLocality,
-                addressRegion: BUSINESS_INFO.address.addressRegion,
-                postalCode: BUSINESS_INFO.address.postalCode,
-                addressCountry: BUSINESS_INFO.address.addressCountry,
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 36.2465,
-                longitude: -115.1475,
-              },
-              hasMap:
-                BUSINESS_INFO.maps.business,
-              openingHoursSpecification: [
-                {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                  opens: '06:00',
-                  closes: '21:00',
-                },
-              ],
-              priceRange: '$$$',
-              currenciesAccepted: 'USD',
-              contactPoint: [
-                {
-                  '@type': 'ContactPoint',
-                  telephone: '+1-702-500-1953',
-                  contactType: 'customer service',
-                  areaServed: 'US',
-                  availableLanguage: ['English'],
-                  hoursAvailable: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                    opens: '06:00',
-                    closes: '21:00',
-                  },
-                },
-                {
-                  '@type': 'ContactPoint',
-                  email: 'DrDuffy@MaravillaHomesForSale.com',
-                  contactType: 'customer service',
-                  areaServed: 'US',
-                  availableLanguage: ['English'],
-                },
-              ],
-            }),
+            __html: JSON.stringify(generateLocalBusinessSchema()),
           }}
         />
 

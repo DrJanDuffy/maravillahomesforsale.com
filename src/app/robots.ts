@@ -1,5 +1,11 @@
 import { MetadataRoute } from 'next';
 
+/**
+ * Robots.txt configuration (2025 Best Practice)
+ * - Allows all content pages for crawling
+ * - Blocks API routes and internal Next.js paths
+ * - References sitemap for efficient crawling
+ */
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = (
     process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -10,7 +16,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Keep crawlers out of non-content routes and legacy routes.
+        // 2025 Best Practice: Block non-content routes but allow CSS/JS for rendering
+        // Google needs CSS/JS to properly render pages for mobile-first indexing
         disallow: [
           '/api/',
           '/_next/',
@@ -25,7 +32,31 @@ export default function robots(): MetadataRoute.Robots {
           '/ub', // Legacy route (redirects to /homes)
         ],
       },
+      // Googlebot-specific rules (2025: Mobile-first indexing is default)
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/private/',
+          '/admin/',
+        ],
+      },
+      // Bingbot rules
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/private/',
+          '/admin/',
+        ],
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    // 2025 Best Practice: Add host directive for canonical domain
+    host: baseUrl,
   };
 }

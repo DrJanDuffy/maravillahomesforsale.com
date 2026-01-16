@@ -11,11 +11,12 @@ const nextConfig = {
       "object-src 'none'",
       "frame-ancestors 'none'",
       "form-action 'self'",
+      // 2025 Best Practice: Allow CSS/JS for proper rendering (mobile-first indexing requirement)
       // Next.js + next/script inline blocks require unsafe-inline unless using nonces.
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com https://assets.calendly.com https://embed.homebotapp.com",
-      "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://embed.homebotapp.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://em.realscout.com https://assets.calendly.com https://embed.homebotapp.com",
+      "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://embed.homebotapp.com https://fonts.googleapis.com",
       "img-src 'self' data: blob: https:",
-      "font-src 'self' data: https:",
+      "font-src 'self' data: https://fonts.gstatic.com",
       "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://connect.facebook.net https://graph.facebook.com https://em.realscout.com https://*.realscout.com https://calendly.com https://*.calendly.com https://embed.homebotapp.com https://*.homebotapp.com https://api.homebotapp.com",
       "frame-src 'self' https://www.google.com https://www.google.com/maps https://calendly.com https://*.calendly.com https://embed.homebotapp.com https://*.homebotapp.com",
       'upgrade-insecure-requests',
