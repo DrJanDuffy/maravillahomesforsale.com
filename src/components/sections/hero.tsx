@@ -22,7 +22,7 @@ export default function Hero() {
             fill
             priority
             fetchPriority='high'
-            className='object-cover'
+            className='object-contain'
             sizes='100vw'
             quality={60}
             aria-hidden='true'
@@ -33,7 +33,7 @@ export default function Hero() {
         {/* 
         <iframe
           src='https://www.homes.com/local-guide/north-las-vegas-nv/maravilla-neighborhood/video/.../?autoplay=1&mute=1&loop=1&controls=0&playsinline=1'
-          className='absolute inset-0 w-full h-full object-cover'
+          className='absolute inset-0 w-full h-full object-contain'
           allow='autoplay; encrypted-media'
           allowFullScreen
           title='Maravilla Neighborhood Video Background'

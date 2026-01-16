@@ -50,7 +50,7 @@ export default function AgentPhoto({
         src={src}
         alt={alt}
         fill
-        className='object-cover'
+        className='object-contain'
         sizes={sizes || '(max-width: 768px) 100vw, 50vw'}
         priority={priority}
         onError={() => setImageError(true)}
