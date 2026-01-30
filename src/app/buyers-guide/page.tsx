@@ -129,7 +129,7 @@ export default function BuyersGuidePage() {
             <Button asChild size='lg' variant='outline'>
               <Link href='/contact'>Schedule Consultation</Link>
             </Button>
-            <Button asChild size='lg' variant='outline' asChild>
+            <Button asChild size='lg' variant='outline'>
               <a href={BUSINESS_INFO.phone.href}>{BUSINESS_INFO.phone.display}</a>
             </Button>
           </div>
