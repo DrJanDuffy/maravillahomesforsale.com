@@ -30,7 +30,6 @@ const routeNames: Record<string, string> = {
   'privacy': 'Privacy Policy',
   'search': 'Search',
   'maravilla-hoa': 'HOA Information',
-  'schools': 'Schools',
   'new-construction': 'New Construction',
 };
 
