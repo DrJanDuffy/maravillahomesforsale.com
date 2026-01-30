@@ -11,12 +11,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
   generateBlogSchema,
-  generateArticleSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
 
@@ -25,12 +25,12 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Las Vegas Homes Market Insights | North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+  title: 'Blog & Market Updates | Maravilla Real Estate | Dr. Jan Duffy',
   description:
-    'Read the latest real estate market insights and trends for Maravilla, Las Vegas, Nevada. Expert analysis on home prices, market conditions, and buying/selling strategies. Updated articles from Simplifying the Market. Call (702) 500-1953.',
+    'Real estate blog and market updates for Maravilla and North Las Vegas. Trends, buying and selling tips, and local insights. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
   keywords:
-    'Maravilla market insights, Maravilla real estate news, Las Vegas market insights, Las Vegas real estate trends',
-  path: '/market-insights',
+    'Maravilla blog, North Las Vegas real estate news, Maravilla market updates, Las Vegas real estate trends',
+  path: '/blog',
 });
 
 type BlogPost = {
@@ -45,36 +45,23 @@ type BlogPost = {
   description?: string;
 };
 
-// Mark page as dynamic since it fetches from external API
-export const dynamic = 'force-dynamic';
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 3600;
 
 async function getBlogPosts(limit: number): Promise<BlogPost[]> {
   try {
-    // Fetch directly from RSS feed instead of API route to avoid build-time issues
     const RSS_FEED_URL =
       'https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18';
-    
     const response = await fetch(RSS_FEED_URL, {
       next: { revalidate: 3600 },
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; RSS Reader)',
-      },
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RSS Reader)' },
     });
-
-    if (!response.ok) {
-      console.error('Failed to fetch RSS feed:', response.statusText);
-      return [];
-    }
-
+    if (!response.ok) return [];
     const xmlString = await response.text();
     const feed = parseRSSFeed(xmlString);
-
-    // Return first N items
     return feed.items.slice(0, limit).map((item) => {
-      const categorySlug = item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
+      const categorySlug =
+        item.categories[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'market-insights';
       const categoryLink = `https://www.simplifyingthemarket.com/en/category/${categorySlug}/?a=956758-ef2edda2f940e018328655620ea05f18`;
-      
       return {
         title: item.title,
         postLink: item.link,
@@ -82,68 +69,57 @@ async function getBlogPosts(limit: number): Promise<BlogPost[]> {
         category: item.categories[0] || 'Market Insights',
         categoryLink,
         author: item.creator,
-        date: formatDate(item.pubDate),
-        dateISO: formatDateISO(item.pubDate),
+        date: (() => {
+          try {
+            return new Date(item.pubDate).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            });
+          } catch {
+            return item.pubDate;
+          }
+        })(),
+        dateISO: (() => {
+          try {
+            return new Date(item.pubDate).toISOString();
+          } catch {
+            return new Date().toISOString();
+          }
+        })(),
         imageUrl: item.imageUrl || '/photos/01-1 (2).jpg',
       };
     });
-  } catch (error) {
-    console.error('Error fetching blog posts:', error);
+  } catch {
     return [];
   }
 }
 
-/**
- * Format date from RSS pubDate
- */
-function formatDate(pubDate: string): string {
-  try {
-    const date = new Date(pubDate);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  } catch {
-    return pubDate;
-  }
-}
-
-/**
- * Format date to ISO 8601 for schema
- */
-function formatDateISO(pubDate: string): string {
-  try {
-    return new Date(pubDate).toISOString();
-  } catch {
-    return new Date().toISOString();
-  }
-}
-
-export default async function MarketInsightsPage() {
-  const posts = await getBlogPosts(12);
+export default async function BlogPage() {
+  const posts = await getBlogPosts(9);
 
   return (
     <PageLayout>
+      <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+            Blog & Market Updates
+          </h1>
+          <p className='text-xl text-gray-200 max-w-3xl'>
+            Real estate trends, buying and selling tips, and local insights for Maravilla and North Las Vegas. Updated regularly from our market insights feed.
+          </p>
+        </div>
+      </div>
+
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
-              Maravilla Las Vegas Homes Market Insights
-            </h1>
-            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-              The latest real estate insights and trends (source:{' '}
-              <Link
-                href='https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18'
-                target='_blank'
-                rel='noopener noreferrer'
-                prefetch={false}
-                className='text-[#3A8DDE] hover:underline'
-              >
-                Simplifying the Market
-              </Link>
-              ). Also see our <Link href='/blog' className='text-[#3A8DDE] hover:underline'>Blog & Market Updates</Link>.
+          <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8'>
+            <p className='text-gray-600'>
+              Latest articles from our partner feed. For the full archive and more insights, visit Market Insights.
             </p>
+            <Button asChild variant='outline' className='shrink-0'>
+              <Link href='/market-insights'>View all Market Insights</Link>
+            </Button>
           </div>
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -158,7 +134,7 @@ export default async function MarketInsightsPage() {
                   rel='noopener noreferrer'
                   prefetch={false}
                   className='block relative w-full h-[200px] overflow-hidden'
-                  aria-label={`Read article: ${post.title}`}
+                  aria-label={`Read: ${post.title}`}
                 >
                   <RSSImage
                     src={post.imageUrl}
@@ -168,12 +144,8 @@ export default async function MarketInsightsPage() {
                     className='object-contain transition-transform duration-300 ease-in-out group-hover:scale-105'
                   />
                 </Link>
-
                 <CardHeader>
-                  <Badge
-                    variant='outline'
-                    className='w-fit mb-2 text-[#3A8DDE] border-[#3A8DDE]/30'
-                  >
+                  <Badge variant='outline' className='w-fit mb-2 text-[#3A8DDE] border-[#3A8DDE]/30'>
                     <Link
                       href={post.categoryLink}
                       target='_blank'
@@ -184,8 +156,7 @@ export default async function MarketInsightsPage() {
                       {post.category}
                     </Link>
                   </Badge>
-
-                  <CardTitle className='group-hover:text-[#3A8DDE] transition-colors duration-300'>
+                  <CardTitle className='group-hover:text-[#3A8DDE] transition-colors'>
                     <Link
                       href={post.postLink}
                       target='_blank'
@@ -196,14 +167,12 @@ export default async function MarketInsightsPage() {
                       {post.title}
                     </Link>
                   </CardTitle>
-
                   {post.description && (
                     <CardDescription className='line-clamp-3 mt-2'>
                       {post.description}
                     </CardDescription>
                   )}
                 </CardHeader>
-
                 <CardFooter className='flex-col items-start gap-2 pt-0'>
                   <CardDescription className='text-xs uppercase'>
                     {post.author}
@@ -213,52 +182,41 @@ export default async function MarketInsightsPage() {
               </Card>
             ))}
           </div>
+
+          {posts.length > 0 && (
+            <div className='mt-12 text-center'>
+              <Button asChild className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white'>
+                <Link href='/market-insights'>View all Market Insights</Link>
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
       <Script
-        id='market-insights-schema'
+        id='blog-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Las Vegas Homes Market Insights',
-              description:
-                'Read the latest real estate market insights and trends for Maravilla, North Las Vegas and Las Vegas, Nevada.',
-              url: `${baseUrl}/market-insights`,
+              name: 'Blog & Market Updates | Maravilla Real Estate',
+              description: 'Real estate blog and market updates for Maravilla and North Las Vegas.',
+              url: `${baseUrl}/blog`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
-                { name: 'Market Insights', url: `${baseUrl}/market-insights` },
+                { name: 'Blog', url: `${baseUrl}/blog` },
               ],
             }),
             generateBlogSchema({
-              name: 'Maravilla Las Vegas Homes Market Insights',
-              description:
-                'Real estate market insights and trends for Maravilla, North Las Vegas and Las Vegas, Nevada.',
-              url: `${baseUrl}/market-insights`,
-              author: 'Simplifying the Market',
+              name: 'Blog & Market Updates',
+              description: 'Real estate trends and local insights for Maravilla and North Las Vegas.',
+              url: `${baseUrl}/blog`,
+              author: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               publisher: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
             }),
-            // Add Article schema for each blog post (2025 Best Practice)
-            ...posts.slice(0, 5).map((post) =>
-              generateArticleSchema({
-                headline: post.title,
-                description: post.description || `Read about ${post.title} in Maravilla real estate market insights.`,
-                url: post.postLink,
-                image: post.imageUrl,
-                datePublished: post.dateISO,
-                author: {
-                  name: post.author || 'Simplifying the Market',
-                },
-                publisher: {
-                  name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
-                  logo: '/globe.svg',
-                },
-              })
-            ),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
-              { name: 'Market Insights', url: `${baseUrl}/market-insights` },
+              { name: 'Blog', url: `${baseUrl}/blog` },
             ]),
           ]),
         }}
@@ -266,5 +224,3 @@ export default async function MarketInsightsPage() {
     </PageLayout>
   );
 }
-
-

@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import { NEIGHBORHOOD_SLUGS } from '@/data/neighborhoods';
+import { GUIDE_SLUGS } from '@/data/guides';
 
 /**
  * Sitemap configuration (2025 Best Practice)
@@ -15,7 +17,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 2025 Best Practice: Use consistent timestamp for better caching
   // Google prefers stable sitemaps that don't change unnecessarily
   const now = new Date().toISOString();
-  
+
+  const neighborhoodUrls: MetadataRoute.Sitemap = NEIGHBORHOOD_SLUGS.map((slug) => ({
+    url: `${baseUrl}/neighborhoods/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  const guideUrls: MetadataRoute.Sitemap = GUIDE_SLUGS.map((slug) => ({
+    url: `${baseUrl}/guides/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -132,11 +148,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/55-plus-communities`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/first-time-buyers`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    ...neighborhoodUrls,
+    ...guideUrls,
   ];
 }
 

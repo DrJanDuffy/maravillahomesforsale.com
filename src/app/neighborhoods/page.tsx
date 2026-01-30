@@ -27,6 +27,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
+import { NEIGHBORHOODS, NEIGHBORHOOD_SLUGS } from '@/data/neighborhoods';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -134,8 +135,14 @@ export default function NeighborhoodsPage() {
           <div className='grid md:grid-cols-3 gap-8'>
             {neighborhoods.map((neighborhood, index) => {
               const Icon = neighborhood.icon;
-              return (
-                <Card key={index} className='border-0 shadow-lg hover:shadow-xl transition-shadow'>
+              const slugMap: Record<string, string> = {
+                'Jasmine Ranch': 'jasmine-ranch',
+                'Centennial Crossing': 'centennial-crossing',
+                'Seabreeze': 'seabreeze',
+              };
+              const slug = slugMap[neighborhood.name];
+              const cardContent = (
+                <>
                   <CardHeader>
                     <div
                       className={`w-12 h-12 ${neighborhood.bgColor} rounded-lg flex items-center justify-center mb-4`}
@@ -163,11 +170,48 @@ export default function NeighborhoodsPage() {
                           </li>
                         ))}
                       </ul>
+                      {slug && (
+                        <Link
+                          href={`/neighborhoods/${slug}`}
+                          className='inline-block mt-4 text-[#3A8DDE] font-medium hover:underline'
+                        >
+                          Homes for sale in {neighborhood.name} →
+                        </Link>
+                      )}
                     </div>
                   </CardContent>
+                </>
+              );
+              return (
+                <Card key={index} className='border-0 shadow-lg hover:shadow-xl transition-shadow'>
+                  {slug ? (
+                    <Link href={`/neighborhoods/${slug}`} className='block' aria-label={`View homes for sale in ${neighborhood.name}`}>
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    cardContent
+                  )}
                 </Card>
               );
             })}
+          </div>
+          <div className='mt-12 pt-8 border-t border-gray-200'>
+            <h3 className='text-xl font-bold text-[#0A2540] mb-4'>Explore more areas</h3>
+            <p className='text-gray-600 mb-4'>
+              Browse dedicated pages for North Las Vegas and Maravilla subareas:
+            </p>
+            <ul className='flex flex-wrap gap-3'>
+              {NEIGHBORHOOD_SLUGS.map((slug) => (
+                <li key={slug}>
+                  <Link
+                    href={`/neighborhoods/${slug}`}
+                    className='inline-flex items-center px-4 py-2 rounded-lg bg-[#F7F9FC] text-[#0A2540] hover:bg-[#3A8DDE]/10 font-medium'
+                  >
+                    {NEIGHBORHOODS[slug].name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NEIGHBORHOODS } from '@/data/neighborhoods';
+import { GUIDES } from '@/data/guides';
 
 interface BreadcrumbItem {
   name: string;
@@ -31,6 +33,20 @@ const routeNames: Record<string, string> = {
   'search': 'Search',
   'maravilla-hoa': 'HOA Information',
   'new-construction': 'New Construction',
+  'blog': 'Blog & Market Updates',
+  '55-plus-communities': '55+ Communities',
+  'first-time-buyers': 'First-Time Buyers',
+  'guides': 'Guides',
+  // Guide slugs (full title from GUIDES below when path is /guides/[slug])
+  'buying-home-winter-2026': 'Things to Consider When Buying a Home Winter 2026',
+  'selling-house-winter-2026': 'Things to Consider When Selling Your House Winter 2026',
+  'first-time-homebuyer': 'First-Time Homebuyer Guide',
+  // Neighborhood subarea slugs (name from NEIGHBORHOODS below)
+  'aliante': 'Aliante',
+  'jasmine-ranch': 'Jasmine Ranch',
+  'centennial-crossing': 'Centennial Crossing',
+  'seabreeze': 'Seabreeze',
+  'eldorado': 'Eldorado',
 };
 
 export default function Breadcrumbs() {
@@ -42,10 +58,17 @@ export default function Breadcrumbs() {
   
   const breadcrumbs: BreadcrumbItem[] = [
     { name: 'Home', href: '/' },
-    ...segments.map((segment, index) => ({
-      name: routeNames[segment] || segment.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-      href: '/' + segments.slice(0, index + 1).join('/'),
-    })),
+    ...segments.map((segment, index) => {
+      const href = '/' + segments.slice(0, index + 1).join('/');
+      const name =
+        routeNames[segment] ??
+        (segments[0] === 'neighborhoods' && index === 1 && NEIGHBORHOODS[segment as keyof typeof NEIGHBORHOODS]
+          ? NEIGHBORHOODS[segment as keyof typeof NEIGHBORHOODS].name
+          : segments[0] === 'guides' && index === 1 && GUIDES[segment as keyof typeof GUIDES]
+            ? GUIDES[segment as keyof typeof GUIDES].title
+            : segment.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()));
+      return { name, href };
+    }),
   ];
 
   const jsonLd = {

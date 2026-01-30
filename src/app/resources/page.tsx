@@ -37,7 +37,9 @@ const resourceGroups = [
   {
     title: 'Buying & Selling',
     items: [
+      { href: '/guides', label: 'Guides for Clients', icon: BookOpen },
       { href: '/buyers-guide', label: 'How to Buy a Home in Maravilla', icon: BookOpen },
+      { href: '/first-time-buyers', label: 'First-Time Buyers', icon: BookOpen },
       { href: '/homes', label: 'Homes for Sale in Maravilla', icon: Home },
       { href: '/sell', label: 'Sell Your Home in Maravilla', icon: FileText },
       { href: '/search', label: 'Search Maravilla Listings', icon: Search },
@@ -49,6 +51,7 @@ const resourceGroups = [
       { href: '/home-valuation', label: 'Home Valuation', icon: DollarSign },
       { href: '/market-data', label: 'Market Data', icon: TrendingUp },
       { href: '/market-insights', label: 'Market Insights', icon: TrendingUp },
+      { href: '/blog', label: 'Blog & Market Updates', icon: TrendingUp },
     ],
   },
   {
@@ -56,6 +59,7 @@ const resourceGroups = [
     items: [
       { href: '/neighborhood', label: 'Maravilla Neighborhood Guide', icon: MapPin },
       { href: '/neighborhoods', label: 'Neighborhoods Near Maravilla', icon: MapPin },
+      { href: '/55-plus-communities', label: '55+ Communities', icon: Home },
       { href: '/community', label: 'Community Life', icon: Home },
       { href: '/amenities', label: 'Amenities', icon: Home },
       { href: '/map-and-nearby-places', label: 'Map & Nearby Places', icon: MapPin },

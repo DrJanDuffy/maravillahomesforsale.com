@@ -424,7 +424,40 @@ const PAGE_FAQ_MAP: Record<string, PageFAQConfig> = {
     subtitle: 'Guides, data, and tools for Maravilla',
     faqs: RESOURCES_FAQS,
   },
+  '/blog': {
+    title: 'Blog & Market Updates FAQs',
+    subtitle: 'Real estate trends and local insights',
+    faqs: RESOURCES_FAQS,
+  },
+  '/55-plus-communities': {
+    title: '55+ Communities FAQs',
+    subtitle: 'Age-qualified and active-adult options in North Las Vegas',
+    faqs: FIFTY_FIVE_PLUS_FAQS,
+  },
+  '/first-time-buyers': {
+    title: 'First-Time Buyers FAQs',
+    subtitle: 'Getting started in North Las Vegas and Maravilla',
+    faqs: FIRST_TIME_BUYERS_FAQS,
+  },
+  '/guides': {
+    title: 'Guides for Clients FAQs',
+    subtitle: 'Buying and selling guides',
+    faqs: BUYERS_GUIDE_FAQS,
+  },
 };
+
+const GUIDES_FAQS: readonly FAQItem[] = [
+  {
+    question: 'Where can I find more buying and selling guides?',
+    answer:
+      'Visit the Guides page for winter 2026 buying and selling considerations and the First-Time Homebuyer Guide. For step-by-step buying help, see the Buyer\'s Guide. Call (702) 500-1953 or use the contact page for personalized advice.',
+  },
+  {
+    question: 'How do I get help with buying or selling in North Las Vegas?',
+    answer:
+      'Dr. Jan Duffy helps buyers and sellers in North Las Vegas and Maravilla. Schedule a consultation via the contact page or call (702) 500-1953. She can walk you through pre-approval, listings, pricing, and closing.',
+  },
+];
 
 /**
  * Returns FAQ config for a given path, or null if no FAQs are defined.
@@ -432,5 +465,17 @@ const PAGE_FAQ_MAP: Record<string, PageFAQConfig> = {
  */
 export function getFAQConfigForPath(path: string): PageFAQConfig | null {
   const normalized = path.replace(/\/$/, '') || '/';
+  // Subarea pages: /neighborhoods/[slug] use same FAQs as /neighborhoods
+  if (normalized.startsWith('/neighborhoods/') && normalized !== '/neighborhoods') {
+    return PAGE_FAQ_MAP['/neighborhoods'] ?? null;
+  }
+  // Guide pages: /guides/[slug] use shared guides FAQs
+  if (normalized.startsWith('/guides/') && normalized !== '/guides') {
+    return {
+      title: 'Guides FAQs',
+      subtitle: 'Buying and selling in North Las Vegas and Maravilla',
+      faqs: GUIDES_FAQS,
+    };
+  }
   return PAGE_FAQ_MAP[normalized] ?? null;
 }
