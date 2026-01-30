@@ -127,10 +127,20 @@ export default function Footer() {
               <li className='flex items-center'>
                 <span className='mr-2'>📞</span>
                 <a
-                  href='tel:7025001953'
+                  href={BUSINESS_INFO.phone.href}
                   className='hover:text-white transition-colors'
                 >
-                  (702) 500-1953
+                  {BUSINESS_INFO.phone.display}
+                </a>
+              </li>
+              <li className='flex items-center'>
+                <span className='mr-2'>💬</span>
+                <a
+                  href={BUSINESS_INFO.sms.href}
+                  className='hover:text-white transition-colors'
+                  aria-label='Text or chat'
+                >
+                  {BUSINESS_INFO.sms.display}
                 </a>
               </li>
               <li className='flex items-center'>

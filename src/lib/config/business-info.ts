@@ -68,5 +68,24 @@ export const BUSINESS_INFO = {
   
   // Google Business Profile
   googleBusinessProfile: 'https://share.google/jwKcbkiXP5lxFx8Kf',
+
+  // Opening date (GBP)
+  foundingDate: '2009-09-20',
+
+  // Contact: SMS/Chat (GBP)
+  sms: {
+    display: 'Text (702) 500-1953',
+    href: 'sms:+17025001953',
+  },
+
+  // GBP attributes (for schema and visible content)
+  attributes: {
+    womenOwned: true,
+    lgbtqFriendly: true,
+    offersOnlineAppointments: true,
+  },
+
+  // Service area (GBP: no physical location; service area only)
+  serviceArea: 'North Las Vegas, NV, USA',
 } as const;
 

@@ -5,7 +5,7 @@ export default function AgentSchema() {
     '@id': 'https://www.maravillahomesforsale.com/#organization',
     'name': 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     'image': 'https://www.maravillahomesforsale.com/dr-jan-duffy.jpg',
-    'description': 'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers.',
+    'description': 'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. Women-owned business. LGBTQ+ friendly. Offers online appointments.',
     'url': 'https://www.maravillahomesforsale.com',
     'telephone': '+1-702-500-1953',
     'email': 'DrJanSells@MaravillaHomesForSale.com',

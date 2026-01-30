@@ -63,8 +63,8 @@ export const CRAIG_RANCH_FAQS = MARAVILLA_FAQS;
 const siteConfig = {
   name: businessName,
   url: siteUrl,
-  description:
-    'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
+    description:
+      'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it\'s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you\'re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
   ogImage: '/photos/01-1 (2).jpg',
   twitterHandle: '@maravillahomes',
   locale: 'en_US',
@@ -159,7 +159,7 @@ export function generateLocalBusinessSchema() {
     '@id': `${siteUrl}#localbusiness`,
     name: businessName,
     description:
-      'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it&apos;s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you&apos;re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free.',
+      'Looking to buy or sell a home in North Las Vegas? Homes by Dr. Jan Duffy is your trusted real estate expert in this growing community. Known for modern home designs, family-friendly amenities, and easy access to I-215 and I-15, North Las Vegas is a top choice for homebuyers. With nearby Aliante shopping, top-rated schools, and great neighborhoods, it\'s no wonder buyers are flocking to this area. For sellers, Dr. Duffy offers proven pricing strategies and expert marketing to help you get the best value for your property. Whether you\'re searching for your dream home or selling your house, Dr. Duffy provides personalized tours, market insights, and full support to make the process easy and stress-free. Women-owned business. LGBTQ+ friendly. Offers online appointments.',
     url: siteUrl,
     telephone: businessPhone,
     email: businessEmail,
@@ -175,6 +175,7 @@ export function generateLocalBusinessSchema() {
     },
     hasMap: BUSINESS_INFO.maps.business,
     areaServed: [
+      { '@type': 'Place', name: BUSINESS_INFO.serviceArea },
       { '@type': 'City', name: 'North Las Vegas', addressRegion: 'NV' },
       { '@type': 'City', name: 'Las Vegas', addressRegion: 'NV' },
       { '@type': 'City', name: 'Henderson', addressRegion: 'NV' },
@@ -187,6 +188,16 @@ export function generateLocalBusinessSchema() {
         closes: '21:00',
       },
     ],
+    specialOpeningHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        opens: '10:00',
+        closes: '18:00',
+        validFrom: '2026-02-16',
+        validThrough: '2026-02-16',
+      },
+    ],
+    ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
     priceRange: '$$$',
     currenciesAccepted: 'USD',
   };
@@ -248,9 +259,10 @@ export function generateOrganizationSchema() {
     ],
     sameAs: [
       'https://www.facebook.com/maravillahomesforsale',
-      'https://www.youtube.com/@DrDuffy',
       'https://www.linkedin.com/company/maravilla-homes-for-sale/',
+      'https://www.youtube.com/@DrDuffy',
     ],
+    ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
   };
 }
 
@@ -323,8 +335,9 @@ export function generateRealEstateAgentSchema() {
     '@id': `${siteUrl}#realestateagent`,
     name: 'Dr. Jan Duffy',
     description:
-      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. Over 15 years of experience with proven track record of 500+ homes sold.',
+      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. Over 15 years of experience with proven track record of 500+ homes sold. Women-owned business. LGBTQ+ friendly. Offers online appointments.',
     jobTitle: 'REALTOR®',
+    ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
     worksFor: {
       '@type': 'Organization',
       name: 'Berkshire Hathaway HomeServices Nevada Properties',
@@ -376,7 +389,6 @@ export function generateRealEstateAgentSchema() {
       {
         '@type': 'ContactPoint',
         telephone: businessPhone,
-        email: businessEmail,
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: ['English'],
@@ -386,6 +398,19 @@ export function generateRealEstateAgentSchema() {
           opens: '06:00',
           closes: '21:00',
         },
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: businessPhone,
+        contactType: 'sms',
+        areaServed: 'US',
+        availableLanguage: ['English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        email: businessEmail,
+        contactType: 'customer service',
+        areaServed: 'US',
       },
     ],
     memberOf: {
@@ -403,8 +428,8 @@ export function generateRealEstateAgentSchema() {
     },
     sameAs: [
       'https://www.facebook.com/maravillahomesforsale',
-      'https://www.youtube.com/@DrDuffy',
       'https://www.linkedin.com/company/maravilla-homes-for-sale/',
+      'https://www.youtube.com/@DrDuffy',
     ],
   };
 }

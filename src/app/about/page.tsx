@@ -94,6 +94,11 @@ export default function AboutPage() {
           <h2 id='why-work-with-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
             Why Work with Dr. Jan Duffy
           </h2>
+          {BUSINESS_INFO.attributes && (
+            <p className='text-center text-gray-600 mb-8 max-w-2xl mx-auto'>
+              Identifies as women-owned • LGBTQ+ friendly • Offers online appointments
+            </p>
+          )}
           <ul className='grid md:grid-cols-2 gap-4 max-w-4xl mx-auto'>
             {highlights.map((item, i) => (
               <li key={i} className='flex items-start gap-3 text-gray-700'>
