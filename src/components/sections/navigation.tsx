@@ -11,7 +11,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/homes', label: 'Homes' },
+    { href: '/homes', label: 'Homes for Sale' },
     { href: '/about', label: 'About' },
     { href: '/buyers-guide', label: 'Buyer\'s Guide' },
     { href: '/neighborhood', label: 'Neighborhood' },
