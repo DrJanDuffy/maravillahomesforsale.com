@@ -9,6 +9,7 @@ import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateArticleSchema,
 } from '@/lib/metadata';
 import { BUSINESS_INFO } from '@/lib/config/business-info';
 import { GUIDE_SLUGS, getGuideBySlug } from '@/data/guides';
@@ -32,8 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return genMetadata({
     title: `${guide.title} | Guides | Dr. Jan Duffy`,
     description: guide.metaDescription,
-    keywords: 'buying home, selling house, first-time homebuyer, North Las Vegas, Maravilla',
+    keywords: guide.keywords,
     path: `/guides/${slug}`,
+    type: 'article',
   });
 }
 
@@ -71,6 +73,26 @@ export default async function GuidePage({ params }: Props) {
           __html: JSON.stringify(generateBreadcrumbSchema(breadcrumb)),
         }}
       />
+      <Script
+        id='guide-article-schema'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateArticleSchema({
+              headline: guide.title,
+              description: guide.metaDescription,
+              url: `${baseUrl}/guides/${slug}`,
+              datePublished: guide.datePublished,
+              dateModified: guide.datePublished,
+              author: { name: 'Dr. Jan Duffy', url: baseUrl },
+              publisher: {
+                name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+                logo: '/globe.svg',
+              },
+            })
+          ),
+        }}
+      />
 
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -83,10 +105,19 @@ export default async function GuidePage({ params }: Props) {
         </div>
       </div>
 
+      <section className='py-8 bg-white border-b' aria-labelledby='guide-intro'>
+        <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <p id='guide-intro' className='text-lg text-gray-700 leading-relaxed'>
+            {guide.intro}
+          </p>
+        </div>
+      </section>
+
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white border-b'>
         <OnThisPage
           links={[
             ...guide.sections.map((s) => ({ id: s.id, label: s.title })),
+            { id: 'related-guides', label: 'More guides' },
             { id: 'faqs', label: 'FAQs' },
           ]}
         />
@@ -124,7 +155,39 @@ export default async function GuidePage({ params }: Props) {
         </div>
       </section>
 
-      <section id='cta' className='py-16 bg-[#F7F9FC]'>
+      <section id='related-guides' className='py-12 bg-[#F7F9FC]' aria-labelledby='related-guides-heading'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h2 id='related-guides-heading' className='text-2xl font-bold text-[#0A2540] mb-6'>
+            More guides for buyers and sellers
+          </h2>
+          <p className='text-gray-600 mb-6 max-w-2xl'>
+            Explore other client guides for North Las Vegas and Maravilla real estate.
+          </p>
+          <ul className='flex flex-wrap gap-4'>
+            {GUIDE_SLUGS.filter((s) => s !== slug).map((otherSlug) => {
+              const other = getGuideBySlug(otherSlug);
+              if (!other) return null;
+              return (
+                <li key={otherSlug}>
+                  <Link
+                    href={`/guides/${otherSlug}`}
+                    className='inline-block px-4 py-2 rounded-lg bg-white border border-gray-200 text-[#0A2540] hover:border-[#3A8DDE] hover:text-[#3A8DDE] font-medium'
+                  >
+                    {other.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <p className='mt-4 text-gray-600'>
+            <Link href='/guides' className='text-[#3A8DDE] font-medium hover:underline'>
+              View all guides for clients
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <section id='cta' className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-2xl font-bold text-[#0A2540] mb-4'>
             Ready to Get Started?

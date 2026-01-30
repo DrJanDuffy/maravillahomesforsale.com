@@ -20,6 +20,12 @@ export interface GuideItem {
   description: string;
   /** For meta description and cards. */
   metaDescription: string;
+  /** Unique meta keywords per guide for SEO. */
+  keywords: string;
+  /** Keyword-rich intro paragraph below hero (North Las Vegas, Maravilla). */
+  intro: string;
+  /** ISO date for Article schema (datePublished). */
+  datePublished: string;
   sections: GuideSection[];
 }
 
@@ -30,6 +36,11 @@ export const GUIDES: Record<GuideSlug, GuideItem> = {
     description: 'Key factors for buyers in the winter 2026 market: rates, inventory, and timing.',
     metaDescription:
       'What to consider when buying a home in winter 2026. Rates, inventory, and timing for North Las Vegas and Maravilla. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
+    keywords:
+      'buying a home winter 2026, North Las Vegas home buyer, Maravilla real estate buyer, winter home buying tips, mortgage rates 2026',
+    intro:
+      'Buying a home in North Las Vegas or Maravilla in winter 2026? This guide covers rates and budget, inventory and timing, inspections, and location so you can make confident decisions. Dr. Jan Duffy helps buyers in the greater Las Vegas area from pre-approval to closing.',
+    datePublished: '2026-01-01',
     sections: [
       {
         id: 'rates-and-budget',
@@ -72,6 +83,11 @@ export const GUIDES: Record<GuideSlug, GuideItem> = {
     description: 'How to prepare and price your home for a winter 2026 sale.',
     metaDescription:
       'What to consider when selling your house in winter 2026. Pricing, presentation, and timing in North Las Vegas and Maravilla. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
+    keywords:
+      'selling your house winter 2026, North Las Vegas home seller, Maravilla sell home, winter real estate market 2026, list home winter',
+    intro:
+      'Selling your house in North Las Vegas or Maravilla in winter 2026? This guide covers pricing strategy, curb appeal and presentation, photos and marketing, and flexibility so your home stands out. Dr. Jan Duffy helps sellers in the greater Las Vegas area with listing and closing.',
+    datePublished: '2026-01-01',
     sections: [
       {
         id: 'pricing-strategy',
@@ -114,6 +130,11 @@ export const GUIDES: Record<GuideSlug, GuideItem> = {
     description: 'A practical guide to buying your first home in North Las Vegas and Maravilla.',
     metaDescription:
       'First-time homebuyer guide: pre-approval, down payment, and steps to buy in North Las Vegas and Maravilla. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
+    keywords:
+      'first-time homebuyer, first time home buyer North Las Vegas, Maravilla first-time buyer, FHA VA loans Maravilla, buy first home Nevada',
+    intro:
+      'Buying your first home in North Las Vegas or Maravilla? This guide walks you through pre-approval, defining your needs, searching and touring, and making an offer so you close with confidence. Dr. Jan Duffy works with first-time buyers across the greater Las Vegas area.',
+    datePublished: '2026-01-01',
     sections: [
       {
         id: 'get-pre-approved',

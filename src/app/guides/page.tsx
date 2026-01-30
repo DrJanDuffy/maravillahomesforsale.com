@@ -36,22 +36,29 @@ export default function GuidesIndexPage() {
         id='guides-schema'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Guides for Clients | Buying & Selling',
+              name: 'Guides for Clients | Buying & Selling | North Las Vegas & Maravilla',
               description:
-                'Client guides for buying and selling in North Las Vegas and Maravilla.',
+                'Client guides for buying and selling in North Las Vegas and Maravilla: winter 2026 buying and selling, first-time homebuyer. Dr. Jan Duffy, REALTOR®.',
               url: `${baseUrl}/guides`,
               breadcrumb,
-            })
-          ),
-        }}
-      />
-      <Script
-        id='guides-breadcrumb-schema'
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumb)),
+            }),
+            generateBreadcrumbSchema(breadcrumb),
+            {
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              name: 'Guides for Clients',
+              description: 'Buying and selling guides for North Las Vegas and Maravilla real estate.',
+              numberOfItems: GUIDE_SLUGS.length,
+              itemListElement: GUIDE_SLUGS.map((slug, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                name: GUIDES[slug].title,
+                url: `${baseUrl}/guides/${slug}`,
+              })),
+            },
+          ]),
         }}
       />
 
@@ -68,9 +75,12 @@ export default function GuidesIndexPage() {
 
       <section className='py-16 bg-white' aria-labelledby='guides-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 id='guides-heading' className='sr-only'>
-            Client guides
+          <h2 id='guides-heading' className='text-2xl font-bold text-[#0A2540] mb-6'>
+            Buying and selling guides for North Las Vegas and Maravilla
           </h2>
+          <p className='text-gray-600 mb-8 max-w-2xl'>
+            Practical guides for home buyers and sellers: winter 2026 considerations and a first-time homebuyer guide. Each guide has a unique page with detailed, SEO-friendly content.
+          </p>
           <div className='grid md:grid-cols-3 gap-8'>
             {GUIDE_SLUGS.map((slug) => {
               const guide = GUIDES[slug];
