@@ -7,12 +7,9 @@ import HomeEvaluationSection from '@/components/sections/home-evaluation';
 import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
-import RealScoutOfficeWidget from '@/components/sections/realscout-office-widget';
-import FAQSection from '@/components/sections/faq-section';
 import RecentSales from '@/components/sections/recent-sales';
 import MarketSnapshot from '@/components/sections/market-snapshot';
 import JustSoldGallery from '@/components/sections/just-sold-gallery';
-import ListingsSkeleton from '@/components/skeletons/listings-skeleton';
 import PropertyCategoriesSkeleton from '@/components/skeletons/property-categories-skeleton';
 import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
 import BlogPostsSkeleton from '@/components/skeletons/blog-posts-skeleton';
@@ -21,8 +18,6 @@ import Link from 'next/link';
 import { ArrowRight, Home as HomeIcon, MapPin, TrendingUp } from 'lucide-react';
 import {
   generateMetadata as genMetadata,
-  MARAVILLA_FAQS,
-  generateFAQPageSchema,
   generateWebPageSchema,
   generateRealEstateAgentSchema,
 } from '@/lib/metadata';
@@ -98,7 +93,7 @@ export default function Home() {
         <section className='py-12 bg-white border-b' aria-label='Quick navigation links'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <nav aria-label='Main navigation shortcuts'>
-              <div className='grid md:grid-cols-3 gap-6'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 <Link href='/homes' className='block' aria-label='Browse homes for sale in Maravilla'>
                   <Button
                     variant='outline'
@@ -137,36 +132,33 @@ export default function Home() {
                     </span>
                   </Button>
                 </Link>
+                <Link href='#faqs' className='block' aria-label='Jump to frequently asked questions'>
+                  <Button
+                    variant='outline'
+                    className='w-full h-auto py-6 flex-col gap-2 hover:bg-[#F7F9FC]'
+                  >
+                    <ArrowRight className='h-8 w-8 text-[#3A8DDE]' aria-hidden='true' />
+                    <span className='text-lg font-semibold'>Common Questions</span>
+                    <span className='text-sm text-gray-600'>
+                      FAQs about Maravilla
+                    </span>
+                  </Button>
+                </Link>
               </div>
+              <p className='text-center text-gray-600 mt-6 text-sm'>
+                <Link href='/about' className='text-[#3A8DDE] hover:underline'>About Dr. Jan Duffy</Link>
+                {' · '}
+                <Link href='/buyers-guide' className='text-[#3A8DDE] hover:underline'>Buyer&apos;s Guide</Link>
+                {' · '}
+                <Link href='/schools' className='text-[#3A8DDE] hover:underline'>Schools</Link>
+                {' · '}
+                <Link href='/resources' className='text-[#3A8DDE] hover:underline'>Resources</Link>
+              </p>
             </nav>
           </div>
         </section>
 
-        {/* RealScout Office Widget Section - Moved up for better conversion */}
-        <section className='py-16 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-12'>
-              <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Featured Maravilla Listings from Dr. Jan Duffy
-              </h2>
-              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                Browse our current office listings. Dr. Jan Duffy specializes in
-                luxury homes and estates across Las Vegas and Henderson.
-              </p>
-            </div>
-            <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg border border-gray-200'>
-              <Suspense fallback={<ListingsSkeleton />}>
-                <RealScoutOfficeWidget
-                  agentEncodedId='QWdlbnQtMjI1MDUw'
-                  showMap={true}
-                  listingsPerPage='12'
-                  priceMin='380000'
-                  priceMax='600000'
-                />
-              </Suspense>
-            </div>
-          </div>
-        </section>
+        {/* Office RealScout widget is in PageLayout - appears on every page */}
 
         {/* Market Data Preview - Moved up to show market strength early */}
         <section className='py-16 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]'>
@@ -311,11 +303,9 @@ export default function Home() {
             </nav>
           </div>
         </section>
-        
-        <FAQSection />
       </article>
 
-      {/* Structured Data */}
+      {/* Structured Data - FAQ schema is output by PageFAQSection in layout */}
       <Script
         id='homepage-schema'
         type='application/ld+json'
@@ -331,7 +321,6 @@ export default function Home() {
               ],
             }),
             generateRealEstateAgentSchema(),
-            generateFAQPageSchema(MARAVILLA_FAQS),
           ]),
         }}
       />

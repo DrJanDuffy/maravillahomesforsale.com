@@ -12,11 +12,13 @@ export default function Navigation() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/homes', label: 'Homes' },
-    { href: '/home-descriptions', label: 'Home Descriptions' },
-    { href: '/amenities', label: 'Amenities' },
+    { href: '/about', label: 'About' },
+    { href: '/buyers-guide', label: 'Buyer\'s Guide' },
     { href: '/neighborhood', label: 'Neighborhood' },
+    { href: '/schools', label: 'Schools' },
     { href: '/map-and-nearby-places', label: 'Map & Nearby' },
     { href: '/real-estate-services', label: 'Services' },
+    { href: '/resources', label: 'Resources' },
     { href: '/contact', label: 'Contact' },
   ];
 

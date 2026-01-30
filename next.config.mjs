@@ -173,7 +173,6 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-  outputFileTracingRoot: process.cwd(),
 };
 
 export default nextConfig;

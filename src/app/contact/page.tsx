@@ -14,6 +14,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import OnThisPage from '@/components/OnThisPage';
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
@@ -52,14 +53,24 @@ export default function ContactPage() {
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
-            HomeServices® Nevada. Get expert, data-driven advice and personalized
-            consultations for <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes in Maravilla</Link> and throughout Las Vegas. Explore <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>real estate services</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
+            HomeServices® Nevada. <a href='#schedule' className='text-white hover:text-gray-200 underline font-medium'>Schedule a consultation</a>, see <a href='#contact-info' className='text-white hover:text-gray-200 underline font-medium'>contact details</a>, or jump to <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>. Explore <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes in Maravilla</Link>, <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>real estate services</Link>, <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
           </p>
         </div>
       </div>
 
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white border-b'>
+        <OnThisPage
+          links={[
+            { id: 'schedule', label: 'Schedule a consultation' },
+            { id: 'contact-info', label: 'Phone, email & office' },
+            { id: 'map', label: 'Office location & map' },
+            { id: 'faqs', label: 'Contact FAQs' },
+          ]}
+        />
+      </div>
+
       {/* Calendly Scheduling - Full Width Prominent Section */}
-      <section className='py-16 bg-white'>
+      <section id='schedule' className='py-16 bg-white' aria-labelledby='schedule-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-8'>
             <h2 className='text-3xl md:text-4xl font-bold text-[#0A2540] mb-4'>
@@ -81,7 +92,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='contact-info' className='py-16 bg-[#F7F9FC]' aria-labelledby='contact-info-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6'>
             <Card className='border-0 shadow-lg bg-gradient-to-br from-[#F7F9FC] to-white'>
@@ -221,10 +232,10 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='map' className='py-16 bg-[#F7F9FC]' aria-labelledby='map-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-8'>
-            <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
+            <h2 id='map-heading' className='text-3xl font-bold text-[#0A2540] mb-4'>
               Find Us on the Map
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>

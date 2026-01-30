@@ -4,11 +4,11 @@ import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import OnThisPage from '@/components/OnThisPage';
 import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateLocalBusinessSchema,
-  generateFAQPageSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -41,34 +41,6 @@ export default function SellMaravillaPage() {
     reviewsHref: BUSINESS_INFO.googleBusinessProfile,
   } as const;
 
-  const faqs = [
-    {
-      question: 'How do you price a Maravilla home to sell?',
-      answer:
-        'We price a Maravilla home by analyzing comparable sales, current active competition, buyer demand, and your home\'s condition and upgrades. The goal is to generate strong buyer interest and protect your net proceeds, not simply "pick a number."',
-    },
-    {
-      question: 'What should I fix before listing in Maravilla?',
-      answer:
-        'Start with items that remove buyer objections: repairs, touch-up paint, lighting, deep cleaning, and curb appeal. In Maravilla, clean presentation and clear feature callouts often outperform expensive renovations.',
-    },
-    {
-      question: 'Do I need staging to sell my Maravilla home?',
-      answer:
-        'Not always, but strategic staging (or partial staging) can help Maravilla buyers understand room scale and flow. We\'ll decide based on your floor plan, vacancy status, and comparable listings buyers are viewing.',
-    },
-    {
-      question: 'How long does it take to sell in Maravilla?',
-      answer:
-        'Timing varies with price point and inventory. Some Maravilla homes move quickly when priced and presented well. We set expectations using current days-on-market and the buyer pipeline—then track performance week-by-week.',
-    },
-    {
-      question: 'Can you help me buy my next home after selling in Maravilla?',
-      answer:
-        'Yes. Many sellers in Maravilla are also buyers. We can coordinate the timing, financing, and contingencies so the move is as smooth as possible.',
-    },
-  ] as const;
-
   return (
     <PageLayout>
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
@@ -81,12 +53,24 @@ export default function SellMaravillaPage() {
             property—it&apos;s about positioning your home so it&apos;s the clear best choice
             for buyers comparing Maravilla inventory right now. Dr. Jan Duffy,
             REALTOR®, helps you prep, price, market, and negotiate with a plan
-            built for the <strong>Maravilla</strong> buyer. Get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>free home valuation</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or explore <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>selling services</Link>.
+            built for the <strong>Maravilla</strong> buyer. <a href='#get-started' className='text-white hover:text-gray-200 underline font-medium'>Get started</a>, read <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>seller FAQs</a>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>free home valuation</Link>, <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or <Link href='/real-estate-services' className='text-white hover:text-gray-200 underline font-medium'>selling services</Link>.
           </p>
         </div>
       </div>
 
-      <section className='py-12 bg-white'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white border-b'>
+        <OnThisPage
+          links={[
+            { id: 'get-started', label: 'Get started: call or schedule' },
+            { id: 'seller-context', label: 'Maravilla seller context' },
+            { id: 'next-steps', label: 'Next steps' },
+            { id: 'location', label: 'Maravilla location map' },
+            { id: 'faqs', label: 'Seller FAQs' },
+          ]}
+        />
+      </div>
+
+      <section id='get-started' className='py-12 bg-white' aria-label='Get started'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-3 gap-6'>
             <div className='rounded-lg border bg-white p-6 shadow-sm'>
@@ -127,9 +111,9 @@ export default function SellMaravillaPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='seller-context' className='py-16 bg-white' aria-labelledby='seller-context-heading'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
+          <h2 id='seller-context-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
             Maravilla real estate context (seller perspective)
           </h2>
           <div className='space-y-4'>
@@ -219,24 +203,6 @@ export default function SellMaravillaPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            Maravilla seller FAQs
-          </h2>
-          <div className='space-y-6'>
-            {faqs.map((faq, idx) => (
-              <div key={idx} className='bg-white rounded-lg p-6 shadow-sm'>
-                <h3 className='text-xl font-semibold text-[#0A2540] mb-2'>
-                  {faq.question}
-                </h3>
-                <p className='text-gray-700 leading-relaxed'>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
@@ -261,9 +227,9 @@ export default function SellMaravillaPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='location' className='py-16 bg-[#F7F9FC]' aria-labelledby='location-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
+          <h2 id='location-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
             Maravilla Location
           </h2>
           <Suspense fallback={<MapSkeleton />}>
@@ -285,7 +251,6 @@ export default function SellMaravillaPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateLocalBusinessSchema(),
-            generateFAQPageSchema(faqs),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Sell in Maravilla', url: `${baseUrl}/sell` },

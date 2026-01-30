@@ -41,7 +41,7 @@ export default function FAQSection({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className={`py-12 px-4 md:px-6 lg:px-8 ${className}`}>
+      <section id="faqs" className={`py-12 px-4 md:px-6 lg:px-8 ${className}`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-2 text-gray-900">{title}</h2>
           {subtitle && <p className="text-center text-gray-600 mb-8">{subtitle}</p>}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "maravillahomesforsale.com"
+        }
+      ],
+      "destination": "https://www.maravillahomesforsale.com/:path*",
+      "permanent": true
+    }
+  ]
+}

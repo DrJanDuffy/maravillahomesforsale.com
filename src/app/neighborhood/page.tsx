@@ -47,6 +47,7 @@ import {
 } from 'lucide-react';
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import OnThisPage from '@/components/OnThisPage';
 import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
@@ -127,13 +128,24 @@ export default function NeighborhoodPage() {
             Welcome to Maravilla
           </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
-            A premier master-planned community in North Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways.
+            A premier master-planned community in North Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways. Jump to <a href='#listings' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</a>, <a href='#about' className='text-white hover:text-gray-200 underline font-medium'>about Maravilla</a>, <a href='#search-listings' className='text-white hover:text-gray-200 underline font-medium'>search listings</a>, or <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>.
           </p>
         </div>
       </div>
 
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#F7F9FC] border-b'>
+        <OnThisPage
+          links={[
+            { id: 'listings', label: 'Homes for sale in Maravilla' },
+            { id: 'about', label: 'About Maravilla' },
+            { id: 'search-listings', label: 'Search Maravilla listings' },
+            { id: 'faqs', label: 'Neighborhood FAQs' },
+          ]}
+        />
+      </div>
+
       {/* Featured Listings Section */}
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='listings' className='py-16 bg-[#F7F9FC]' aria-labelledby='listings-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
@@ -168,11 +180,11 @@ export default function NeighborhoodPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='about' className='py-16 bg-white' aria-labelledby='about-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-16'>
             <div>
-              <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
+              <h2 id='about-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
                 About Maravilla
               </h2>
               <div className='space-y-4 text-gray-600 leading-relaxed'>

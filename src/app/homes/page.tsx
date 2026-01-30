@@ -25,6 +25,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Home, MapPin, DollarSign, TrendingUp } from 'lucide-react';
+import OnThisPage from '@/components/OnThisPage';
 
 import Script from 'next/script';
 import type { Metadata } from 'next';
@@ -64,21 +65,36 @@ export default function HomesPage() {
             Vegas. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway
             HomeServices® Nevada, to find your perfect property. Prices range
             from $370,000 to $1.8 million, with 206 homes currently available.
-            Average home value: $427,967. Explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>Maravilla neighborhood</Link>, view <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
+            Average home value: $427,967. Jump to <a href='#listings' className='text-white hover:text-gray-200 underline font-medium'>current listings</a>, <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>, or explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>Maravilla neighborhood</Link>, <Link href='/market-data' className='text-white hover:text-gray-200 underline font-medium'>market data</Link>, or <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
           </p>
         </div>
       </div>
 
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white border-b'>
+        <OnThisPage
+          links={[
+            { id: 'listings', label: 'Current Maravilla listings' },
+            { id: 'working-with-agent', label: 'Working with Dr. Jan Duffy' },
+            { id: 'why-buy', label: 'Why buy in Maravilla' },
+            { id: 'community-info', label: 'Community & amenities' },
+            { id: 'ready-to-find', label: 'Ready to find your home' },
+            { id: 'faqs', label: 'Maravilla homes FAQs' },
+          ]}
+        />
+      </div>
+
       <Suspense fallback={<ListingsSkeleton />}>
-        <RealEstateListings />
+        <section id='listings' aria-label='Maravilla listings'>
+          <RealEstateListings />
+        </section>
       </Suspense>
 
       {/* Working with Dr. Jan Duffy Section - Moved up for trust building */}
-      <section className='py-16 bg-white'>
+      <section id='working-with-agent' className='py-16 bg-white' aria-labelledby='working-with-agent-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-12'>
             <div>
-              <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
+              <h2 id='working-with-agent-heading' className='text-3xl font-bold text-[#0A2540] mb-4'>
                 Working with Dr. Jan Duffy for Maravilla Homes
               </h2>
               <p className='text-lg text-gray-600 mb-6'>
@@ -154,9 +170,9 @@ export default function HomesPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='why-buy' className='py-16 bg-[#F7F9FC]' aria-labelledby='why-buy-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
+          <h2 id='why-buy-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
             Why Buy in Maravilla?
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -228,11 +244,11 @@ export default function HomesPage() {
       </Suspense>
 
       {/* Price Range & Community Info */}
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='community-info' className='py-16 bg-[#F7F9FC]' aria-labelledby='community-info-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
-              <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
+              <h2 id='community-info-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
                 Homes for Sale in Maravilla
               </h2>
               <div className='space-y-4 text-gray-700'>
@@ -300,9 +316,9 @@ export default function HomesPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='ready-to-find' className='py-16 bg-white' aria-labelledby='ready-to-find-heading'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
+          <h2 id='ready-to-find-heading' className='text-3xl font-bold text-[#0A2540] mb-4'>
             Ready to Find Your Dream Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>

@@ -4,11 +4,11 @@ import GoogleMap from '@/components/sections/google-map';
 import MapSkeleton from '@/components/skeletons/map-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import OnThisPage from '@/components/OnThisPage';
 import Script from 'next/script';
 import {
   generateMetadata as genMetadata,
   generateLocalBusinessSchema,
-  generateFAQPageSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from '@/lib/metadata';
@@ -40,34 +40,6 @@ export default function MaravillaHomeValuationPage() {
     mapsHref: BUSINESS_INFO.maps.community,
     reviewsHref: BUSINESS_INFO.googleBusinessProfile,
   } as const;
-
-  const faqs = [
-    {
-      question: 'How is a Maravilla home valuation calculated?',
-      answer:
-        'A Maravilla valuation is based on comparable closed sales, current active listings, condition and upgrades, layout desirability, lot features, and buyer demand. We also consider what buyers are choosing instead if they don\'t buy your Maravilla home.',
-    },
-    {
-      question: 'Is an online estimate accurate for Maravilla?',
-      answer:
-        'Online estimates can be a rough starting point, but Maravilla values often hinge on specific features (layout, condition, finishes, lot position). A local valuation adds context that automated estimates often miss.',
-    },
-    {
-      question: 'Do you provide a CMA for Maravilla?',
-      answer:
-        'Yes. A CMA (comparative market analysis) for Maravilla includes recent comps, active competition, and a recommended pricing strategy aligned with your timeline and goals.',
-    },
-    {
-      question: 'What information do you need for a Maravilla valuation?',
-      answer:
-        'At minimum: address, bed/bath count, approximate square footage, key upgrades, and your timeline. Photos can help, but we can start with basics and refine as needed for your Maravilla home.',
-    },
-    {
-      question: 'How often do Maravilla valuations change?',
-      answer:
-        'Maravilla values can shift with interest rates, inventory, seasonality, and buyer sentiment. That\'s why we look at the most recent comparable sales and the current competition, not just older data.',
-    },
-  ] as const;
 
   return (
     <PageLayout>
@@ -129,9 +101,9 @@ export default function MaravillaHomeValuationPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-white'>
+      <section id='valuation-context' className='py-16 bg-white' aria-labelledby='valuation-context-heading'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
+          <h2 id='valuation-context-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
             Maravilla real estate context (valuation lens)
           </h2>
           <div className='space-y-4'>
@@ -224,24 +196,6 @@ export default function MaravillaHomeValuationPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            Maravilla valuation FAQs
-          </h2>
-          <div className='space-y-6'>
-            {faqs.map((faq, idx) => (
-              <div key={idx} className='bg-white rounded-lg p-6 shadow-sm'>
-                <h3 className='text-xl font-semibold text-[#0A2540] mb-2'>
-                  {faq.question}
-                </h3>
-                <p className='text-gray-700 leading-relaxed'>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
@@ -266,9 +220,9 @@ export default function MaravillaHomeValuationPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-[#F7F9FC]'>
+      <section id='location' className='py-16 bg-[#F7F9FC]' aria-labelledby='location-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
+          <h2 id='location-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
             Maravilla Location
           </h2>
           <Suspense fallback={<MapSkeleton />}>
@@ -290,7 +244,6 @@ export default function MaravillaHomeValuationPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateLocalBusinessSchema(),
-            generateFAQPageSchema(faqs),
             generateBreadcrumbSchema([
               { name: 'Home', url: baseUrl },
               { name: 'Maravilla Home Valuation', url: `${baseUrl}/home-valuation` },

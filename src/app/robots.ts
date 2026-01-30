@@ -3,7 +3,8 @@ import { MetadataRoute } from 'next';
 /**
  * Robots.txt configuration (2025 Best Practice)
  * - Allows all content pages for crawling
- * - Blocks API routes and internal Next.js paths
+ * - Allows /_next/static/ (CSS/JS) so Googlebot can render pages (mobile-first indexing)
+ * - Blocks API routes and other internal Next.js paths
  * - References sitemap for efficient crawling
  */
 export default function robots(): MetadataRoute.Robots {
@@ -15,9 +16,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        // 2025 Best Practice: Block non-content routes but allow CSS/JS for rendering
-        // Google needs CSS/JS to properly render pages for mobile-first indexing
+        allow: ['/', '/_next/static/'],
+        // Block non-content routes; allow wins over disallow for more specific paths (/_next/static/)
         disallow: [
           '/api/',
           '/_next/',
@@ -30,12 +30,13 @@ export default function robots(): MetadataRoute.Robots {
           '/mls', // Legacy MLS route (redirects to /homes)
           '/lc', // Legacy route (redirects to /contact)
           '/ub', // Legacy route (redirects to /homes)
+          '/ap', // Legacy route (redirects to /homes)
         ],
       },
-      // Googlebot-specific rules (2025: Mobile-first indexing is default)
+      // Googlebot: allow CSS/JS for rendering (mobile-first indexing)
       {
         userAgent: 'Googlebot',
-        allow: '/',
+        allow: ['/', '/_next/static/'],
         disallow: [
           '/api/',
           '/_next/',
@@ -43,10 +44,10 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
         ],
       },
-      // Bingbot rules
+      // Bingbot
       {
         userAgent: 'Bingbot',
-        allow: '/',
+        allow: ['/', '/_next/static/'],
         disallow: [
           '/api/',
           '/_next/',

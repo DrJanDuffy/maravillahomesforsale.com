@@ -10,8 +10,12 @@ interface BreadcrumbItem {
 
 const routeNames: Record<string, string> = {
   '': 'Home',
+  'about': 'About Dr. Jan Duffy',
+  'buyers-guide': 'Buyer\'s Guide',
   'homes': 'Homes for Sale',
   'neighborhood': 'Neighborhood Guide',
+  'resources': 'Resources',
+  'schools': 'Schools',
   'neighborhoods': 'Neighborhoods',
   'market-data': 'Market Data',
   'market-insights': 'Market Insights',
@@ -24,6 +28,7 @@ const routeNames: Record<string, string> = {
   'map-and-nearby-places': 'Map & Nearby Places',
   'real-estate-services': 'Real Estate Services',
   'privacy': 'Privacy Policy',
+  'search': 'Search',
   'maravilla-hoa': 'HOA Information',
   'schools': 'Schools',
   'new-construction': 'New Construction',
