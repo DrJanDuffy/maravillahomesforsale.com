@@ -280,6 +280,16 @@ export default function ContactPage() {
                 View Google Reviews
               </Link>
             </Button>
+            <Button asChild variant='outline' className='border-[#16B286] text-[#16B286] hover:bg-[#16B286]/10'>
+              <Link
+                href={BUSINESS_INFO.googleReviewUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                prefetch={false}
+              >
+                Leave a Google Review
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

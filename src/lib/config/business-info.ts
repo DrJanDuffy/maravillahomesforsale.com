@@ -69,6 +69,9 @@ export const BUSINESS_INFO = {
   // Google Business Profile
   googleBusinessProfile: 'https://share.google/jwKcbkiXP5lxFx8Kf',
 
+  // Direct link for customers to leave a Google review (builds trust, helps GBP stand out)
+  googleReviewUrl: 'https://g.page/r/CZcA4mC9AUJeEBI/review',
+
   // Opening date (GBP)
   foundingDate: '2009-09-20',
 
