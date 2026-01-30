@@ -68,7 +68,7 @@ export default function GuidesIndexPage() {
             Guides for Clients
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
-            Practical guides for buying and selling in North Las Vegas and Maravilla. Winter 2026 considerations and a first-time homebuyer guide.
+            Practical guides for buying and selling in North Las Vegas and Maravilla. Winter 2026 considerations and a first-time homebuyer guide. Share any guide with clients via link, email, or print (save as PDF).
           </p>
         </div>
       </div>

@@ -27,7 +27,15 @@ export interface GuideItem {
   /** ISO date for Article schema (datePublished). */
   datePublished: string;
   sections: GuideSection[];
+  /** Optional KCM/Simplifying the Market landing page for lead capture + PDF eGuide. */
+  externalGuideUrl?: string;
+  /** CTA label for external eGuide link (e.g. "Get the free eGuide (PDF)"). */
+  externalGuideLabel?: string;
 }
+
+/** KCM buyer guide landing page (Dr. Jan Duffy affiliate). Fill out form to receive PDF eGuide. */
+export const KCM_BUYER_GUIDE_URL =
+  'https://www.simplifyingthemarket.com/en/buyers/?a=956758-ef2edda2f940e018328655620ea05f18';
 
 export const GUIDES: Record<GuideSlug, GuideItem> = {
   'buying-home-winter-2026': {
@@ -76,6 +84,8 @@ export const GUIDES: Record<GuideSlug, GuideItem> = {
           'Get pre-approved, define your must-haves, and browse current listings. Schedule a consultation with Dr. Jan Duffy to discuss your timeline and the winter 2026 market in North Las Vegas and Maravilla.',
       },
     ],
+    externalGuideUrl: KCM_BUYER_GUIDE_URL,
+    externalGuideLabel: 'Get the free eGuide (PDF)',
   },
   'selling-house-winter-2026': {
     slug: 'selling-house-winter-2026',

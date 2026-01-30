@@ -15,6 +15,7 @@ import { BUSINESS_INFO } from '@/lib/config/business-info';
 import { GUIDE_SLUGS, getGuideBySlug } from '@/data/guides';
 import OnThisPage from '@/components/OnThisPage';
 import PageFAQSection from '@/components/PageFAQSection';
+import GuideShareActions from '@/components/GuideShareActions';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -101,6 +102,21 @@ export default async function GuidePage({ params }: Props) {
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             {guide.description} Jump to <a href={`#${guide.sections[0]?.id}`} className='text-white hover:text-gray-200 underline font-medium'>sections</a> or <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</Link>, <Link href='/contact' className='text-white hover:text-gray-200 underline font-medium'>contact Dr. Jan Duffy</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
+          </p>
+          <div className='mt-6 flex flex-wrap items-center gap-3'>
+            <span className='text-gray-200 text-sm font-medium'>Share or download:</span>
+            <GuideShareActions title={guide.title} url={`${baseUrl}/guides/${slug}`} />
+            {guide.externalGuideUrl && guide.externalGuideLabel && (
+              <Button asChild size='sm' variant='secondary' className='bg-white/20 hover:bg-white/30 text-white border-white/40'>
+                <a href={guide.externalGuideUrl} target='_blank' rel='noopener noreferrer'>
+                  {guide.externalGuideLabel}
+                </a>
+              </Button>
+            )}
+          </div>
+          <p className='mt-3 text-sm text-gray-300'>
+            Copy the link to share with clients, email the guide, or print (use your browser&apos;s &quot;Save as PDF&quot; option for a PDF).
+            {guide.externalGuideUrl && ' Or use the button above to get the official eGuide (PDF) from our partner.'}
           </p>
         </div>
       </div>

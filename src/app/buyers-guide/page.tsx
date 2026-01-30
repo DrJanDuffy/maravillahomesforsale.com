@@ -11,7 +11,9 @@ import {
   generateWebPageSchema,
 } from '@/lib/metadata';
 import { BUSINESS_INFO } from '@/lib/config/business-info';
+import { KCM_BUYER_GUIDE_URL } from '@/data/guides';
 import OnThisPage from '@/components/OnThisPage';
+import { FileText } from 'lucide-react';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -60,6 +62,25 @@ export default function BuyersGuidePage() {
           <p className='text-xl text-gray-200 max-w-3xl'>
             A practical guide to buying a home in Maravilla, North Las Vegas. From pre-approval to closing, Dr. Jan Duffy helps you find the right property and navigate every step. Jump to <a href='#steps' className='text-white hover:text-gray-200 underline font-medium'>buying steps</a>, <a href='#financing' className='text-white hover:text-gray-200 underline font-medium'>financing</a>, or <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
           </p>
+        </div>
+      </div>
+
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#F7F9FC] border-b'>
+        <div className='flex flex-wrap items-center justify-between gap-4 rounded-lg bg-white p-4 shadow-sm border border-[#3A8DDE]/20'>
+          <div className='flex items-center gap-3'>
+            <div className='w-10 h-10 rounded-lg bg-[#3A8DDE]/10 flex items-center justify-center'>
+              <FileText className='h-5 w-5 text-[#3A8DDE]' aria-hidden />
+            </div>
+            <div>
+              <p className='font-semibold text-[#0A2540]'>Free Winter 2026 Buyer eGuide</p>
+              <p className='text-sm text-gray-600'>Fill out a short form to receive the PDF from Dr. Jan Duffy&apos;s partner, Keeping Current Matters.</p>
+            </div>
+          </div>
+          <Button asChild className='bg-[#3A8DDE] hover:bg-[#2A7DCE] text-white shrink-0'>
+            <a href={KCM_BUYER_GUIDE_URL} target='_blank' rel='noopener noreferrer'>
+              Get the free eGuide (PDF)
+            </a>
+          </Button>
         </div>
       </div>
 
