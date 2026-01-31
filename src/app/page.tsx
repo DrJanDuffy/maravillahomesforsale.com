@@ -7,6 +7,7 @@ import HomeEvaluationSection from '@/components/sections/home-evaluation';
 import PropertyCategories from '@/components/sections/property-categories';
 import FeaturedCommunities from '@/components/sections/featured-communities';
 import BlogPosts from '@/components/sections/blog-posts';
+import KcmVideosSection from '@/components/sections/kcm-videos-section';
 import RecentSales from '@/components/sections/recent-sales';
 import MarketSnapshot from '@/components/sections/market-snapshot';
 import JustSoldGallery from '@/components/sections/just-sold-gallery';
@@ -15,7 +16,8 @@ import CommunitiesSkeleton from '@/components/skeletons/communities-skeleton';
 import BlogPostsSkeleton from '@/components/skeletons/blog-posts-skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Home as HomeIcon, MapPin, TrendingUp } from 'lucide-react';
+import { ArrowRight, Home as HomeIcon, MapPin, Play, TrendingUp } from 'lucide-react';
+import { KCM_VIDEOS_URL } from '@/data/guides';
 import {
   generateMetadata as genMetadata,
   generateWebPageSchema,
@@ -188,14 +190,25 @@ export default function Home() {
                 <div className='text-white/90 text-sm'>YoY Appreciation</div>
               </div>
             </div>
-            <Button
-              asChild
-              className='bg-[#16B286] hover:bg-[#15A276] text-white'
-            >
-              <Link href='/market-data'>
-                View Full Market Report <ArrowRight className='ml-2 h-4 w-4' />
-              </Link>
-            </Button>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Button
+                asChild
+                className='bg-[#16B286] hover:bg-[#15A276] text-white'
+              >
+                <Link href='/market-data'>
+                  View Full Market Report <ArrowRight className='ml-2 h-4 w-4' />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant='outline'
+                className='bg-white/10 hover:bg-white/20 text-white border-white/30'
+              >
+                <a href={KCM_VIDEOS_URL} target='_blank' rel='noopener noreferrer'>
+                  <Play className='mr-2 h-4 w-4' aria-hidden /> Watch: Home Sales Picked Up Coming into 2026
+                </a>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -212,7 +225,9 @@ export default function Home() {
         <Suspense fallback={<BlogPostsSkeleton />}>
           <DynamicBlogPosts />
         </Suspense>
-        
+
+        <KcmVideosSection limit={4} heading='Latest Market Videos' />
+
         {/* Strategic Internal Links for Sitelinks Optimization */}
         <section className='py-12 bg-gray-50 border-t border-gray-200'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

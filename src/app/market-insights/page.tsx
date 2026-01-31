@@ -19,6 +19,8 @@ import {
   generateArticleSchema,
 } from '@/lib/metadata';
 import { parseRSSFeed } from '@/lib/utils/rss-parser';
+import { KCM_VIDEOS_URL } from '@/data/guides';
+import KcmVideosSection from '@/components/sections/kcm-videos-section';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -144,6 +146,16 @@ export default async function MarketInsightsPage() {
               </Link>
               ). Also see our <Link href='/blog' className='text-[#3A8DDE] hover:underline'>Blog & Market Updates</Link>.
             </p>
+            <p className='mt-3 text-gray-600'>
+              <a
+                href={KCM_VIDEOS_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 text-[#3A8DDE] hover:underline font-medium'
+              >
+                Watch: Home Sales Picked Up Coming into 2026
+              </a>
+            </p>
           </div>
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -215,6 +227,12 @@ export default async function MarketInsightsPage() {
           </div>
         </div>
       </section>
+
+      <KcmVideosSection
+        limit={5}
+        heading='Market Videos'
+        description='Watch short market updates and tips from Dr. Jan Duffy’s partner, Simplifying the Market.'
+      />
 
       <Script
         id='market-insights-schema'

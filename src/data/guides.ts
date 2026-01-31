@@ -37,6 +37,10 @@ export interface GuideItem {
 export const KCM_BUYER_GUIDE_URL =
   'https://www.simplifyingthemarket.com/en/buyers/?a=956758-ef2edda2f940e018328655620ea05f18';
 
+/** KCM videos page (Dr. Jan Duffy affiliate). Latest market videos e.g. "Home Sales Picked Up Coming into 2026". */
+export const KCM_VIDEOS_URL =
+  'https://www.simplifyingthemarket.com/en/videos/?a=956758-ef2edda2f940e018328655620ea05f18';
+
 export const GUIDES: Record<GuideSlug, GuideItem> = {
   'buying-home-winter-2026': {
     slug: 'buying-home-winter-2026',

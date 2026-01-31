@@ -323,6 +323,52 @@ const RESOURCES_FAQS: readonly FAQItem[] = [
   },
 ];
 
+const FIFTY_FIVE_PLUS_FAQS: readonly FAQItem[] = [
+  {
+    question: 'What are 55+ or age-qualified communities near Maravilla?',
+    answer:
+      'North Las Vegas and the greater Las Vegas area include age-qualified (55+) and active-adult communities. Dr. Jan Duffy can help you compare options, rules, and locations. Call (702) 500-1953 or use the contact page.',
+  },
+  {
+    question: 'How do age restrictions work in 55+ communities?',
+    answer:
+      'Age-qualified communities typically require at least one resident to be 55 or older and may limit the share of households under 55. Rules vary by community. Dr. Duffy can point you to specific HOA or community guidelines.',
+  },
+  {
+    question: 'Are there 55+ homes for sale in North Las Vegas?',
+    answer:
+      'Yes. Inventory in 55+ and active-adult areas changes regularly. Browse our listings and filter by area, or contact Dr. Jan Duffy at (702) 500-1953 for a tailored search in North Las Vegas and Maravilla-area communities.',
+  },
+  {
+    question: 'Can Dr. Jan Duffy help me buy in a 55+ community?',
+    answer:
+      'Yes. Dr. Duffy works with buyers and sellers in North Las Vegas and Maravilla, including those interested in age-qualified and active-adult communities. She can walk you through options, financing, and HOA details.',
+  },
+];
+
+const FIRST_TIME_BUYERS_FAQS: readonly FAQItem[] = [
+  {
+    question: 'What should a first-time buyer do first in North Las Vegas?',
+    answer:
+      'Get pre-approved with a lender so you know your budget and show sellers you\'re serious. Then define your must-haves and browse Maravilla and North Las Vegas listings. Dr. Jan Duffy can connect you with lenders and guide you step-by-step.',
+  },
+  {
+    question: 'Are there first-time buyer programs in Nevada?',
+    answer:
+      'Nevada and local programs may offer down payment assistance, favorable rates, or tax benefits for first-time buyers. Dr. Jan Duffy can point you to lenders and resources that specialize in these programs for the North Las Vegas area.',
+  },
+  {
+    question: 'How do I make an offer on my first home?',
+    answer:
+      'Dr. Duffy will help you craft a competitive offer based on comparable sales and market conditions. She explains contingencies, negotiations, and the steps after your offer is accepted so you stay informed through closing.',
+  },
+  {
+    question: 'Can Dr. Jan Duffy help first-time buyers in Maravilla?',
+    answer:
+      'Yes. Dr. Duffy works with first-time buyers throughout Maravilla and North Las Vegas, from pre-approval to closing. Call (702) 500-1953 or use the contact page to get started.',
+  },
+];
+
 const PAGE_FAQ_MAP: Record<string, PageFAQConfig> = {
   '/': {
     title: 'Frequently Asked Questions About Maravilla',
