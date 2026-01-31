@@ -42,7 +42,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-8'>
               <h2 id='office-listings-heading' className='text-3xl font-bold text-[#0A2540] mb-2'>
-                Maravilla Listings from Dr. Jan Duffy
+                North Las Vegas Family Homes: Listings from Dr. Jan Duffy
               </h2>
               <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
                 Browse current office listings. Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada.

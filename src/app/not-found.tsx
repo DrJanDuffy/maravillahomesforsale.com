@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className='max-w-2xl w-full text-center text-white'>
         <div className='mb-8'>
           <h1 className='text-9xl font-bold mb-4'>404</h1>
-          <h2 className='text-4xl font-semibold mb-4'>Page Not Found</h2>
+          <h2 className='text-4xl font-semibold mb-4'>North Las Vegas Family Homes: Page Not Found</h2>
           <p className='text-xl text-gray-200 mb-8'>
             Sorry, we couldn&apos;t find the page you&apos;re looking for. The page may have been moved, deleted, or the URL may be incorrect.
           </p>

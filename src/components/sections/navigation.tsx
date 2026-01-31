@@ -29,7 +29,7 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <Link href='/' className='flex items-center'>
             <h1 className='text-2xl font-bold text-[#0A2540]'>
-              (702) 500-1953
+              North Las Vegas Family Homes
             </h1>
           </Link>
 
@@ -73,7 +73,7 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
               <div className='flex flex-col space-y-4 mt-8'>
-                <h2 className='text-2xl font-bold text-[#0A2540] mb-4'>Menu</h2>
+                <h2 className='text-2xl font-bold text-[#0A2540] mb-4'>North Las Vegas Family Homes – Menu</h2>
                 {navLinks.map(link => (
                   <Link
                     key={link.href}

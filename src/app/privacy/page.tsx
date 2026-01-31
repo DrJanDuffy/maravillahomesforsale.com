@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       <article className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl font-bold text-[#0A2540] mb-8'>
-            Privacy Policy
+            North Las Vegas Family Homes: Privacy Policy
           </h1>
 
           <div className='prose prose-lg max-w-none space-y-6 text-gray-700'>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className='text-2xl font-semibold text-[#0A2540] mb-4'>
-                How We Use Your Information
+                North Las Vegas Family Homes: How We Use Your Information
               </h2>
               <p>We use the information we collect to:</p>
               <ul className='list-disc pl-6 space-y-2 mt-4'>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className='text-2xl font-semibold text-[#0A2540] mb-4'>
-                Data Security
+                North Las Vegas Family Homes: Data Security
               </h2>
               <p>
                 We implement appropriate security measures to protect your personal
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className='text-2xl font-semibold text-[#0A2540] mb-4'>
-                Cookies and Tracking
+                North Las Vegas Family Homes: Cookies and Tracking
               </h2>
               <p>
                 We use cookies and similar tracking technologies to improve your
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className='text-2xl font-semibold text-[#0A2540] mb-4'>
-                Updates to This Policy
+                North Las Vegas Family Homes: Updates to This Policy
               </h2>
               <p>
                 We may update this Privacy Policy from time to time. The most recent

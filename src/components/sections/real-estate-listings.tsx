@@ -37,7 +37,7 @@ export default function RealEstateListings() {
         {/* Section Header */}
         <div className='text-center mb-16'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Available Maravilla Properties
+            North Las Vegas Family Homes: Available Properties
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed'>
             Discover the latest luxury homes available in Maravilla
@@ -48,7 +48,7 @@ export default function RealEstateListings() {
         <div className='bg-[#F7F9FC] rounded-xl p-8 shadow-lg'>
           <div className='mb-6'>
             <h3 className='text-2xl font-semibold text-[#0A2540] mb-2'>
-              Current Maravilla Listings
+              North Las Vegas Family Homes: Current Listings
             </h3>
             <p className='text-gray-600'>
               Browse our curated selection of premium properties in the $600K -

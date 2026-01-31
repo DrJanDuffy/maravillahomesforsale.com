@@ -25,7 +25,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Blog & Market Updates | Maravilla Real Estate | Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | Blog & Market Updates | Dr. Jan Duffy',
   description:
     'Real estate blog and market updates for Maravilla and North Las Vegas. Trends, buying and selling tips, and local insights. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
   keywords:
@@ -103,7 +103,7 @@ export default async function BlogPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Blog & Market Updates
+            North Las Vegas Family Homes: Blog & Market Updates
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Real estate trends, buying and selling tips, and local insights for Maravilla and North Las Vegas. Updated regularly from our market insights feed.
@@ -199,8 +199,8 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Blog & Market Updates | Maravilla Real Estate',
-              description: 'Real estate blog and market updates for Maravilla and North Las Vegas.',
+              name: 'North Las Vegas Family Homes | Blog & Market Updates',
+              description: 'North Las Vegas Family Homes: blog and market updates for North Las Vegas and Maravilla.',
               url: `${baseUrl}/blog`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
@@ -209,7 +209,7 @@ export default async function BlogPage() {
             }),
             generateBlogSchema({
               name: 'Blog & Market Updates',
-              description: 'Real estate trends and local insights for Maravilla and North Las Vegas.',
+              description: 'North Las Vegas Family Homes: real estate trends and local insights for North Las Vegas and Maravilla.',
               url: `${baseUrl}/blog`,
               author: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
               publisher: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',

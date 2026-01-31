@@ -371,8 +371,8 @@ const FIRST_TIME_BUYERS_FAQS: readonly FAQItem[] = [
 
 const PAGE_FAQ_MAP: Record<string, PageFAQConfig> = {
   '/': {
-    title: 'Frequently Asked Questions About Maravilla',
-    subtitle: 'Find answers to common questions about buying and selling in Maravilla',
+    title: 'North Las Vegas Family Homes | FAQs',
+    subtitle: 'Find answers to common questions about buying and selling in North Las Vegas and Maravilla',
     faqs: MARAVILLA_FAQS,
   },
   '/homes': {

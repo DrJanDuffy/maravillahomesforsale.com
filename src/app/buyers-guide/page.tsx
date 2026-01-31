@@ -9,6 +9,7 @@ import {
   generateMetadata as genMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateHowToSchema,
 } from '@/lib/metadata';
 import { BUSINESS_INFO } from '@/lib/config/business-info';
 import { KCM_BUYER_GUIDE_URL } from '@/data/guides';
@@ -20,11 +21,11 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'How to Buy a Home in Maravilla | Buyer\'s Guide | Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | How to Buy a Home in Maravilla | Buyer\'s Guide | Dr. Jan Duffy',
   description:
-    'Step-by-step guide to buying a home in Maravilla, North Las Vegas. Financing, search, offers, and closing with Dr. Jan Duffy, REALTOR®. Call (702) 500-1953.',
+    'How to buy a home in Maravilla & North Las Vegas: pre-approval, search, offers, closing. Step-by-step buyer\'s guide with Dr. Jan Duffy, REALTOR®. Call (702) 500-1953.',
   keywords:
-    'buy a home Maravilla, first-time home buyer Maravilla, Maravilla buyer guide, North Las Vegas home buying, Maravilla real estate',
+    'how to buy a home Maravilla, first-time home buyer North Las Vegas, Maravilla buyer guide, North Las Vegas home buying, Maravilla real estate, Dr. Jan Duffy',
   path: '/buyers-guide',
 });
 
@@ -57,7 +58,7 @@ export default function BuyersGuidePage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            How to Buy a Home in Maravilla
+            North Las Vegas Family Homes: Buyer&apos;s Guide
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             A practical guide to buying a home in Maravilla, North Las Vegas. From pre-approval to closing, Dr. Jan Duffy helps you find the right property and navigate every step. Jump to <a href='#steps' className='text-white hover:text-gray-200 underline font-medium'>buying steps</a>, <a href='#financing' className='text-white hover:text-gray-200 underline font-medium'>financing</a>, or <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
@@ -98,7 +99,7 @@ export default function BuyersGuidePage() {
       <section id='steps' className='py-16 bg-white' aria-labelledby='steps-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='steps-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Steps to Buy a Home in Maravilla
+            North Las Vegas Family Homes: Steps to Buy a Home
           </h2>
           <div className='grid md:grid-cols-2 gap-8'>
             {steps.map((step, i) => {
@@ -138,7 +139,7 @@ export default function BuyersGuidePage() {
       <section id='cta' className='py-16 bg-white' aria-labelledby='cta-heading'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 id='cta-heading' className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Ready to Find Your Maravilla Home?
+            North Las Vegas Family Homes: Ready to Find Your Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Dr. Jan Duffy helps buyers find and close on the right Maravilla property. Call, schedule a consultation, or browse current listings to get started.
@@ -167,13 +168,20 @@ export default function BuyersGuidePage() {
               { name: 'Buyer\'s Guide', url: `${baseUrl}/buyers-guide` },
             ]),
             generateWebPageSchema({
-              name: 'How to Buy a Home in Maravilla | Buyer\'s Guide',
-              description: 'Step-by-step guide to buying a home in Maravilla with Dr. Jan Duffy.',
+              name: 'North Las Vegas Family Homes | Buyer\'s Guide',
+              description: 'Step-by-step guide to buying a home in North Las Vegas and Maravilla with Dr. Jan Duffy.',
               url: `${baseUrl}/buyers-guide`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },
                 { name: 'Buyer\'s Guide', url: `${baseUrl}/buyers-guide` },
               ],
+            }),
+            generateHowToSchema({
+              name: 'How to Buy a Home in Maravilla and North Las Vegas',
+              description: 'Step-by-step buyer\'s guide: pre-approval, search and tour homes, make an offer, and close. Dr. Jan Duffy, REALTOR®, North Las Vegas Family Homes.',
+              url: `${baseUrl}/buyers-guide`,
+              totalTime: 'P30D',
+              steps: steps.map((s) => ({ name: s.title, text: s.body })),
             }),
           ]),
         }}

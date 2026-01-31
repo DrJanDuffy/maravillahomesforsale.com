@@ -22,7 +22,7 @@ const baseUrl = (
 export const revalidate = 604800; // weekly
 
 export const metadata = genMetadata({
-  title: 'Sell a Home in Maravilla | Listing Agent: Dr. Jan Duffy, REALTOR®',
+  title: 'North Las Vegas Family Homes | Sell a Home in Maravilla | Dr. Jan Duffy, REALTOR®',
   description:
     'Sell your Maravilla home with expert guidance. Dr. Jan Duffy, REALTOR®, helps you price competitively, prepare for market, and negotiate to maximize proceeds. Average days on market: 25 days. Free consultation. Call (702) 500-1953.',
   keywords:
@@ -46,7 +46,7 @@ export default function SellMaravillaPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Sell Your Home in Maravilla
+            North Las Vegas Family Homes: Sell Your Home
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Selling in <strong>Maravilla</strong> is about more than listing a
@@ -129,7 +129,7 @@ export default function SellMaravillaPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            Maravilla seller strategy: what drives results
+            North Las Vegas Family Homes: Seller Strategy
           </h2>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
             Buyers compare &quot;Maravilla vs. everything else&quot;
@@ -174,7 +174,7 @@ export default function SellMaravillaPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            Preparing your Maravilla home to sell (high-ROI checklist)
+            North Las Vegas Family Homes: Preparing Your Home to Sell
           </h2>
           <p className='text-gray-700 leading-relaxed mb-4'>
             Most Maravilla sellers get the best return from &quot;friction reducers&quot;:
@@ -230,7 +230,7 @@ export default function SellMaravillaPage() {
       <section id='location' className='py-16 bg-[#F7F9FC]' aria-labelledby='location-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='location-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Maravilla Location
+            North Las Vegas Family Homes: Maravilla Location
           </h2>
           <Suspense fallback={<MapSkeleton />}>
             <GoogleMap
@@ -256,7 +256,7 @@ export default function SellMaravillaPage() {
               { name: 'Sell in Maravilla', url: `${baseUrl}/sell` },
             ]),
             generateWebPageSchema({
-              name: 'Sell a Home in Maravilla | Dr. Jan Duffy, REALTOR®',
+              name: 'North Las Vegas Family Homes | Sell Your Home',
               description:
                 'Sell your Maravilla home with expert guidance. Dr. Jan Duffy helps you price competitively, prepare for market, and negotiate to maximize proceeds.',
               url: `${baseUrl}/sell`,

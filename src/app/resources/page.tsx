@@ -25,7 +25,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Real Estate Resources | Guides, Data & Tools | Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | Resources, Guides & Tools | Dr. Jan Duffy',
   description:
     'Resources for Maravilla home buyers and sellers: buyer\'s guide, home valuation, market data, neighborhood info, and contact. Dr. Jan Duffy, REALTOR® (702) 500-1953.',
   keywords:
@@ -82,7 +82,7 @@ export default function ResourcesPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Maravilla Real Estate Resources
+            North Las Vegas Family Homes: Resources
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Guides, market data, neighborhood info, and tools for Maravilla home buyers and sellers. Find what you need and connect with Dr. Jan Duffy for personalized help.
@@ -105,7 +105,7 @@ export default function ResourcesPage() {
       <section id='buying-selling' className='py-16 bg-white' aria-labelledby='buying-selling-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='buying-selling-heading' className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Buying & Selling
+            North Las Vegas Family Homes: Buying & Selling
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {resourceGroups[0].items.map((item, i) => {
@@ -131,7 +131,7 @@ export default function ResourcesPage() {
       <section id='value-market' className='py-16 bg-[#F7F9FC]' aria-labelledby='value-market-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='value-market-heading' className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Value & Market
+            North Las Vegas Family Homes: Value & Market
           </h2>
           <div className='grid md:grid-cols-3 gap-6'>
             {resourceGroups[1].items.map((item, i) => {
@@ -183,7 +183,7 @@ export default function ResourcesPage() {
       <section id='services' className='py-16 bg-[#F7F9FC]' aria-labelledby='services-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='services-heading' className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Services & Contact
+            North Las Vegas Family Homes: Services & Contact
           </h2>
           <div className='grid md:grid-cols-3 gap-6'>
             {resourceGroups[3].items.map((item, i) => {
@@ -216,8 +216,8 @@ export default function ResourcesPage() {
               { name: 'Resources', url: `${baseUrl}/resources` },
             ]),
             generateWebPageSchema({
-              name: 'Maravilla Real Estate Resources | Guides & Tools',
-              description: 'Resources for Maravilla buyers and sellers: guides, market data, neighborhood info.',
+              name: 'North Las Vegas Family Homes | Resources & Tools',
+              description: 'Resources for North Las Vegas and Maravilla buyers and sellers: guides, market data, neighborhood info.',
               url: `${baseUrl}/resources`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },

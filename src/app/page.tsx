@@ -22,7 +22,9 @@ import {
   generateMetadata as genMetadata,
   generateWebPageSchema,
   generateRealEstateAgentSchema,
+  generateVideoGallerySchema,
 } from '@/lib/metadata';
+import { KCM_VIDEO_ENTRIES } from '@/data/kcm-videos';
 
 const baseUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'
@@ -79,9 +81,9 @@ export const revalidate = 3600; // 1 hour
 export const metadata = genMetadata({
   title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
-    'Find your dream home in Maravilla, Las Vegas. Browse luxury homes and explore this premier community with excellent schools, parks, and convenient amenities. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 500-1953.',
+    'North Las Vegas Family Homes: find your dream home in Maravilla and North Las Vegas. Family-friendly community, top schools, parks, amenities. Dr. Jan Duffy, REALTOR® Berkshire Hathaway Nevada. Browse homes, get a valuation, or contact (702) 500-1953.',
   keywords:
-    'Maravilla, Las Vegas real estate, luxury homes, Las Vegas homes for sale, Nevada real estate, Maravilla community, luxury properties, real estate agent Las Vegas, Dr. Jan Duffy, Berkshire Hathaway',
+    'North Las Vegas family homes, Maravilla homes for sale, North Las Vegas real estate, Maravilla Las Vegas, Dr. Jan Duffy REALTOR, Berkshire Hathaway Nevada, first-time home buyer North Las Vegas, homes for sale Maravilla',
   path: '/',
 });
 
@@ -166,7 +168,7 @@ export default function Home() {
         <section className='py-16 bg-linear-to-r from-[#0A2540] to-[#3A8DDE]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>
-              Maravilla Market Overview
+              North Las Vegas Family Homes: Market Overview
             </h2>
             <p className='text-xl text-white mb-8 max-w-3xl mx-auto'>
               Stay informed with the latest real estate trends in Las
@@ -232,7 +234,7 @@ export default function Home() {
         <section className='py-12 bg-gray-50 border-t border-gray-200'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <nav aria-label='Site navigation' className='text-center'>
-              <h2 className='sr-only'>Site Navigation</h2>
+              <h2 className='sr-only'>North Las Vegas Family Homes – Site Navigation</h2>
               <ul className='flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm'>
                 <li>
                   <Link
@@ -336,6 +338,15 @@ export default function Home() {
               ],
             }),
             generateRealEstateAgentSchema(),
+            generateVideoGallerySchema(
+              KCM_VIDEO_ENTRIES.map((v) => ({
+                id: v.id,
+                title: v.title,
+                description: v.description,
+                url: v.url,
+              })),
+              'North Las Vegas Family Homes: Latest Market Videos'
+            ),
           ]),
         }}
       />

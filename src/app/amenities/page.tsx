@@ -16,7 +16,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Homes Amenities | Luxury Features in North Las Vegas',
+  title: 'North Las Vegas Family Homes | Maravilla Amenities | Parks, Pools & Features',
   description:
     'Discover the extensive amenities available in Maravilla homes, including open floor plans, attached garages, jetted bathtubs, swimming pools, smart home technology, and community features in North Las Vegas.',
   keywords:
@@ -48,7 +48,7 @@ export default function AmenitiesPage() {
         <section className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-              Maravilla Homes Amenities
+              North Las Vegas Family Homes: Amenities
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
               Explore the comprehensive amenities that make <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>Maravilla homes</Link> exceptional. From interior features to community amenities, discover what sets these properties apart in North Las Vegas. See <Link href='/home-descriptions' className='text-white hover:text-gray-200 underline font-medium'>detailed home descriptions</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or view <Link href='/map-and-nearby-places' className='text-white hover:text-gray-200 underline font-medium'>nearby places</Link>.
@@ -60,7 +60,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Interior Home Amenities
+              North Las Vegas Family Homes: Interior Amenities
             </h2>
             <p className='text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl'>
               Maravilla homes are designed with thoughtful amenities that enhance daily living, provide comfort, and support modern lifestyles. These features are carefully selected to offer both immediate enjoyment and long-term value, making each home a true sanctuary for its residents.
@@ -88,7 +88,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Open Floor Plan Design
+              North Las Vegas Family Homes: Open Floor Plan Design
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -127,7 +127,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Attached Garage Features
+              North Las Vegas Family Homes: Attached Garage Features
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -166,7 +166,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Jetted Bathtub Luxury
+              North Las Vegas Family Homes: Jetted Bathtub Luxury
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -205,7 +205,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Laminate Flooring Benefits
+              North Las Vegas Family Homes: Laminate Flooring Benefits
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -283,7 +283,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Community Walking Paths
+              North Las Vegas Family Homes: Community Walking Paths
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -322,7 +322,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Dedicated Laundry Room
+              North Las Vegas Family Homes: Dedicated Laundry Room
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -361,7 +361,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Central Air Conditioning
+              North Las Vegas Family Homes: Central Air Conditioning
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -400,7 +400,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Dedicated Dining Area
+              North Las Vegas Family Homes: Dedicated Dining Area
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -439,7 +439,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Additional Premium Amenities
+              North Las Vegas Family Homes: Additional Premium Amenities
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -494,7 +494,7 @@ export default function AmenitiesPage() {
         <section className='py-16 bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold mb-4'>
-              Experience Maravilla Amenities Firsthand
+              North Las Vegas Family Homes: Experience Amenities Firsthand
             </h2>
             <p className='text-xl text-gray-200 mb-8 max-w-2xl mx-auto'>
               Schedule a private tour to see these exceptional amenities in person. Dr. Jan Duffy can help you find the perfect Maravilla home with the features that matter most to you.
@@ -518,7 +518,7 @@ export default function AmenitiesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Homes Amenities | Luxury Features in North Las Vegas',
+              name: 'North Las Vegas Family Homes | Maravilla Amenities',
               description:
                 'Comprehensive guide to amenities in Maravilla homes including open floor plans, attached garages, jetted bathtubs, swimming pools, and community features.',
               url: `${baseUrl}/amenities`,

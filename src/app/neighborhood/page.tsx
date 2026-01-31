@@ -62,7 +62,7 @@ const baseUrl = (
 export const revalidate = 604800; // 1 week
 
 export const metadata = genMetadata({
-  title: 'Maravilla Homes & Real Estate | Las Vegas Community Guide',
+  title: 'North Las Vegas Family Homes | Maravilla Community Guide',
   description:
     'Maravilla is a premier master-planned community in Las Vegas featuring luxury homes, excellent schools, parks, and convenient amenities. Discover why families choose Maravilla. Call (702) 500-1953.',
   keywords:
@@ -125,7 +125,7 @@ export default function NeighborhoodPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Welcome to Maravilla
+            North Las Vegas Family Homes: Welcome to Maravilla
           </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
             A premier master-planned community in North Las Vegas featuring luxury homes, excellent schools, parks, and convenient access to shopping, dining, and major highways. Jump to <a href='#listings' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</a>, <a href='#about' className='text-white hover:text-gray-200 underline font-medium'>about Maravilla</a>, <a href='#search-listings' className='text-white hover:text-gray-200 underline font-medium'>search listings</a>, or <a href='#faqs' className='text-white hover:text-gray-200 underline font-medium'>FAQs</a>.
@@ -149,7 +149,7 @@ export default function NeighborhoodPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              View All Homes for Sale in Maravilla
+              North Las Vegas Family Homes: View All Homes for Sale in Maravilla
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Explore all available properties in Maravilla, Las Vegas
@@ -185,7 +185,7 @@ export default function NeighborhoodPage() {
           <div className='grid lg:grid-cols-2 gap-12 items-center mb-16'>
             <div>
               <h2 id='about-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
-                About Maravilla
+                North Las Vegas Family Homes: About Maravilla
               </h2>
               <div className='space-y-4 text-gray-600 leading-relaxed'>
                 <p>
@@ -296,7 +296,7 @@ export default function NeighborhoodPage() {
           </div>
 
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            What Makes Maravilla Special
+            North Las Vegas Family Homes: What Makes Maravilla Special
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {highlights.map((highlight, index) => {
@@ -325,7 +325,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Property Overview
+            North Las Vegas Family Homes: Property Overview
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Nestled in the heart of North Las Vegas&apos;s 89031 zip code, Maravilla offers the perfect blend of suburban serenity and urban convenience. Celebrated for its pristine upkeep and desert-friendly landscaping, this residence is part of a well-established neighborhood that has matured beautifully over the years. The community features a diverse selection of <Link href='/homes' className='text-[#3A8DDE] hover:underline font-medium'>homes ranging from $380,000 to $600,000</Link>, providing options for various budgets and preferences. Explore <Link href='/home-descriptions' className='text-[#3A8DDE] hover:underline font-medium'>detailed home descriptions</Link> and <Link href='/amenities' className='text-[#3A8DDE] hover:underline font-medium'>community amenities</Link>.
@@ -340,7 +340,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Location & Transportation
+            North Las Vegas Family Homes: Location & Transportation
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Maravilla is conveniently connected to major routes, making it easy to access the entire Las Vegas Valley and beyond. The strategic location provides excellent connectivity while maintaining a peaceful residential atmosphere. See our <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>interactive map</Link> and explore <Link href='/community' className='text-[#3A8DDE] hover:underline font-medium'>community amenities</Link>.
@@ -388,7 +388,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Shopping & Dining in Maravilla
+            North Las Vegas Family Homes: Shopping & Dining
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Within a 1-2 mile radius, you&apos;ll find a variety of shopping and dining options that make daily errands convenient and dining out enjoyable. The area offers everything from everyday essentials to specialty retailers, and from casual family restaurants to upscale dining establishments. Discover more <Link href='/map-and-nearby-places' className='text-[#3A8DDE] hover:underline font-medium'>nearby places</Link> and <Link href='/community' className='text-[#3A8DDE] hover:underline font-medium'>community features</Link>.
@@ -458,7 +458,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Recreation & Entertainment
+            North Las Vegas Family Homes: Recreation & Entertainment
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Endless opportunities for relaxation and fun are available within minutes of Maravilla. From outdoor recreation to entertainment venues, residents have access to a wide variety of activities that enhance quality of life.
@@ -514,7 +514,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Essential Services
+            North Las Vegas Family Homes: Essential Services
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Convenient access to critical services ensures that Maravilla residents can meet all their essential needs without traveling far from home. These services are strategically located to provide easy access when needed.
@@ -570,7 +570,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Community Features
+            North Las Vegas Family Homes: Community Features
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             Maravilla is enriched with community amenities that enhance quality of life and provide opportunities for recreation, education, and social connection. These features make the neighborhood more than just a place to live—they create a true community.
@@ -618,7 +618,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-            Local Climate
+            North Las Vegas Family Homes: Local Climate
           </h2>
           <p className='text-lg text-gray-700 mb-6 leading-relaxed'>
             North Las Vegas boasts a sunny desert climate that attracts residents seeking year-round outdoor activities and comfortable living. The climate is characterized by abundant sunshine, low humidity, and minimal rainfall, making it ideal for those who enjoy outdoor recreation and prefer to avoid harsh winters.
@@ -778,7 +778,7 @@ export default function NeighborhoodPage() {
               <MapPin className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-                Maravilla Location
+                North Las Vegas Family Homes: Maravilla Location
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Located in Las Vegas, Maravilla is conveniently situated with easy
@@ -896,7 +896,7 @@ export default function NeighborhoodPage() {
               <Search className='h-8 w-8 text-[#3A8DDE]' />
             </div>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Search Maravilla Homes for Sale
+              North Las Vegas Family Homes: Search Maravilla Homes for Sale
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Browse available properties in Maravilla, Las Vegas. Use the
@@ -1008,7 +1008,7 @@ export default function NeighborhoodPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Ready to Call Maravilla Home?
+            North Las Vegas Family Homes: Ready to Call Maravilla Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Discover why so many families choose Maravilla. Browse available
@@ -1108,7 +1108,7 @@ export default function NeighborhoodPage() {
               { name: 'Maravilla Neighborhood', url: `${baseUrl}/neighborhood` },
             ]),
             generateWebPageSchema({
-              name: 'Maravilla Homes & Real Estate | Las Vegas Community Guide',
+              name: 'North Las Vegas Family Homes | Maravilla Community Guide',
               description:
                 'Maravilla homes for sale in Las Vegas. Discover luxury homes in this premier master-planned community with excellent schools, parks, and convenient amenities.',
               url: `${baseUrl}/neighborhood`,

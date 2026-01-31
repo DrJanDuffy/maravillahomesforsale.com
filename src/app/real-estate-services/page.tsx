@@ -28,7 +28,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Full-Service Real Estate Services | Dr. Jan Duffy Maravilla Expert',
+  title: 'North Las Vegas Family Homes | Real Estate Services | Dr. Jan Duffy',
   description:
     'Comprehensive real estate services for buyers, sellers, and investors in Maravilla, North Las Vegas. Property management, investment consulting, transaction services, and specialty services from Dr. Jan Duffy.',
   keywords:
@@ -44,7 +44,7 @@ export default function RealEstateServicesPage() {
         <section className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-              Full-Service Real Estate Services
+              North Las Vegas Family Homes: Real Estate Services
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
               Comprehensive support for buyers, sellers, and investors in Maravilla, North Las Vegas. From property transactions to investment consulting, Dr. Jan Duffy provides expert guidance every step of the way. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>homes for sale</Link>, get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>, or learn about <Link href='/sell' className='text-white hover:text-gray-200 underline font-medium'>selling your home</Link>.
@@ -166,7 +166,7 @@ export default function RealEstateServicesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Maravilla Transaction Services
+              North Las Vegas Family Homes: Transaction Services
             </h2>
             <div className='grid md:grid-cols-2 gap-8 mb-8'>
               <div>
@@ -364,7 +364,7 @@ export default function RealEstateServicesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Maravilla Consulting Services
+              North Las Vegas Family Homes: Consulting Services
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -463,7 +463,7 @@ export default function RealEstateServicesPage() {
         <section className='py-16 bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold mb-8 text-center'>
-              Maravilla Contact Information
+              North Las Vegas Family Homes: Contact Information
             </h2>
             <div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
               <div className='text-center'>
@@ -502,7 +502,7 @@ export default function RealEstateServicesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Full-Service Real Estate Services | Dr. Jan Duffy Maravilla Expert',
+              name: 'North Las Vegas Family Homes | Real Estate Services',
               description:
                 'Comprehensive real estate services for buyers, sellers, and investors in Maravilla, North Las Vegas including property management, investment consulting, and transaction services.',
               url: `${baseUrl}/real-estate-services`,

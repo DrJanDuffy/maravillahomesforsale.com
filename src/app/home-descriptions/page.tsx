@@ -19,7 +19,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Home Descriptions | Luxury Homes in North Las Vegas $380k-$600k',
+  title: 'North Las Vegas Family Homes | Home Descriptions | Maravilla $380k-$600k',
   description:
     'Explore detailed descriptions of Maravilla luxury homes in North Las Vegas. Features include 3-5 bedrooms, gourmet kitchens, smart home technology, and resort-style amenities. Price range $380,000-$600,000.',
   keywords:
@@ -35,7 +35,7 @@ export default function HomeDescriptionsPage() {
         <section className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-              Maravilla Homes: Detailed Property Descriptions
+              North Las Vegas Family Homes: Detailed Property Descriptions
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
               Discover the exceptional features and specifications of <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>luxury homes in Maravilla</Link>, North Las Vegas. From gourmet kitchens to smart home technology, explore what makes these properties truly special. View <Link href='/amenities' className='text-white hover:text-gray-200 underline font-medium'>community amenities</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood</Link>, or see <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home values</Link>.
@@ -47,7 +47,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-              Price Range: $380,000-$600,000
+              North Las Vegas Family Homes: Price Range $380K–$600K
             </h2>
             <div className='grid md:grid-cols-3 gap-6 mb-12'>
               <div className='bg-[#F7F9FC] rounded-lg p-6 text-center'>
@@ -76,7 +76,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Home Specifications
+              North Las Vegas Family Homes: Home Specifications
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -242,7 +242,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Exterior Elements
+              North Las Vegas Family Homes: Exterior Elements
             </h2>
             <div className='grid md:grid-cols-2 gap-8 mb-8'>
               <div>
@@ -352,7 +352,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Location Benefits
+              North Las Vegas Family Homes: Location Benefits
             </h2>
             <div className='grid md:grid-cols-2 gap-8 mb-8'>
               <div>
@@ -472,7 +472,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Surrounding Neighborhoods
+              North Las Vegas Family Homes: Surrounding Neighborhoods
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -564,7 +564,7 @@ export default function HomeDescriptionsPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-              Maravilla Location
+              North Las Vegas Family Homes: Maravilla Location
             </h2>
             <Suspense fallback={<div className='h-[500px] bg-gray-200 animate-pulse rounded-lg' />}>
               <GoogleMap
@@ -587,7 +587,7 @@ export default function HomeDescriptionsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Home Descriptions | Luxury Homes in North Las Vegas',
+              name: 'North Las Vegas Family Homes | Home Descriptions',
               description:
                 'Detailed descriptions of Maravilla luxury homes featuring 3-5 bedrooms, gourmet kitchens, smart home technology, and resort-style amenities in North Las Vegas.',
               url: `${baseUrl}/home-descriptions`,

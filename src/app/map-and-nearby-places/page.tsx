@@ -29,7 +29,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'Maravilla Map & Nearby Places | Schools, Parks, Restaurants, Shopping',
+  title: 'North Las Vegas Family Homes | Maravilla Map & Nearby Places | Schools, Parks, Shopping',
   description:
     'Explore Maravilla, North Las Vegas location with interactive map. Discover nearby schools, parks, restaurants, shopping, gyms, and essential services. Find everything you need within minutes of Maravilla homes.',
   keywords:
@@ -45,7 +45,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-              Maravilla Map & Nearby Places
+              North Las Vegas Family Homes: Map & Nearby Places
             </h1>
             <p className='text-xl text-gray-200 max-w-3xl'>
               Discover everything Maravilla, North Las Vegas has to offer. Explore schools, parks, restaurants, shopping, and essential services all within minutes of your new home. Browse <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>available homes</Link>, explore the <Link href='/neighborhood' className='text-white hover:text-gray-200 underline font-medium'>neighborhood guide</Link>, or see <Link href='/community' className='text-white hover:text-gray-200 underline font-medium'>community features</Link>.
@@ -89,7 +89,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Nearby Schools
+              North Las Vegas Family Homes: Nearby Schools
             </h2>
             <p className='text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl'>
               Maravilla is served by excellent schools in the Clark County School District, providing quality education from elementary through high school. These schools offer comprehensive academic programs, extracurricular activities, and support services that help students succeed.
@@ -182,7 +182,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='py-16 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Parks and Recreation
+              North Las Vegas Family Homes: Parks and Recreation
             </h2>
             <p className='text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl'>
               Maravilla residents enjoy access to numerous parks and recreational facilities that provide opportunities for outdoor activities, family fun, and community gatherings. These spaces enhance quality of life and provide venues for healthy, active lifestyles.
@@ -274,7 +274,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Shopping and Dining
+              North Las Vegas Family Homes: Shopping and Dining
             </h2>
             <p className='text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl'>
               Maravilla residents enjoy convenient access to premier shopping centers and diverse dining options. From everyday essentials to specialty retailers, and from casual family restaurants to upscale dining, everything you need is within minutes of home.
@@ -570,7 +570,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Additional Nearby Amenities
+              North Las Vegas Family Homes: Additional Nearby Amenities
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -736,7 +736,7 @@ export default function MapAndNearbyPlacesPage() {
         <section className='py-16 bg-[#F7F9FC]'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-8'>
-              Entertainment and Recreation
+              North Las Vegas Family Homes: Entertainment and Recreation
             </h2>
             <div className='grid md:grid-cols-2 gap-8'>
               <div>
@@ -804,7 +804,7 @@ export default function MapAndNearbyPlacesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Map & Nearby Places | Schools, Parks, Restaurants, Shopping',
+              name: 'North Las Vegas Family Homes | Maravilla Map & Nearby Places',
               description:
                 'Explore Maravilla, North Las Vegas location with interactive map. Discover nearby schools, parks, restaurants, shopping, gyms, and essential services.',
               url: `${baseUrl}/map-and-nearby-places`,

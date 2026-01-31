@@ -18,7 +18,7 @@ type KcmVideosSectionProps = {
 
 export default function KcmVideosSection({
   limit = 4,
-  heading = 'Latest Market Videos',
+  heading = 'North Las Vegas Family Homes: Latest Market Videos',
   description = 'Watch short market updates and tips from Dr. Jan Duffy’s partner, Simplifying the Market.',
 }: KcmVideosSectionProps) {
   const videos = KCM_VIDEO_ENTRIES.slice(0, limit);

@@ -78,7 +78,7 @@ export default async function NeighborhoodSubareaPage({ params }: Props) {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Homes for Sale in {neighborhood.name}
+            North Las Vegas Family Homes: Homes for Sale in {neighborhood.name}
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             {neighborhood.shortDescription}{' '}
@@ -97,7 +97,7 @@ export default async function NeighborhoodSubareaPage({ params }: Props) {
       <section id='about' className='py-16 bg-white' aria-labelledby='about-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='about-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
-            About {neighborhood.name}
+            North Las Vegas Family Homes: About {neighborhood.name}
           </h2>
           <p className='text-gray-700 leading-relaxed mb-6 max-w-3xl'>
             {neighborhood.description}
@@ -130,7 +130,7 @@ export default async function NeighborhoodSubareaPage({ params }: Props) {
       <section id='cta' className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-2xl font-bold text-[#0A2540] mb-4'>
-            Ready to Find Your Home in {neighborhood.name}?
+            North Las Vegas Family Homes: Ready to Find Your Home in {neighborhood.name}?
           </h2>
           <p className='text-gray-600 mb-6'>
             Browse listings, get a home valuation, or schedule a consultation with Dr. Jan Duffy.

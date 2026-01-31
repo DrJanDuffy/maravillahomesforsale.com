@@ -142,7 +142,7 @@ export default async function GuidePage({ params }: Props) {
       <section className='py-16 bg-white' aria-labelledby='guide-content'>
         <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='guide-content' className='sr-only'>
-            Guide content
+            North Las Vegas Family Homes: Guide content
           </h2>
           {guide.sections.map((section) => (
             <div
@@ -174,7 +174,7 @@ export default async function GuidePage({ params }: Props) {
       <section id='related-guides' className='py-12 bg-[#F7F9FC]' aria-labelledby='related-guides-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='related-guides-heading' className='text-2xl font-bold text-[#0A2540] mb-6'>
-            More guides for buyers and sellers
+            North Las Vegas Family Homes: More Guides
           </h2>
           <p className='text-gray-600 mb-6 max-w-2xl'>
             Explore other client guides for North Las Vegas and Maravilla real estate.

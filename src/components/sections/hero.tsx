@@ -49,16 +49,15 @@ export default function Hero() {
       <div className='relative z-10 text-center text-white max-w-4xl mx-auto px-4'>
         <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
           <span className='block animate-fade-in hero-gold-text'>
-            Find Your Dream Home in
+            North Las Vegas Family Homes
           </span>
           <span className='block mt-2 animate-fade-in-delay hero-green-text'>
-            Maravilla
+            in Maravilla
           </span>
         </h1>
 
         <p className='text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]'>
-          Find exceptional value and quality homes in one of Las Vegas&apos; best
-          value communities
+          Find exceptional value and quality family homes in North Las Vegas and Maravilla
         </p>
 
         {/* Hero CTA Buttons */}

@@ -19,7 +19,7 @@ const baseUrl = (
 ).replace(/\/$/, '');
 
 export const metadata = genMetadata({
-  title: 'About Dr. Jan Duffy | Maravilla Real Estate Agent | Berkshire Hathaway HomeServices Nevada',
+  title: 'North Las Vegas Family Homes | About Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada',
   description:
     'Meet Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada. Expert in Maravilla and North Las Vegas real estate. License S.0197614.LLC. Call (702) 500-1953.',
   keywords:
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <section id='why-work-with' className='py-16 bg-[#F7F9FC]' aria-labelledby='why-work-with-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='why-work-with-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Why Work with Dr. Jan Duffy
+            North Las Vegas Family Homes: Why Work with Dr. Jan Duffy
           </h2>
           {BUSINESS_INFO.attributes && (
             <p className='text-center text-gray-600 mb-8 max-w-2xl mx-auto'>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <section id='contact-cta' className='py-16 bg-white' aria-labelledby='contact-cta-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='contact-cta-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Get in Touch
+            North Las Vegas Family Homes: Get in Touch
           </h2>
           <div className='grid md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
             <Card className='border-0 shadow-lg'>
@@ -166,8 +166,8 @@ export default function AboutPage() {
               { name: 'About Dr. Jan Duffy', url: `${baseUrl}/about` },
             ]),
             generateWebPageSchema({
-              name: 'About Dr. Jan Duffy | Maravilla Real Estate Agent',
-              description: 'Meet Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada. Expert in Maravilla and North Las Vegas.',
+              name: 'North Las Vegas Family Homes | About Dr. Jan Duffy',
+              description: 'Meet Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada. North Las Vegas Family Homes expert—Maravilla and North Las Vegas.',
               url: `${baseUrl}/about`,
               breadcrumb: [
                 { name: 'Home', url: baseUrl },

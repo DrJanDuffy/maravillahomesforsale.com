@@ -22,7 +22,7 @@ const baseUrl = (
 export const revalidate = 604800; // weekly
 
 export const metadata = genMetadata({
-  title: 'Maravilla Home Valuation | What Is My Maravilla Home Worth?',
+  title: 'North Las Vegas Family Homes | Home Valuation | Maravilla & North Las Vegas',
   description:
     'Get a free Maravilla home valuation with local pricing context. Dr. Jan Duffy, REALTOR®, provides accurate value estimates based on recent sales, active listings, and market trends. Average home value: $525K. Call (702) 500-1953 for your free estimate.',
   keywords:
@@ -46,7 +46,7 @@ export default function MaravillaHomeValuationPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Maravilla Home Valuation
+            North Las Vegas Family Homes: Home Valuation
           </h1>
           <p className='text-xl text-gray-200 max-w-3xl'>
             Wondering <strong>what your Maravilla home is worth</strong>? A
@@ -119,7 +119,7 @@ export default function MaravillaHomeValuationPage() {
       <section className='py-16 bg-[#F7F9FC]'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-6'>
-            What affects Maravilla home values?
+            North Las Vegas Family Homes: What Affects Home Values?
           </h2>
           <h3 className='text-xl font-semibold text-[#0A2540] mb-3'>
             Comparable sales (the foundation)
@@ -199,7 +199,7 @@ export default function MaravillaHomeValuationPage() {
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Ready to get your Maravilla home valuation?
+            North Las Vegas Family Homes: Get Your Home Valuation
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Contact Dr. Jan Duffy for a comprehensive valuation that considers all
@@ -223,7 +223,7 @@ export default function MaravillaHomeValuationPage() {
       <section id='location' className='py-16 bg-[#F7F9FC]' aria-labelledby='location-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='location-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Maravilla Location
+            North Las Vegas Family Homes: Maravilla Location
           </h2>
           <Suspense fallback={<MapSkeleton />}>
             <GoogleMap
@@ -249,7 +249,7 @@ export default function MaravillaHomeValuationPage() {
               { name: 'Maravilla Home Valuation', url: `${baseUrl}/home-valuation` },
             ]),
             generateWebPageSchema({
-              name: 'Maravilla Home Valuation | What Is My Maravilla Home Worth?',
+              name: 'North Las Vegas Family Homes | Home Valuation',
               description:
                 'Get a free Maravilla home valuation with local pricing context. Dr. Jan Duffy provides accurate value estimates based on recent sales and market trends.',
               url: `${baseUrl}/home-valuation`,

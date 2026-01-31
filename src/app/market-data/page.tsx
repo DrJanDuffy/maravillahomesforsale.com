@@ -35,7 +35,7 @@ const baseUrl = (
 export const revalidate = 900; // 15 minutes
 
 export const metadata = genMetadata({
-  title: 'Maravilla Real Estate Market Data & Trends | Las Vegas',
+  title: 'North Las Vegas Family Homes | Market Data & Trends | Maravilla & North Las Vegas',
   description:
     'Latest Maravilla real estate market data: Track pricing trends, sales volume, and market conditions. Updated regularly. Call (702) 500-1953 for market insights.',
   keywords:
@@ -97,7 +97,7 @@ export default function MarketDataPage() {
       <div className='bg-gradient-to-r from-[#0A2540] to-[#3A8DDE] text-white py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-            Maravilla Market Data
+            North Las Vegas Family Homes: Market Data
           </h1>
           <p className='text-xl text-white max-w-3xl'>
             Stay informed with the latest real estate market trends, statistics, and data for <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>Maravilla homes</Link>. Track pricing, sales volume, and market conditions. View <Link href='/homes' className='text-white hover:text-gray-200 underline font-medium'>available homes</Link>, explore <Link href='/market-insights' className='text-white hover:text-gray-200 underline font-medium'>market insights</Link>, or get a <Link href='/home-valuation' className='text-white hover:text-gray-200 underline font-medium'>home valuation</Link>.
@@ -171,7 +171,7 @@ export default function MarketDataPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-[#0A2540] mb-4'>
-              Market Insights
+              North Las Vegas Family Homes: Market Insights
             </h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Key factors driving the Maravilla real estate market
@@ -249,7 +249,7 @@ export default function MarketDataPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Maravilla Real Estate Market Data & Trends',
+              name: 'North Las Vegas Family Homes | Market Data',
               description:
                 'Stay informed with the latest real estate market data, trends, and statistics for Maravilla, Las Vegas. Average prices, days on market, and more.',
               url: `${baseUrl}/market-data`,
@@ -259,9 +259,9 @@ export default function MarketDataPage() {
               ],
             }),
             generateDatasetSchema({
-              name: 'Maravilla Real Estate Market Data',
+              name: 'North Las Vegas Family Homes | Market Data',
               description:
-                'Comprehensive real estate market data and statistics for Maravilla, Las Vegas including average prices, days on market, inventory levels, and market trends.',
+                'Comprehensive real estate market data and statistics for Maravilla and North Las Vegas including average prices, days on market, inventory levels, and market trends.',
               url: `${baseUrl}/market-data`,
             }),
             generateBreadcrumbSchema([

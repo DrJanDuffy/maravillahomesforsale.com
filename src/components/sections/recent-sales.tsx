@@ -71,7 +71,7 @@ export default function RecentSales() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl font-bold text-[#0A2540] mb-4'>
-            Recent Sales
+            North Las Vegas Family Homes: Recent Sales
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
             View recently sold properties in Maravilla and surrounding areas

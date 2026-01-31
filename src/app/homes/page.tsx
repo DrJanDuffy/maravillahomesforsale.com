@@ -44,7 +44,7 @@ const baseUrl = (
 export const revalidate = 1800; // 30 minutes
 
 export const metadata = genMetadata({
-  title: 'Homes for Sale in Maravilla, Las Vegas | North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+  title: 'North Las Vegas Family Homes | Homes for Sale in Maravilla | Dr. Jan Duffy',
   description:
     'Browse luxury homes for sale in Maravilla, Las Vegas. View current listings with detailed photos, virtual tours, and market data. Work with Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices® Nevada. Call (702) 500-1953.',
   keywords:
@@ -173,7 +173,7 @@ export default function HomesPage() {
       <section id='why-buy' className='py-16 bg-[#F7F9FC]' aria-labelledby='why-buy-heading'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h2 id='why-buy-heading' className='text-3xl font-bold text-[#0A2540] mb-8 text-center'>
-            Why Buy in Maravilla?
+            North Las Vegas Family Homes: Why Buy in Maravilla?
           </h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Card className='border-0 shadow-lg'>
@@ -249,7 +249,7 @@ export default function HomesPage() {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <h2 id='community-info-heading' className='text-3xl font-bold text-[#0A2540] mb-6'>
-                Homes for Sale in Maravilla
+                North Las Vegas Family Homes: Homes for Sale in Maravilla
               </h2>
               <div className='space-y-4 text-gray-700'>
                 <p>
@@ -319,7 +319,7 @@ export default function HomesPage() {
       <section id='ready-to-find' className='py-16 bg-white' aria-labelledby='ready-to-find-heading'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 id='ready-to-find-heading' className='text-3xl font-bold text-[#0A2540] mb-4'>
-            Ready to Find Your Dream Home?
+            North Las Vegas Family Homes: Ready to Find Your Dream Home?
           </h2>
           <p className='text-lg text-gray-600 mb-8'>
             Dr. Jan Duffy can provide you with the most current and specific
@@ -354,17 +354,27 @@ export default function HomesPage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            generateCollectionPageSchema({
-              name: 'Homes for Sale in Maravilla, Las Vegas',
+            generateWebPageSchema({
+              name: 'North Las Vegas Family Homes | Homes for Sale',
               description:
-                'Browse quality homes for sale in Maravilla, Las Vegas. Find exceptional value and your dream home in one of Las Vegas&apos; best value communities.',
+                'Browse quality homes for sale in Maravilla, Las Vegas. Find exceptional value and your dream home in one of Las Vegas\' best value communities.',
+              url: `${baseUrl}/homes`,
+              breadcrumb: [
+                { name: 'Home', url: baseUrl },
+                { name: 'Homes for Sale', url: `${baseUrl}/homes` },
+              ],
+            }),
+            generateCollectionPageSchema({
+              name: 'North Las Vegas Family Homes: Homes for Sale in Maravilla',
+              description:
+                'Browse quality homes for sale in Maravilla, Las Vegas. Find exceptional value and your dream home in one of Las Vegas\' best value communities.',
               url: `${baseUrl}/homes`,
             }),
             {
               '@context': 'https://schema.org',
               '@type': 'ItemList',
               name: 'North Las Vegas Family Homes',
-              description: 'Luxury homes for sale in Maravilla, Las Vegas',
+              description: 'North Las Vegas Family Homes: homes for sale in Maravilla and North Las Vegas',
               url: `${baseUrl}/homes`,
               numberOfItems: 206,
               itemListElement: {
@@ -374,7 +384,7 @@ export default function HomesPage() {
                   '@type': 'Product',
                   '@id': `${baseUrl}/homes`,
                   name: 'Maravilla Homes',
-                  description: 'Luxury homes in Maravilla with various price ranges to suit different needs',
+                  description: 'North Las Vegas Family Homes in Maravilla with various price ranges to suit different needs',
                   category: 'Real Estate',
                   offers: {
                     '@type': 'AggregateOffer',

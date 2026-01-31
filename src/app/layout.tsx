@@ -71,9 +71,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
   description:
-    'Find exceptional value in Maravilla, Las Vegas. Discover quality homes with great value in a well-planned community featuring excellent amenities, top-rated schools, and convenient location.',
+    'North Las Vegas Family Homes: find your dream home in Maravilla & North Las Vegas. Family-friendly community, top schools, parks. Dr. Jan Duffy, REALTOR®. Call (702) 500-1953.',
   keywords:
-    'Maravilla, Las Vegas homes, luxury real estate, Nevada homes, Las Vegas real estate, Maravilla community, luxury homes Las Vegas, Maravilla properties, Las Vegas luxury real estate, Maravilla homes for sale, Las Vegas real estate agent, Maravilla neighborhood, luxury properties Las Vegas, Maravilla real estate market, Las Vegas home values',
+    'North Las Vegas family homes, Maravilla homes for sale, North Las Vegas real estate, Maravilla Las Vegas, Dr. Jan Duffy REALTOR, Berkshire Hathaway Nevada, first-time home buyer North Las Vegas, Maravilla community, North Las Vegas neighborhoods, homes for sale Maravilla, Nevada real estate',
   authors: [
     { name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy', url: siteUrl },
   ],
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
-      "Find exceptional value in Maravilla, North Las Vegas. Discover quality homes with great value in a well-planned community featuring excellent amenities and convenient location.",
+      "North Las Vegas Family Homes: Maravilla & North Las Vegas real estate. Family-friendly community, top schools. Dr. Jan Duffy, REALTOR®. (702) 500-1953.",
     url: siteUrl,
     siteName: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     locale: 'en_US',
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
     description:
-      "Find exceptional value in Maravilla, North Las Vegas. Discover quality homes with great value in a well-planned community.",
+      "North Las Vegas Family Homes: Maravilla & North Las Vegas real estate. Dr. Jan Duffy, REALTOR®. (702) 500-1953.",
     images: ['/photos/01-1 (2).jpg'],
     // 2025 Best Practice: Add Twitter site handle if available
     creator: '@maravillahomes',
@@ -168,11 +168,11 @@ export default function RootLayout({
         <meta name='theme-color' content='#0A2540' />
         {/* 2025 Best Practice: Color scheme for dark mode support */}
         <meta name='color-scheme' content='light dark' />
-        {/* Favicon for Google Search results - must be square, at least 48x48px, stable URL */}
+        {/* Favicon for Google Search results - SVG primary, ICO fallback */}
+        <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
         <link rel='icon' href='/favicon.ico' sizes='any' />
-        <link rel='icon' href='/favicon.ico' type='image/x-icon' />
         {/* Apple Touch Icon for iOS devices */}
-        <link rel='apple-touch-icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' href='/favicon.svg' />
         {/* Preconnect to critical third-party origins for faster resource loading */}
         {/* RealScout: Preconnect for widget (310ms LCP savings per Lighthouse) */}
         <link rel='preconnect' href='https://em.realscout.com' crossOrigin='anonymous' />
@@ -338,7 +338,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Home Buying Services',
-                      description: 'Expert assistance finding and purchasing your dream home in Maravilla and North Las Vegas',
+                      description: 'North Las Vegas Family Homes: expert assistance finding your dream home in North Las Vegas and Maravilla',
                     },
                   },
                   {
@@ -354,7 +354,7 @@ export default function RootLayout({
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Property Valuation',
-                      description: 'Accurate home valuations and market analysis for Maravilla properties',
+                      description: 'North Las Vegas Family Homes: accurate home valuations and market analysis for North Las Vegas and Maravilla',
                     },
                   },
                   {

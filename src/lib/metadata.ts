@@ -24,6 +24,31 @@ const businessName = BUSINESS_INFO.name;
 const businessPhone = BUSINESS_INFO.phone.schema;
 const businessEmail = BUSINESS_INFO.email;
 
+/** Optional AggregateRating from GBP – set NEXT_PUBLIC_GBP_RATING and NEXT_PUBLIC_GBP_REVIEW_COUNT to show stars in search */
+function getAggregateRatingForSchema():
+  | { '@type': 'AggregateRating'; ratingValue: number; reviewCount: number; bestRating: number }
+  | undefined {
+  const rating = process.env.NEXT_PUBLIC_GBP_RATING;
+  const count = process.env.NEXT_PUBLIC_GBP_REVIEW_COUNT;
+  if (!rating || !count) return undefined;
+  const ratingValue = Number.parseFloat(rating);
+  const reviewCount = Number.parseInt(count, 10);
+  if (
+    Number.isNaN(ratingValue) ||
+    Number.isNaN(reviewCount) ||
+    ratingValue < 1 ||
+    ratingValue > 5 ||
+    reviewCount < 1
+  )
+    return undefined;
+  return {
+    '@type': 'AggregateRating',
+    ratingValue,
+    reviewCount,
+    bestRating: 5,
+  };
+}
+
 export const MARAVILLA_FAQS = [
   {
     question: 'What makes Maravilla a desirable community?',
@@ -200,6 +225,7 @@ export function generateLocalBusinessSchema() {
     ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
     priceRange: '$$$',
     currenciesAccepted: 'USD',
+    ...(getAggregateRatingForSchema() && { aggregateRating: getAggregateRatingForSchema() }),
   };
 }
 
@@ -263,6 +289,7 @@ export function generateOrganizationSchema() {
       'https://www.youtube.com/@DrDuffy',
     ],
     ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
+    ...(getAggregateRatingForSchema() && { aggregateRating: getAggregateRatingForSchema() }),
   };
 }
 
@@ -279,7 +306,7 @@ export function generatePersonSchema() {
     alternateName: ['Jan Duffy', 'Dr. Duffy'],
     jobTitle: 'REALTOR®',
     description:
-      'Dr. Jan Duffy is a highly experienced REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. With over 15 years of experience, she provides expert, data-driven advice and personalized consultations.',
+      'Dr. Jan Duffy is a highly experienced REALTOR® with Berkshire Hathaway HomeServices® Nevada. North Las Vegas Family Homes specialist—Maravilla, Las Vegas, North Las Vegas, and Henderson. Expert, data-driven advice and personalized consultations.',
     image: `${siteUrl}/photos/Dr. Duffy Blue_Headshot.jpg`,
     url: siteUrl,
     email: businessEmail,
@@ -303,6 +330,7 @@ export function generatePersonSchema() {
       identifier: 'S.0197614',
     },
     knowsAbout: [
+      'North Las Vegas Family Homes',
       'North Las Vegas Real Estate',
       'Maravilla Homes',
       'Luxury Real Estate',
@@ -335,7 +363,7 @@ export function generateRealEstateAgentSchema() {
     '@id': `${siteUrl}#realestateagent`,
     name: 'Dr. Jan Duffy',
     description:
-      'REALTOR® with Berkshire Hathaway HomeServices® Nevada, specializing in luxury homes and estates in Maravilla, Las Vegas, North Las Vegas, and Henderson. Over 15 years of experience with proven track record of 500+ homes sold. Women-owned business. LGBTQ+ friendly. Offers online appointments.',
+      'REALTOR® with Berkshire Hathaway HomeServices® Nevada. North Las Vegas Family Homes specialist—Maravilla, Las Vegas, North Las Vegas, and Henderson. Over 15 years of experience, 500+ homes sold. Women-owned. LGBTQ+ friendly. Offers online appointments.',
     jobTitle: 'REALTOR®',
     ...(BUSINESS_INFO.foundingDate && { foundingDate: BUSINESS_INFO.foundingDate }),
     worksFor: {
@@ -528,6 +556,39 @@ export function generateFAQPageSchema(
 }
 
 /**
+ * Generate HowTo schema for step-by-step guides (e.g. buyer's guide)
+ * 2025 Best Practice: HowTo can show rich results in search
+ */
+export function generateHowToSchema({
+  name,
+  description,
+  url,
+  steps,
+  totalTime,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  steps: ReadonlyArray<{ name: string; text: string }>;
+  totalTime?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    url,
+    ...(totalTime && { totalTime }),
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
+/**
  * Generate WebSite schema with site name for Google Search
  * This is required for Google to display your site name in search results
  * Must be placed on the homepage only
@@ -538,14 +599,14 @@ export function generateWebSiteSchema() {
     '@type': 'WebSite',
     name: 'North Las Vegas Family Homes',
     alternateName: [
-      'Maravilla Homes',
       'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+      'Maravilla Homes',
       'www.maravillahomesforsale.com',
       'maravillahomesforsale.com',
     ],
     url: siteUrl,
     description:
-      'Luxury real estate services in Maravilla, Las Vegas, Nevada. Find your dream home with Dr. Jan Duffy, REALTOR® specializing in Maravilla properties.',
+      'North Las Vegas Family Homes: real estate in Maravilla and North Las Vegas. Find your dream home with Dr. Jan Duffy, REALTOR®. Family homes, schools, and community in North Las Vegas.',
     publisher: {
       '@type': 'Organization',
       '@id': `${siteUrl}#organization`,
@@ -797,6 +858,93 @@ export function generateReviewSchema({
       ratingValue,
       bestRating,
     },
+  };
+}
+
+/**
+ * Generate VideoObject schema for a single video
+ * 2025 Best Practice: VideoObject helps Google show video rich results
+ */
+export function generateVideoObjectSchema({
+  name,
+  description,
+  url,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  embedUrl,
+  publisher,
+}: {
+  name: string;
+  description?: string;
+  url: string;
+  thumbnailUrl?: string;
+  uploadDate?: string;
+  duration?: string;
+  embedUrl?: string;
+  publisher?: { name: string; logo?: string };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    ...(description && { description }),
+    url,
+    ...(thumbnailUrl && {
+      thumbnailUrl: thumbnailUrl.startsWith('http') ? thumbnailUrl : `${siteUrl}${thumbnailUrl}`,
+    }),
+    ...(uploadDate && { uploadDate }),
+    ...(duration && { duration }),
+    ...(embedUrl && { embedUrl }),
+    ...(publisher && {
+      publisher: {
+        '@type': 'Organization',
+        name: publisher.name,
+        ...(publisher.logo && {
+          logo: {
+            '@type': 'ImageObject',
+            url: publisher.logo.startsWith('http') ? publisher.logo : `${siteUrl}${publisher.logo}`,
+          },
+        }),
+      },
+    }),
+    isFamilyFriendly: true,
+  };
+}
+
+/**
+ * Generate ItemList of VideoObject schemas for a video gallery/section
+ */
+export function generateVideoGallerySchema(
+  videos: Array<{
+    id: string;
+    title: string;
+    description?: string;
+    url: string;
+    thumbnailUrl?: string;
+    uploadDate?: string;
+  }>,
+  listName = 'North Las Vegas Family Homes: Market Videos'
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: listName,
+    description: 'Real estate market videos and buyer/seller tips from Dr. Jan Duffy and North Las Vegas Family Homes.',
+    numberOfItems: videos.length,
+    itemListElement: videos.map((video, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'VideoObject',
+        name: video.title,
+        ...(video.description && { description: video.description }),
+        url: video.url,
+        ...(video.thumbnailUrl && { thumbnailUrl: video.thumbnailUrl }),
+        ...(video.uploadDate && { uploadDate: video.uploadDate }),
+        isFamilyFriendly: true,
+      },
+    })),
   };
 }
 

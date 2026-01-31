@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
-  shortName: 'Maravilla Homes',
+  shortName: 'North Las Vegas Family Homes',
   url: 'https://www.maravillahomesforsale.com',
   phone: '(702) 500-1953',
   phoneRaw: '+17025001953',

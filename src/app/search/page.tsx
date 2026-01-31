@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   ...genMetadata({
-    title: 'Search Maravilla Homes | North Las Vegas Family Homes | Homes by Dr. Jan Duffy',
+    title: 'North Las Vegas Family Homes | Search Homes in Maravilla | Dr. Jan Duffy',
     description:
       'Search Maravilla homes and explore real estate listings, market data, and neighborhood information in Maravilla, Las Vegas, Nevada.',
     keywords:
@@ -44,7 +44,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       <section className='py-16 bg-white'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h1 className='text-4xl md:text-5xl font-bold text-[#0A2540] mb-4'>
-            Search Maravilla Homes
+            North Las Vegas Family Homes: Search Homes
           </h1>
           <p className='text-lg text-gray-600 mb-8'>
             {query
@@ -70,7 +70,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             generateWebPageSchema({
-              name: 'Search Maravilla Homes',
+              name: 'North Las Vegas Family Homes | Search Homes',
               description:
                 'Search Maravilla homes and explore real estate listings, market data, and neighborhood information in Maravilla, Las Vegas, Nevada.',
               url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maravillahomesforsale.com'}/search`,
